@@ -1,0 +1,20 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Section71Create"
+	},
+	"OnFailure": "/TRL_Snorkel_Digitization_TSL/Actions/CreateEntityFailureMessage.action",
+	"OnSuccess": "/TRL_Snorkel_Digitization_TSL/Rules/Section72Visible.js",
+	"Target": {
+		"Service": "/TRL_Snorkel_Digitization_TSL/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_ITEM"
+	},
+	"Properties": {
+		"DATE_INSPECTED": "#Page:SnorkelInstallation2/#Control:Section71Date/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation2/#Control:Section71DecisionTaken/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation2/#Control:Section71InspectedBy/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation2/#Control:Section71Method/#Value",
+		"QUESTION": "7.1 Uneveness of spray coat is not allowed.",
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
+	}
+}

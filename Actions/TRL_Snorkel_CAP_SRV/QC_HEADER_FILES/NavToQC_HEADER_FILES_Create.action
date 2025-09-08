@@ -1,0 +1,6 @@
+{
+    "ModalPageFullscreen": false,
+    "ModalPage": true,
+    "PageToOpen": "/TRL_Snorkel_Digitization_TSL/Pages/TRL_Snorkel_CAP_SRV_QC_HEADER_FILES/QC_HEADER_FILES_Create.page",
+    "_Type": "Action.Type.Navigation"
+}

@@ -1,0 +1,10 @@
+{
+	"Application": "/home/user/projects/TRL_Snorkel_Digitization_TSL/Application.app",
+	"Target": "Cloud Foundry",
+	"OtherApps": [
+		{
+			"Application": "/home/user/projects/TRL_Snorkel_Digitization_TSL/Application.app",
+			"Target": "Cloud Foundry"
+		}
+	]
+}

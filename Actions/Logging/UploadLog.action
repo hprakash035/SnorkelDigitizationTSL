@@ -1,0 +1,10 @@
+{
+    "ActionResult": {
+        "_Name": "UploadLog"
+    },
+    "ActivityIndicatorText": "Uploading...",
+    "OnFailure": "/TRL_Snorkel_Digitization_TSL/Actions/Logging/LogUploadFailure.action",
+    "OnSuccess": "/TRL_Snorkel_Digitization_TSL/Actions/Logging/LogUploadSuccessful.action",
+    "ShowActivityIndicator": false,
+    "_Type": "Action.Type.Logger.Upload"
+}

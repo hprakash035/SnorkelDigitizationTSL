@@ -1,0 +1,9 @@
+{
+	"_Type": "Action.Type.Navigation",
+	"ActionResult": {
+		"_Name": "Nav2Sheet3"
+	},
+	"PageToOpen": "/TRL_Snorkel_Digitization_TSL/Pages/SnorkelInstallation3.page",
+	"BackStackVisible": true,
+	"ClearHistory": false
+}

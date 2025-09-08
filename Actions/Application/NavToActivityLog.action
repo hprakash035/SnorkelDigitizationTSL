@@ -1,0 +1,5 @@
+{
+    "ModalPage": true,
+    "PageToOpen": "/TRL_Snorkel_Digitization_TSL/Pages/Application/UserActivityLog.page",
+    "_Type": "Action.Type.Navigation"
+}

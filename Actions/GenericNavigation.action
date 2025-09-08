@@ -1,0 +1,7 @@
+{
+    "_Type": "Action.Type.Navigation",
+    "ActionResult": {
+        "_Name": "GenericNavigation"
+    },
+    "PageToOpen": "/TRL_Snorkel_Digitization_TSL/Pages/Main.page"
+}

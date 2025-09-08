@@ -1,0 +1,45 @@
+export default function Section1Validation(clientAPI) {
+    try {
+        const pageProxy = clientAPI.getPageProxy();
+        const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
+        const headerSection = FormSectionedTable.getSection('HeaderSection');
+        const snorkelNoControl = headerSection.getControl('SnorkelNo');
+        const snorkelNo = snorkelNoControl.getValue();
+
+        if (!snorkelNo) {
+            return clientAPI.executeAction({
+                Name: '/TRL_Snorkel_Digitization_TSL/Actions/ValidationFailed.action',
+            });
+        }
+
+        const Section1 = FormSectionedTable.getSection('Section1Form');
+        const decisionTakenCtrl = Section1.getControl('Section1DecisionTaken1');
+        const inspectedByCtrl = Section1.getControl('Section1InspectedBy1');
+        const inspectionMethodCtrl = Section1.getControl('Section1InspectionMethod1');
+
+        const decisionTaken = decisionTakenCtrl?.getValue();
+        const inspectedBy = inspectedByCtrl?.getValue();
+        const inspectionMethod = inspectionMethodCtrl?.getValue();
+
+        if (decisionTaken && inspectedBy && inspectionMethod && decisionTaken != ""  && inspectedBy !="") {
+            const Section2 = FormSectionedTable.getSection('Section12Form');
+ 
+            return clientAPI.executeAction({
+                Name: '/TRL_Snorkel_Digitization_TSL/Actions/Section1Create.action'
+            });
+
+        } else {
+            return clientAPI.executeAction({
+                Name: '/TRL_Snorkel_Digitization_TSL/Actions/ValidationFailed.action'
+            });
+        }
+
+    } catch (error) {
+        return clientAPI.executeAction({
+            Name: '/TRL_Snorkel_Digitization_TSL/Actions/ErrorMessage.action',
+            Properties: {
+                Message: 'Unexpected error during Section 1 validation. Please try again.'
+            }
+        });
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "css.customData": [
+        "./.vscode/my-less.css-data.json"
+    ],
+    "mdk.uieditor": {
+        "left": {
+            "visible": true,
+            "width": 201.9921875
+        },
+        "right": {
+            "visible": true
+        },
+        "device": "tablet"
+    }
+}

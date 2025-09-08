@@ -1,0 +1,8 @@
+{
+    "_Type": "Action.Type.ApplicationUpdate",
+    "ActionResult": {
+        "_Name": "AppUpdate"
+    },
+    "OnFailure": "/TRL_Snorkel_Digitization_TSL/Rules/Application/AppUpdateFailure.js",
+    "OnSuccess": "/TRL_Snorkel_Digitization_TSL/Rules/Application/AppUpdateSuccess.js"
+}

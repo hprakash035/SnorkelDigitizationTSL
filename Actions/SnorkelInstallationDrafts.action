@@ -1,0 +1,12 @@
+{
+	"_Type": "Action.Type.ODataService.Read",
+	"ActionResult": {
+		"_Name": "SnorkelInstallationDrafts"
+	},
+	"OnSuccess": "/TRL_Snorkel_Digitization_TSL/Rules/OnDraftLoadSuccess.js",
+	"Target": {
+		"Service": "/TRL_Snorkel_Digitization_TSL/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_HEADER",
+		"QueryOptions": "$expand=qc_ATTACHMENTS,qc_ITEMS,qc_TESTS,headerFiles&$filter=SNORKEL_NO eq '{{#Page:SnorkelInstallation/#Control:SnorkelNo/#ClientData/?}}'"
+	}
+}

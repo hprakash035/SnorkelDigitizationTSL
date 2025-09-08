@@ -1,0 +1,16 @@
+{
+	"_Type": "Action.Type.ODataService.CallFunction",
+	"ActionResult": {
+		"_Name": "callGeneratePdFFunction"
+	},
+	"OnSuccess": "/TRL_Snorkel_Digitization_TSL/Rules/OpenReport.js",
+	"Target": {
+		"Service": "/TRL_Snorkel_Digitization_TSL/Services/TRL_Snorkel_CAP_SRV.service",
+		"Function": {
+			"Name": "generateQCReport",
+			"Parameters": {
+				"SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
+			}
+		}
+	}
+}

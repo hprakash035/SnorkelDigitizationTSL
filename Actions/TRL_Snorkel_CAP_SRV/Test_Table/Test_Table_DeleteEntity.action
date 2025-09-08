@@ -1,0 +1,13 @@
+{
+    "Target": {
+        "EntitySet": "Test_Table",
+        "Service": "/TRL_Snorkel_Digitization_TSL/Services/TRL_Snorkel_CAP_SRV.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "OnSuccess": "/TRL_Snorkel_Digitization_TSL/Actions/DeleteEntitySuccessMessage.action",
+    "OnFailure": "/TRL_Snorkel_Digitization_TSL/Actions/DeleteEntityFailureMessage.action",
+    "ActionResult": {
+        "_Name": "delete"
+    },
+    "_Type": "Action.Type.ODataService.DeleteEntity"
+}

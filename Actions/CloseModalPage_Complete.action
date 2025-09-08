@@ -1,0 +1,6 @@
+{
+	"_Type": "Action.Type.ClosePage",
+	"OnSuccess": "/TRL_Snorkel_Digitization_TSL/Rules/Section1Visible.js",
+	"DismissModal": "Action.Type.ClosePage.Completed",
+	"CancelPendingActions": false
+}

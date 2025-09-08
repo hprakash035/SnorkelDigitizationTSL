@@ -1,0 +1,20 @@
+{
+    "PopoverItems": [{
+            "Title": "Add ATTACHMENTS",
+            "OnPress": "/TRL_Snorkel_Digitization_TSL/Actions/TRL_Snorkel_CAP_SRV/QC_HEADER/NavToQC_HEADER_CreateATTACHMENTS.action"
+        },
+        {
+            "Title": "Add QC_ITEM",
+            "OnPress": "/TRL_Snorkel_Digitization_TSL/Actions/TRL_Snorkel_CAP_SRV/QC_HEADER/NavToQC_HEADER_CreateQC_ITEM.action"
+        },
+        {
+            "Title": "Add Test_Table",
+            "OnPress": "/TRL_Snorkel_Digitization_TSL/Actions/TRL_Snorkel_CAP_SRV/QC_HEADER/NavToQC_HEADER_CreateTest_Table.action"
+        },
+        {
+            "Title": "Delete",
+            "OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/TRL_Snorkel_CAP_SRV/QC_HEADER/QC_HEADER_DeleteConfirmation.js"
+        }
+    ],
+    "_Type": "Action.Type.PopoverMenu"
+}

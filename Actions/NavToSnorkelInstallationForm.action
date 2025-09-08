@@ -1,0 +1,11 @@
+{
+	"_Type": "Action.Type.Navigation",
+	"ActionResult": {
+		"_Name": "NavToSnorkelInstallationForm"
+	},
+	"PageToOpen": "/TRL_Snorkel_Digitization_TSL/Pages/SnorkelInstallation.page",
+	"NavigationType": "Inner",
+	"ClientData": {
+    "snorkelNo": "{Property:SNORKEL_NO}"
+  }
+}
