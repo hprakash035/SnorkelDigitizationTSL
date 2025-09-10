@@ -3,7 +3,7 @@
 	"ActionResult": {
 		"_Name": "HeaderCreate"
 	},
-	"OnFailure": "/TRL_Snorkel_Digitization_TSL/Actions/Unauthorized.action",
+	"OnFailure": "/TRL_Snorkel_Digitization_TSL/Actions/TRL_Snorkel_CAP_SRV/Service/InitializeOnlineFailureMessage.action",
 	"OnSuccess": "/TRL_Snorkel_Digitization_TSL/Rules/Section1Visible.js",
 	"OnSuccessLog": {
 		"Level": "Info",

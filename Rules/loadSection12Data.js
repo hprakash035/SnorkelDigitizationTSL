@@ -38,6 +38,10 @@ export async function loadSection12Data(pageProxy, qcItem12, FormSectionedTable,
         if (section12DecisionTaken12Control && qcItem12.DECISION_TAKEN) {
             await section12DecisionTaken12Control.setValue(qcItem12.DECISION_TAKEN);
         }
+        const Characterfield = section12.getControl('Characterfield');
+        if (Characterfield && qcItem12.characterField) {
+            await Characterfield.setValue(qcItem12.characterField);
+        }
 
     } catch (error) {
         console.error("Error loading Section12 data:", error);

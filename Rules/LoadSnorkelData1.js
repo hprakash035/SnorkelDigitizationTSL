@@ -82,7 +82,7 @@ export default async function LoadSnorkelDataPage1(clientAPI) {
                 return sectionKeyFromItem === sectionKey;
             });
 
-            if (item && item.DATE_INSPECTED && item.INSPECTED_BY) {
+            if (item  && item.INSPECTED_BY) {
                 const question = item.QUESTION?.trim();
                 const normalize = str => str?.replace(/\s+/g, ' ')?.trim();
                 const matchingAttachments = attachmentGroups[normalize(question)] || [];

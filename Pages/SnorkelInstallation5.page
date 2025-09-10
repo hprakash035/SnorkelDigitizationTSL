@@ -2760,7 +2760,8 @@
 				"IsIconCircular": false,
 				"Visible": true,
 				"OnPress": "/TRL_Snorkel_Digitization_TSL/Actions/Nav2Home.action"
-			},{
+			},
+			{
 				"_Type": "Control.Type.ActionBarItem",
 				"_Name": "NextPage",
 				"Caption": "",

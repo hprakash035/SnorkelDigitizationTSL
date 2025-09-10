@@ -3,6 +3,7 @@ import { loadSection112Data } from './loadSection112Data';
 import { loadSection113Data } from './loadSection113Data';
 import { loadSection121Data } from './loadSection121Data';
 import { loadSection122Data } from './loadSection122Data';
+import { loadSection122DataInlet } from './loadSection122DataInlet';
 import { loadSection123Data } from './loadSection123Data';
 
 export default async function LoadSnorkelDataPage3(clientAPI) {
@@ -67,7 +68,7 @@ export default async function LoadSnorkelDataPage3(clientAPI) {
                 return sectionKeyFromItem === sectionKey;
             });
 
-            if (item && item.DATE_INSPECTED && item.INSPECTED_BY) {
+            if (item  && item.INSPECTED_BY) {
                 const question = item.QUESTION?.trim();
                 const normalize = str => str?.replace(/\s+/g, ' ')?.trim();
                 const matchingAttachments = attachmentGroups[normalize(question)] || [];
@@ -120,6 +121,7 @@ function getSectionLoader(sectionKey) {
         '11.3': loadSection113Data,
         '12.1': loadSection121Data,
         '12.2': loadSection122Data,
+        '12.2': loadSection122DataInlet,
         '12.3': loadSection123Data,
     };
     return sectionLoaders[sectionKey];

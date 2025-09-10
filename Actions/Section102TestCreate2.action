@@ -12,7 +12,7 @@
 		"powderweight": "#Page:SnorkelInstallation2/#Control:Section102PowerWeight2/#Value",
 		"remark": "#Page:SnorkelInstallation2/#Control:Section102Remark2/#Value",
 		"testname": "*4 Actual situation for mixing the outer castable",
-		"vibration": "#Page:SnorkelInstallation2/#Control:Section102AddingVibration2/#Value",
+		"vibration": "#Page:SnorkelInstallation2/#Control:Section102AddingVibration2/#SelectedValue",
 		"watercasting": "#Page:SnorkelInstallation2/#Control:Section102WaterCasting2/#Value",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}

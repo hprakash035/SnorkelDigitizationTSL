@@ -15,6 +15,7 @@
 		"INSPECTED_BY": "#Page:SnorkelInstallation/#Control:Section12InspectedBy/#SelectedValue",
 		"METHOD": "#Page:SnorkelInstallation/#Control:Section12InspectionMethod/#Value",
 		"QUESTION": "#Page:SnorkelInstallation/#Control:Section12Question/#Value",
+		"characterField": "#Page:SnorkelInstallation/#Control:Characterfield/#Value",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}
 }

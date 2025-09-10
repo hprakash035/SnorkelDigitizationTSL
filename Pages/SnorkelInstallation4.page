@@ -1678,16 +1678,6 @@
 			},
 			{
 				"_Type": "Control.Type.ActionBarItem",
-				"_Name": "ActionBarItem0",
-				"Caption": "",
-				"Icon": "sap-icon://customer",
-				"Position": "Right",
-				"IsIconCircular": false,
-				"Visible": true,
-				"OnPress": "/TRL_Snorkel_Digitization_TSL/Actions/Application/UserMenuPopover.action"
-			},
-			{
-				"_Type": "Control.Type.ActionBarItem",
 				"_Name": "NextPage",
 				"Caption": "",
 				"Icon": "sap-icon://navigation-right-arrow",
@@ -1695,6 +1685,16 @@
 				"IsIconCircular": false,
 				"Visible": true,
 				"OnPress": "/TRL_Snorkel_Digitization_TSL/Actions/Nav2Sheet5.action"
+			},
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"Icon": "sap-icon://customer",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/TRL_Snorkel_Digitization_TSL/Actions/Application/UserMenuPopover.action"
 			}
 		],
 		"_Name": "ActionBar0",

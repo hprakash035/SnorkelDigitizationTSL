@@ -13,12 +13,12 @@ export default async function Section91TestFormValidation(clientAPI) {
         const tf1 = section91.getControl('Section91TF1')?.getValue();
         const settingTime1 = section91.getControl('Section91SettingTime1')?.getValue();
 
-        if (!water1 || !ff1 || !tf1 || !settingTime1) {
-            return clientAPI.executeAction({
-                Name: '/TRL_Snorkel_Digitization_TSL/Actions/ValidationFailed.action',
-                Properties: { Message: 'All values must be entered for Test 1 (Water of casting, FF, TF, Setting time).' }
-            });
-        }
+        // if (!water1 || !ff1 || !tf1 || !settingTime1) {
+        //     return clientAPI.executeAction({
+        //         Name: '/TRL_Snorkel_Digitization_TSL/Actions/ValidationFailed.action',
+        //         Properties: { Message: 'All values must be entered for Test 1 (Water of casting, FF, TF, Setting time).' }
+        //     });
+        // }
 
        
 
@@ -26,34 +26,34 @@ export default async function Section91TestFormValidation(clientAPI) {
         await clientAPI.executeAction({ Name: '/TRL_Snorkel_Digitization_TSL/Actions/Section91TestCreateA.action' });
 
         // Test 2
-        const water2 = section91.getControl('Section91TestWaterCasteing2')?.getValue();
-        const ff2 = section91.getControl('Section91FF2')?.getValue();
-        const tf2 = section91.getControl('Section91TF2')?.getValue();
-        const settingTime2 = section91.getControl('Section91SettingTime2')?.getValue();
+        // const water2 = section91.getControl('Section91TestWaterCasteing2')?.getValue();
+        // const ff2 = section91.getControl('Section91FF2')?.getValue();
+        // const tf2 = section91.getControl('Section91TF2')?.getValue();
+        // const settingTime2 = section91.getControl('Section91SettingTime2')?.getValue();
 
-        if (!water2 || !ff2 || !tf2 || !settingTime2) {
-            return clientAPI.executeAction({
-                Name: '/TRL_Snorkel_Digitization_TSL/Actions/ValidationFailed.action',
-                Properties: { Message: 'All values must be entered for Test 2 (Water of casting, FF, TF, Setting time).' }
-            });
-        }
+        // if (!water2 || !ff2 || !tf2 || !settingTime2) {
+        //     return clientAPI.executeAction({
+        //         Name: '/TRL_Snorkel_Digitization_TSL/Actions/ValidationFailed.action',
+        //         Properties: { Message: 'All values must be entered for Test 2 (Water of casting, FF, TF, Setting time).' }
+        //     });
+        // }
 
  
        
         await clientAPI.executeAction({ Name: '/TRL_Snorkel_Digitization_TSL/Actions/Section91TestCreateB.action' });
 
         // Test 3
-        const water3 = section91.getControl('Section91TestWaterCasteing3')?.getValue();
-        const ff3 = section91.getControl('Section91FF3')?.getValue();
-        const tf3 = section91.getControl('Section91TF3')?.getValue();
-        const settingTime3 = section91.getControl('Section91SettingTime3')?.getValue();
+        // const water3 = section91.getControl('Section91TestWaterCasteing3')?.getValue();
+        // const ff3 = section91.getControl('Section91FF3')?.getValue();
+        // const tf3 = section91.getControl('Section91TF3')?.getValue();
+        // const settingTime3 = section91.getControl('Section91SettingTime3')?.getValue();
 
-        if (!water3 || !ff3 || !tf3 || !settingTime3) {
-            return clientAPI.executeAction({
-                Name: '/TRL_Snorkel_Digitization_TSL/Actions/ValidationFailed.action',
-                Properties: { Message: 'All values must be entered for Test 3 (Water of casting, FF, TF, Setting time).' }
-            });
-        }
+        // if (!water3 || !ff3 || !tf3 || !settingTime3) {
+        //     return clientAPI.executeAction({
+        //         Name: '/TRL_Snorkel_Digitization_TSL/Actions/ValidationFailed.action',
+        //         Properties: { Message: 'All values must be entered for Test 3 (Water of casting, FF, TF, Setting time).' }
+        //     });
+        // }
 
 
        

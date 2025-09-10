@@ -1,6 +1,6 @@
 export async function loadSection122DataInlet(pageProxy, qcItem122, FormSectionedTable, attachments, flags, testdataArray) {
     try {
-        const Section122 = FormSectionedTable.getSection('Section122Forminlet');
+        const Section122 = FormSectionedTable.getSection('Section122FormInlet');
         if (!Section122) {
             throw new Error("Section122Forminlet not found in FormSectionedTable.");
         }

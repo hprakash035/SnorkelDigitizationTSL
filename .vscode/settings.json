@@ -8,7 +8,8 @@
             "width": 201.9921875
         },
         "right": {
-            "visible": true
+            "visible": true,
+            "width": 384.00262451171875
         },
         "device": "tablet"
     }

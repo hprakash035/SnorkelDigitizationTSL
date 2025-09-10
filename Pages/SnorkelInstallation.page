@@ -388,10 +388,6 @@
 					"_Name": "Section1Form"
 				},
 				{
-					"Visible": false,
-					"EmptySection": {
-						"FooterVisible": false
-					},
 					"Separators": {
 						"TopSectionSeparator": false,
 						"BottomSectionSeparator": true,
@@ -399,9 +395,6 @@
 						"FooterSeparator": true,
 						"ControlSeparator": true
 					},
-					"_Type": "Section.Type.FormCell",
-					"DataSubscriptions": [],
-					"_Name": "Section12Form",
 					"Controls": [
 						{
 							"Value": "1.2 Pallet number for ring no-1 & 2",
@@ -566,6 +559,15 @@
 							]
 						},
 						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Characterfield",
+							"IsVisible": true,
+							"Separator": true,
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section12NextButton",
 							"IsVisible": true,
@@ -582,7 +584,14 @@
 					],
 					"Layout": {
 						"NumberOfColumns": 1
-					}
+					},
+					"Visible": false,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"DataSubscriptions": [],
+					"_Name": "Section12Form"
 				},
 				{
 					"Layout": {
