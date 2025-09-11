@@ -63,7 +63,7 @@ export async function loadSection91Data(pageProxy, qcItem91, FormSectionedTable,
     const parsedTestDataArray = testdataArray
       .filter(item => (item.testname || '').toLowerCase().includes('outer castable workablity'))
       .map(item => ({
-        batchNo: safeVal(item.batchno),
+        batchNo: safeVal(item.batchNo),
         water: safeVal(item.watercasting || item.water),
         ff1: safeVal(item.ff1),
         ff2: safeVal(item.ff2),
@@ -73,7 +73,7 @@ export async function loadSection91Data(pageProxy, qcItem91, FormSectionedTable,
         remark: safeVal(item.remark)
       }));
 
-    console.log("✅ Parsed Section91 data:", parsedTestDataArray);
+    // console.log("✅ Parsed Section91 data:", parsedTestDataArray);
 
     // 🔗 Control mapping for 3 rows (full set)
     const rowConfig = [

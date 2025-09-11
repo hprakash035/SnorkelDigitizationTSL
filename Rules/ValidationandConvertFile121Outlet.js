@@ -10,8 +10,8 @@ export default async function ValidateAndConvertFile121Outlet(clientAPI) {
     const sectionedTable = pageProxy.getControl('FormSectionedTable');
     const snorkelNo = clientAPI.binding.SNORKEL_NO;
 
-    const photoSection = sectionedTable.getSection('Section121ImageOutlet');
-    const photoControl = photoSection?.getControl('Section121UserInputImageOutlet');
+    const photoSection = sectionedTable.getSection('Section121UserInputImageOutlet');
+    const photoControl = photoSection?.getControl('Section121TakePhotoOutlet');
     const attachments = photoControl?.getValue() || [];
 
     const question = sectionedTable

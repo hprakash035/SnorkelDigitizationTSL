@@ -64,30 +64,35 @@ export async function loadSection102Data(pageProxy, qcItem102, FormSectionedTabl
         }
 
         // --- Load Mixing Test values (*4 Actual situation...) ---
-        const testForm = FormSectionedTable.getSection('Section102TestForm');
-        if (testForm && testdataArray.length > 0) {
-            const mixingTests = testdataArray.filter(t =>
-                t.testname?.includes("mixing the outer castable")
-            );
+const testForm = FormSectionedTable.getSection('Section102TestForm');
+if (testForm && testdataArray.length > 0) {
+    const mixingTests = testdataArray.filter(t =>
+        t.testname?.includes("mixing the outer castable")
+    );
 
-            for (let i = 0; i < Math.min(mixingTests.length, 5); i++) {
-                const test = mixingTests[i];
-                const suffix = i + 1;
+    for (let i = 0; i < Math.min(mixingTests.length, 5); i++) {
+        const test = mixingTests[i];
+        const suffix = i + 1;
 
-                const setFormValue = async (ctrl, val) => {
-                    const c = testForm.getControl(ctrl);
-                    if (c && val !== undefined && val !== null) {
-                        await c.setValue(val);
-                    }
-                };
-
-                await setFormValue(`Section102PowerWeight${suffix}`, test.powderweight);
-                await setFormValue(`Section102WaterCasting${suffix}`, test.watercasting);
-                await setFormValue(`Section102FludityOfCastable${suffix}`, test.fluidity ? [test.fluidity] : []);
-                await setFormValue(`Section102AddingVibration${suffix}`, test.vibration);
-                await setFormValue(`Section102Remark${suffix}`, test.remark);
+        const setFormValue = async (ctrl, val) => {
+            const c = testForm.getControl(ctrl);
+            if (c && val !== undefined && val !== null) {
+                await c.setValue(val);
             }
-        }
+        };
+
+        // Populate Batch No
+        await setFormValue(`Section102TestBatchNo${suffix}`, test.batchNo);
+
+        // Populate other fields
+        await setFormValue(`Section102PowerWeight${suffix}`, test.powderweight);
+        await setFormValue(`Section102WaterCasting${suffix}`, test.watercasting);
+        await setFormValue(`Section102FludityOfCastable${suffix}`, test.fluidity ? [test.fluidity] : []);
+        await setFormValue(`Section102AddingVibration${suffix}`, test.vibration);
+        await setFormValue(`Section102Remark${suffix}`, test.remark);
+    }
+}
+
 
         // --- Load Gap Measurement tests (*5 The gap between...) ---
         const gapFormHeader = FormSectionedTable.getSection('Section102TestFormName2');

@@ -2127,7 +2127,7 @@
 							"Image": "sap-icon://open-command-field",
 							"ImagePosition": "Trailing",
 							"Enabled": true,
-							"OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/Application/Section122ValidationOutlet.js"
+							"OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/Section122ValidationOutlet.js"
 						}
 					],
 					"Layout": {
@@ -2193,7 +2193,7 @@
 							"_Name": "Section122TakePhotoOutlet",
 							"IsVisible": true,
 							"Separator": true,
-							"OnValueChange": "/TRL_Snorkel_Digitization_TSL/Rules/ValidationandConvertFile123.js",
+							"OnValueChange": "/TRL_Snorkel_Digitization_TSL/Rules/ValidationandConvertFile122Outlet.js",
 							"AttachmentActionType": [
 								"TakePhoto"
 							],
@@ -2234,14 +2234,14 @@
 						"_Name": "SectionCommonTypeHeader10",
 						"AccessoryType": "None",
 						"UseTopPadding": true,
-						"Caption": "*8 Gap measurement between 2nd ring brick and the Core Shell "
+						"Caption": "*7 Gap measurement between 2nd ring brick and the Core Shell "
 					},
 					"Visible": false,
 					"EmptySection": {
 						"FooterVisible": false
 					},
 					"_Type": "Section.Type.FormCell",
-					"_Name": "Section122TestFormName"
+					"_Name": "Section122TestFormNameOutlet"
 				},
 				{
 					"Separators": {
@@ -2301,7 +2301,7 @@
 							"_Name": "Section122Position2",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "1.Position",
+							"Caption": "2.Position",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": false
@@ -2436,7 +2436,7 @@
 							"Image": "sap-icon://open-command-field",
 							"ImagePosition": "Trailing",
 							"Enabled": true,
-							"OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/Section122TestValidation.js"
+							"OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/Section122TestValidationOutlet.js"
 						}
 					],
 					"Layout": {
@@ -2447,7 +2447,7 @@
 						"FooterVisible": false
 					},
 					"_Type": "Section.Type.FormCell",
-					"_Name": "Section122TestForm"
+					"_Name": "Section122TestFormOutlet"
 				},
 				{
 					"Separators": {
@@ -2461,7 +2461,7 @@
 						{
 							"Value": "12.3 Confirmation of uneven on the brick surface  after removing the hanging hook",
 							"_Type": "Control.Type.FormCell.Title",
-							"_Name": "FormCellTitle2",
+							"_Name": "Section123QuestionOutlet",
 							"IsVisible": true,
 							"Separator": true,
 							"PlaceHolder": "PlaceHolder",
@@ -2471,7 +2471,7 @@
 						{
 							"Value": "{qc_ITEMS/DATE_INSPECTED}",
 							"_Type": "Control.Type.FormCell.DatePicker",
-							"_Name": "FormCellDatePicker1",
+							"_Name": "Section123DateOutlet",
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Date",
@@ -2483,7 +2483,7 @@
 								"{qc_ITEMS/INSPECTED_BY}"
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
-							"_Name": "FormCellListPicker3",
+							"_Name": "Section123InspectedByOutlet",
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -2586,7 +2586,7 @@
 						{
 							"Value": "Visual confirmation",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "FormCellSimpleProperty7",
+							"_Name": "Section123MethodOutlet",
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Method",
@@ -2599,7 +2599,7 @@
 								"{qc_ITEMS/DECISION_TAKEN}"
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
-							"_Name": "FormCellListPicker4",
+							"_Name": "Section123DecisionTakenOutlet",
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -2629,7 +2629,7 @@
 						},
 						{
 							"_Type": "Control.Type.FormCell.Button",
-							"_Name": "FormCellButton3",
+							"_Name": "Section123NextOutlet",
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -2639,7 +2639,7 @@
 							"Image": "sap-icon://open-command-field",
 							"ImagePosition": "Trailing",
 							"Enabled": true,
-							"OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/Section123Validation.js"
+							"OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/Section123ValidationOutlet.js"
 						}
 					],
 					"Layout": {
@@ -2650,7 +2650,7 @@
 						"FooterVisible": false
 					},
 					"_Type": "Section.Type.FormCell",
-					"_Name": "SectionFormCell1"
+					"_Name": "Section123FormOutlet"
 				},
 				{
 					"Separators": {
@@ -2707,16 +2707,6 @@
 			},
 			{
 				"_Type": "Control.Type.ActionBarItem",
-				"_Name": "UpdateButton",
-				"Caption": "",
-				"Icon": "sap-icon://save",
-				"Position": "Right",
-				"IsIconCircular": false,
-				"Visible": true,
-				"OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/UpdateSnorkelData_Sheet3.js"
-			},
-			{
-				"_Type": "Control.Type.ActionBarItem",
 				"_Name": "NextPage",
 				"Caption": "",
 				"Icon": "sap-icon://navigation-right-arrow",
@@ -2724,6 +2714,16 @@
 				"IsIconCircular": false,
 				"Visible": true,
 				"OnPress": "/TRL_Snorkel_Digitization_TSL/Actions/Nav2Sheet4.action"
+			},
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "UpdateButton",
+				"Caption": "",
+				"Icon": "sap-icon://save",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/UpdateSnorkelData_Sheet3.js"
 			},
 			{
 				"_Type": "Control.Type.ActionBarItem",

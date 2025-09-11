@@ -14,10 +14,6 @@ export default async function LoadSnorkelDataPage4(clientAPI) {
         const readLink = binding['@odata.readLink'];
         const service = '/TRL_Snorkel_Digitization_TSL/Services/TRL_Snorkel_CAP_SRV.service';
         const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
-        const headerSection = FormSectionedTable.getSection('HeaderSection');
-
-        // --- Header Setup ---
-       
 
         // --- Read Data ---
         const [itemsResult, headerFiles, attachmentsResult, testdata] = await Promise.all([
@@ -32,12 +28,21 @@ export default async function LoadSnorkelDataPage4(clientAPI) {
         const attachmentGroups = groupAttachmentsByQuestion(attachments);
         const flags = { next: false };
 
-        // --- Process Header Files ---
-         if (clientAPI.binding.SNORKEL_NO) {
-            FormSectionedTable.getSection('Section131Form').setVisible(true);
-            
+        // --- Handle TYPE condition ---
+        if (binding.SNORKEL_NO) {
+            if (binding.TYPE?.toLowerCase() === "inlet") {
+                FormSectionedTable.getSection('Section131Form').setVisible(true);
+                FormSectionedTable.getSection('Section131FormOutlet').setVisible(false);
+            } else if (binding.TYPE?.toLowerCase() === "outlet") {
+                FormSectionedTable.getSection('Section131FormOutlet').setVisible(true);
+                FormSectionedTable.getSection('Section131Form').setVisible(false);
+            } else {
+                // hide both if TYPE is missing or invalid
+                FormSectionedTable.getSection('Section131Form').setVisible(false);
+                FormSectionedTable.getSection('Section131FormOutlet').setVisible(false);
+            }
         }
-       
+
         // --- Section Keys (Page 4 only) ---
         const orderedSectionKeys = [
           '13.1', '13.2', '13.3', '13.4', '13.5', '13.6'
@@ -52,7 +57,7 @@ export default async function LoadSnorkelDataPage4(clientAPI) {
                 return sectionKeyFromItem === sectionKey;
             });
 
-            if (item  && item.INSPECTED_BY) {
+            if (item && item.INSPECTED_BY) {
                 const question = item.QUESTION?.trim();
                 const normalize = str => str?.replace(/\s+/g, ' ')?.trim();
                 const matchingAttachments = attachmentGroups[normalize(question)] || [];
@@ -66,7 +71,6 @@ export default async function LoadSnorkelDataPage4(clientAPI) {
                         flags,
                         testdata._array
                     );
-                    // console.log(`✅ Loader for ${sectionKey} executed successfully`);
                 } catch (err) {
                     console.error(`❌ Error running loader for section ${sectionKey}:`, err);
                 }
@@ -77,7 +81,7 @@ export default async function LoadSnorkelDataPage4(clientAPI) {
 
     } catch (error) {
         clientAPI.dismissActivityIndicator();
-        // console.error('❌ Fatal error in LoadSnorkelDataPage4:', error);
+        console.error('❌ Fatal error in LoadSnorkelDataPage4:', error);
     }
 }
 

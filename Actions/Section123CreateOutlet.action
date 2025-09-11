@@ -1,0 +1,19 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Section123Create"
+	},
+	"OnFailure": "/TRL_Snorkel_Digitization_TSL/Actions/CreateEntityFailureMessage.action",
+	"Target": {
+		"Service": "/TRL_Snorkel_Digitization_TSL/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_ITEM"
+	},
+	"Properties": {
+		"DATE_INSPECTED": "#Page:SnorkelInstallation3/#Control:Section123DateOutlet/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation3/#Control:Section123DecisionTakenOutlet/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation3/#Control:Section123InspectedByOutlet/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation3/#Control:Section123MethodOutlet/#Value",
+		"QUESTION": "12.3 Confirmation of uneven on the brick surface after removing the hanging hook",
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
+	}
+}

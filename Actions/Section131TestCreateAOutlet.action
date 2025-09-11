@@ -1,0 +1,22 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Section131TestCreateAOutlet"
+	},
+	"Target": {
+		"Service": "/TRL_Snorkel_Digitization_TSL/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_Test_Table"
+	},
+	"Properties": {
+		"ff1": "#Page:SnorkelInstallation4/#Control:Section131FF1/#Value",
+		"ff2": "#Page:SnorkelInstallation4/#Control:Section131FF12/#Value",
+		"remark": "#Page:SnorkelInstallation4/#Control:Section131TestRemark1/#Value",
+		"settleduration": "#Page:SnorkelInstallation4/#Control:Section131SettingTime1/#Value",
+		"testname": "*9  Actual situation for mixing the outer castable",
+		"tf1": "#Page:SnorkelInstallation4/#Control:Section131TF1/#Value",
+		"tf2": "#Page:SnorkelInstallation4/#Control:Section131TF12/#Value",
+		"watercasting": "#Page:SnorkelInstallation4/#Control:Section131TestWaterCasteing1/#Value",
+		"batchNo": "#Page:SnorkelInstallation4/#Control:Section131TestBatchNo1/#Value",
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
+	}
+}
