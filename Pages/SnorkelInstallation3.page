@@ -218,7 +218,7 @@
 							"Separator": true,
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						}
 					],
 					"Layout": {
@@ -1763,7 +1763,7 @@
 							"_Name": "Section123NextButton",
 							"IsVisible": true,
 							"Separator": true,
-							"Title": "Next",
+							"Title": "Next Sheet",
 							"Alignment": "Center",
 							"ButtonType": "Text",
 							"Semantic": "Tint",
@@ -2632,7 +2632,7 @@
 							"_Name": "Section123NextOutlet",
 							"IsVisible": true,
 							"Separator": true,
-							"Title": "Next",
+							"Title": "Next Sheet",
 							"Alignment": "Center",
 							"ButtonType": "Text",
 							"Semantic": "Tint",
@@ -2651,41 +2651,6 @@
 					},
 					"_Type": "Section.Type.FormCell",
 					"_Name": "Section123FormOutlet"
-				},
-				{
-					"Separators": {
-						"TopSectionSeparator": false,
-						"BottomSectionSeparator": true,
-						"HeaderSeparator": true,
-						"FooterSeparator": true,
-						"ControlSeparator": true
-					},
-					"Layout": {
-						"LayoutType": "Vertical",
-						"HorizontalAlignment": "Leading"
-					},
-					"_Type": "Section.Type.ButtonTable",
-					"_Name": "Sheet3To4NavButtonContainer",
-					"Visible": true,
-					"EmptySection": {
-						"FooterVisible": false
-					},
-					"Buttons": [
-						{
-							"_Type": "ButtonTable.Type.Button",
-							"_Name": "Sheet3To4NavButton",
-							"Title": "Next Sheet",
-							"Alignment": "Center",
-							"ButtonType": "Text",
-							"Semantic": "Tint",
-							"Image": "sap-icon://open-command-field",
-							"ImagePosition": "Trailing",
-							"FullWidth": false,
-							"Visible": true,
-							"Enabled": true,
-							"OnPress": "/TRL_Snorkel_Digitization_TSL/Actions/Nav2Sheet4.action"
-						}
-					]
 				}
 			]
 		}
