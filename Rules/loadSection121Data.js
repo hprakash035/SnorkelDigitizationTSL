@@ -20,7 +20,7 @@ export async function loadSection121Data(pageProxy, qcItem121, FormSectionedTabl
         const userPhotoOutlet = FormSectionedTable.getSection('Section121UserInputImageOutlet');
 
         if (type === "inlet") {
-            console.log("🔑 TYPE=inlet → Showing Section121FormInlet, hiding Section121FormOutlet");
+            // console.log("🔑 TYPE=inlet → Showing Section121FormInlet, hiding Section121FormOutlet");
             if (sectionInlet) await sectionInlet.setVisible(true);
             if (sectionOutlet) await sectionOutlet.setVisible(false);
 
@@ -44,7 +44,7 @@ export async function loadSection121Data(pageProxy, qcItem121, FormSectionedTabl
                     const ctrl = sectionInlet.getControl(key);
                     if (ctrl && qcItem121[key] !== undefined && qcItem121[key] !== null) {
                         await ctrl.setValue(qcItem121[key]);
-                        console.log(`✔️ ${key} set to`, qcItem121[key]);
+                        // console.log(`✔️ ${key} set to`, qcItem121[key]);
                     }
                 }
 
@@ -54,14 +54,14 @@ export async function loadSection121Data(pageProxy, qcItem121, FormSectionedTabl
                     await nextButton.setVisible(false);
 
                     if (flags?.next === false && section122Inlet) {
-                        console.log("➡️ flags.next=false → Making Section122FormInlet visible");
+                        // console.log("➡️ flags.next=false → Making Section122FormInlet visible");
                         await section122Inlet.setVisible(true);
                     }
                 }
             }
         } 
         else if (type === "outlet") {
-            console.log("🔑 TYPE=outlet → Showing Section121FormOutlet, hiding Section121FormInlet");
+            // console.log("🔑 TYPE=outlet → Showing Section121FormOutlet, hiding Section121FormInlet");
             if (sectionOutlet) await sectionOutlet.setVisible(true);
             if (sectionInlet) await sectionInlet.setVisible(false);
 
@@ -84,21 +84,21 @@ export async function loadSection121Data(pageProxy, qcItem121, FormSectionedTabl
             if (flags?.next === false) {
                 if (imageOutlet) {
                     await imageOutlet.setVisible(true);
-                    console.log("🖼️ Section121ImageOutlet made visible");
+                    // console.log("🖼️ Section121ImageOutlet made visible");
                 }
                 if (userPhotoOutlet) {
                     await userPhotoOutlet.setVisible(true);
-                    console.log("📷 Section121UserInputImageOutlet made visible");
+                    // console.log("📷 Section121UserInputImageOutlet made visible");
                 }
             }
         } 
         else {
-            console.warn(`⚠️ Unknown TYPE '${type}'. Neither Inlet nor Outlet section displayed.`);
+            // console.warn(`⚠️ Unknown TYPE '${type}'. Neither Inlet nor Outlet section displayed.`);
             if (sectionInlet) await sectionInlet.setVisible(false);
             if (sectionOutlet) await sectionOutlet.setVisible(false);
         }
 
     } catch (error) {
-        console.error("💥 Error in loadSection121Data:", error);
+        // console.error("💥 Error in loadSection121Data:", error);
     }
 }

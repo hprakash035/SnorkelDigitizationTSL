@@ -1763,7 +1763,7 @@
 							"_Name": "Section123NextButton",
 							"IsVisible": true,
 							"Separator": true,
-							"Title": "Next Sheet",
+							"Title": "Next ",
 							"Alignment": "Center",
 							"ButtonType": "Text",
 							"Semantic": "Tint",

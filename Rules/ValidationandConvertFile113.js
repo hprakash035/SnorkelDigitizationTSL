@@ -5,29 +5,29 @@
 export default async function ValidateAndConvertFile113(clientAPI) {
   const pageProxy = clientAPI.getPageProxy();
   const binding = pageProxy.getBindingObject();
-  console.log("🚀 ValidateAndConvertFile113 started | Binding:", binding);
+  // console.log("🚀 ValidateAndConvertFile113 started | Binding:", binding);
 
   try {
     const sectionedTable = pageProxy.getControl('FormSectionedTable');
     const snorkelNo = clientAPI.binding.SNORKEL_NO;
-    console.log("🔑 SNORKEL_NO:", snorkelNo);
+    // console.log("🔑 SNORKEL_NO:", snorkelNo);
     const type = clientAPI.binding.TYPE;
-    console.log("🔑 TYPE:", type);
+    // console.log("🔑 TYPE:", type);
 
     const photoSection = sectionedTable.getSection('Section113UserInputImage');
     const photoControl = photoSection?.getControl('Section113TakePhoto');
     const attachments = photoControl?.getValue() || [];
-    console.log("📎 Attachments found:", attachments);
+    // console.log("📎 Attachments found:", attachments);
 
     const question = sectionedTable
       .getSection('Section113Form')
       .getControl('Section113Question')
       .getValue();
-    console.log("❓ Question value:", question);
+    // console.log("❓ Question value:", question);
 
     // Validate attachment
     if (!attachments || attachments.length === 0 || !attachments[0].content) {
-      console.warn("⚠️ Invalid attachment. No file or missing content.");
+      // console.warn("⚠️ Invalid attachment. No file or missing content.");
       await clientAPI.executeAction({
         Name: "/TRL_Snorkel_Digitization_TSL/Actions/AttachmnetValidation.action",
         Properties: {
@@ -41,7 +41,7 @@ export default async function ValidateAndConvertFile113(clientAPI) {
 
     // Allow only 1 file
     if (attachments.length > 1) {
-      console.warn("⚠️ Multiple attachments detected. Keeping only the first.");
+      // console.warn("⚠️ Multiple attachments detected. Keeping only the first.");
       photoControl.setValue([attachments[0]]);
 
       await clientAPI.executeAction({
@@ -56,14 +56,14 @@ export default async function ValidateAndConvertFile113(clientAPI) {
     }
 
     const file = attachments[0];
-    console.log("📄 Processing file:", {
-      urlString: file.urlString,
-      mimeType: file.contentType,
-      size: file.content?.byteLength
-    });
+    // // console.log("📄 Processing file:", {
+    //   urlString: file.urlString,
+    //   mimeType: file.contentType,
+    //   size: file.content?.byteLength
+    // });
 
     const base64Content = arrayBufferToBase64(file.content);
-    console.log("🔄 Converted file to base64, length:", base64Content?.length);
+    // console.log("🔄 Converted file to base64, length:", base64Content?.length);
 
     const uploadedFile = {
       base64: base64Content,
@@ -71,11 +71,11 @@ export default async function ValidateAndConvertFile113(clientAPI) {
       mimeType: file.contentType || 'application/pdf',
       size: file.content.byteLength
     };
-    console.log("📦 UploadedFile object prepared:", uploadedFile);
+    // console.log("📦 UploadedFile object prepared:", uploadedFile);
 
     clientAPI.getClientData().uploadedFile = uploadedFile;
 
-    console.log("📤 Executing AttachmentCreate113.action...");
+    // console.log("📤 Executing AttachmentCreate113.action...");
     await clientAPI.executeAction({
       Name: "/TRL_Snorkel_Digitization_TSL/Actions/AttachmentCreate113.action",
       Properties: {
@@ -98,30 +98,30 @@ export default async function ValidateAndConvertFile113(clientAPI) {
 
     if (normalizedType === "inlet") {
       if (sectionInlet) {
-        console.log("✅ TYPE=inlet. Showing Section121FormInlet...");
+        // console.log("✅ TYPE=inlet. Showing Section121FormInlet...");
         await sectionInlet.setVisible(true);
       }
       if (sectionOutlet) {
-        console.log("🚫 Hiding Section121FormOutlet...");
+        // console.log("🚫 Hiding Section121FormOutlet...");
         await sectionOutlet.setVisible(false);
       }
     } else if (normalizedType === "outlet") {
       if (sectionOutlet) {
-        console.log("✅ TYPE=outlet. Showing Section121FormOutlet...");
+        // console.log("✅ TYPE=outlet. Showing Section121FormOutlet...");
         await sectionOutlet.setVisible(true);
       }
       if (sectionInlet) {
-        console.log("🚫 Hiding Section121FormInlet...");
+        // console.log("🚫 Hiding Section121FormInlet...");
         await sectionInlet.setVisible(false);
       }
     } else {
-      console.warn(`⚠️ Unknown TYPE '${type}'. No section shown.`);
+      // console.warn(`⚠️ Unknown TYPE '${type}'. No section shown.`);
     }
 
-    console.log("🏁 ValidateAndConvertFile113 completed successfully");
+    // console.log("🏁 ValidateAndConvertFile113 completed successfully");
 
   } catch (error) {
-    console.error("💥 Error in ValidateAndConvertFile113:", error);
+    // console.error("💥 Error in ValidateAndConvertFile113:", error);
     await clientAPI.executeAction({
       Name: "/TRL_Snorkel_Digitization_TSL/Actions/AttachmnetValidation.action",
       Properties: {
@@ -135,13 +135,13 @@ export default async function ValidateAndConvertFile113(clientAPI) {
 }
 
 function arrayBufferToBase64(buffer) {
-  console.log("🧩 Converting ArrayBuffer to base64...");
+  // console.log("🧩 Converting ArrayBuffer to base64...");
   let binary = '';
   const bytes = new Uint8Array(buffer);
   for (let i = 0; i < bytes.byteLength; i++) {
     binary += String.fromCharCode(bytes[i]);
   }
   const base64 = btoa(binary);
-  console.log("🔄 Conversion complete. Base64 length:", base64.length);
+  // console.log("🔄 Conversion complete. Base64 length:", base64.length);
   return base64;
 }
