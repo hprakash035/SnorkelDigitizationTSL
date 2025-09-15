@@ -1,13 +1,13 @@
-import { loadSection171Data } from './loadSection171Data';
-import { loadSection181Data } from './loadSection181Data';
-import { loadSection182Data } from './loadSection182Data';
-import { loadSection183Data } from './loadSection183Data';
-import { loadSection184Data } from './loadSection184Data';
-import { loadSection191Data } from './loadSection191Data';
-import { loadSection192Data } from './loadSection192Data';
-import { loadSection193Data } from './loadSection193Data';
-import { loadSection194Data } from './loadSection194Data';
-import { loadSection195Data } from './loadSection195Data';
+// import { loadSection171Data } from './loadSection171Data';
+// import { loadSection181Data } from './loadSection181Data';
+// import { loadSection182Data } from './loadSection182Data';
+// import { loadSection183Data } from './loadSection183Data';
+// import { loadSection184Data } from './loadSection184Data';
+// import { loadSection191Data } from './loadSection191Data';
+// import { loadSection192Data } from './loadSection192Data';
+// import { loadSection193Data } from './loadSection193Data';
+// import { loadSection194Data } from './loadSection194Data';
+// import { loadSection195Data } from './loadSection195Data';
 
 export default async function LoadSnorkelDataPage5(clientAPI) {
     try {
@@ -36,10 +36,16 @@ export default async function LoadSnorkelDataPage5(clientAPI) {
         const attachmentGroups = groupAttachmentsByQuestion(attachments);
         const flags = { next: false };
 
-        // --- Process Header Files ---
-         if (clientAPI.binding.SNORKEL_NO) {
-            FormSectionedTable.getSection('Section171Form').setVisible(true);
-            
+          if (binding.SNORKEL_NO) {
+            if (binding.TYPE?.toLowerCase() === "inlet") {
+               
+                FormSectionedTable.getSection('Section141Form').setVisible(true);
+                FormSectionedTable.getSection('Section171FormOutlet').setVisible(false);
+            } else if (binding.TYPE?.toLowerCase() === "outlet") {
+             
+                FormSectionedTable.getSection('Section171FormOutlet').setVisible(true);
+                FormSectionedTable.getSection('Section141Form').setVisible(false);
+            } 
         }
        
         // --- Section Keys (Page 4 only) ---

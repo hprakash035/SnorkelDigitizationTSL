@@ -61,6 +61,6 @@ export default async function Section1Visible(clientAPI) {
        
 
     } catch (error) {
-        console.error("💥 [Section1Visible] Error occurred:", error);
+        // console.error("💥 [Section1Visible] Error occurred:", error);
     }
 }

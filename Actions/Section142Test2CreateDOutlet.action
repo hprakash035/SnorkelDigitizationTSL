@@ -1,0 +1,18 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Section142Test2CreateDOutlet"
+	},
+	"Target": {
+		"Service": "/TRL_Snorkel_Digitization_TSL/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_Test_Table"
+	},
+	"Properties": {
+		"actualvalue": "#Page:SnorkelInstallation4/#Control:Section142TestActualGapD/#Value",
+		"method": "#Page:SnorkelInstallation4/#Control:Section142TestMethodD/#Value",
+		"position": "#Page:SnorkelInstallation4/#Control:Section142TestPositionGapD/#Value",
+		"tolerance": "#Page:SnorkelInstallation4/#Control:Section142TestToleranceD/#Value",
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value",
+		"testname": "*10 The gap between the top of brick surface to the top face of castable"
+	}
+}

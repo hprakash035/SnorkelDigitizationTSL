@@ -37,9 +37,19 @@ export default function Section122ValidationInlet(clientAPI) {
 
  
     FormSectionedTable.getSection('Section122FormInlet').getControl('Section123NextButton').setVisible(false);
-            return clientAPI.executeAction({
+          
+            
+            
+            
+            clientAPI.executeAction({
                 Name: '/TRL_Snorkel_Digitization_TSL/Actions/Section122Create.action'
             });
+
+              
+           return clientAPI.executeAction({
+                Name: '/TRL_Snorkel_Digitization_TSL/Actions/Nav2Sheet4.action'
+            });
+           
            
         } else {
             return clientAPI.executeAction({

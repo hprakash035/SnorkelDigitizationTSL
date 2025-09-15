@@ -1,0 +1,18 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Section142CreateOutlet"
+	},
+	"OnFailure": "/TRL_Snorkel_Digitization_TSL/Actions/CreateEntityFailureMessage.action",
+	"Target": {
+		"Service": "/TRL_Snorkel_Digitization_TSL/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_ITEM"
+	},
+	"Properties": {
+	"DECISION_TAKEN": "#Page:SnorkelInstallation4/#Control:Section142DecisionTaken/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation4/#Control:Section142InspectedBy/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation4/#Control:Section142Method/#Value",
+		"QUESTION": " 14.2 The gap between the top of brick surface to the top face of casting    *10",
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
+	}
+}

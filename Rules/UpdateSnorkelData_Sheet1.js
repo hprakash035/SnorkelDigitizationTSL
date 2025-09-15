@@ -135,6 +135,7 @@ export default async function UpdateSnorkelData_Sheet1(clientAPI) {
         // console.log(`📌 getSectionFormId called with key: ${key}`);
         return {
             '1.1': 'Section1Form',
+            '1.2': 'Section12Form',
             '2.1': 'Section2Form',
             '3.1': 'Section31Form',
             '3.2': 'Section32Form',
@@ -166,6 +167,14 @@ export default async function UpdateSnorkelData_Sheet1(clientAPI) {
             updated.INSPECTED_BY = (await section.getControl('Section1InspectedBy1').getValue())?.[0]?.ReturnValue || '';
             updated.METHOD = await section.getControl('Section1InspectionMethod1').getValue();
             updated.DECISION_TAKEN = (await section.getControl('Section1DecisionTaken1').getValue())?.[0]?.ReturnValue || '';
+        }
+         if (key === '1.2') {
+            // console.log('📝 Extracting values for Section 1.1');
+            updated.DATE_INSPECTED = await getDate('Section12Date');
+            updated.INSPECTED_BY = (await section.getControl('Section12InspectedBy').getValue())?.[0]?.ReturnValue || '';
+            updated.METHOD = await section.getControl('Section12InspectionMethod').getValue();
+            updated.DECISION_TAKEN = (await section.getControl('Section12DecisionTaken').getValue())?.[0]?.ReturnValue || '';
+             updated.characterField = await section.getControl('Characterfield').getValue();
         }
         if (key === '2.1') {
             // console.log('📝 Extracting values for Section 2.1');

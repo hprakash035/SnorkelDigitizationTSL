@@ -1,9 +1,9 @@
-import { loadSection131Data } from './loadSection131Data';
-import { loadSection132Data } from './loadSection132Data';
-import { loadSection133Data } from './loadSection133Data';
-import { loadSection134Data } from './loadSection134Data';
-import { loadSection135Data } from './loadSection135Data';
-import { loadSection136Data } from './loadSection136Data';
+// import { loadSection131Data } from './loadSection131Data';
+// import { loadSection132Data } from './loadSection132Data';
+// import { loadSection133Data } from './loadSection133Data';
+// import { loadSection134Data } from './loadSection134Data';
+// import { loadSection135Data } from './loadSection135Data';
+// import { loadSection136Data } from './loadSection136Data';
 
 export default async function LoadSnorkelDataPage4(clientAPI) {
     try {
@@ -31,16 +31,14 @@ export default async function LoadSnorkelDataPage4(clientAPI) {
         // --- Handle TYPE condition ---
         if (binding.SNORKEL_NO) {
             if (binding.TYPE?.toLowerCase() === "inlet") {
+               
                 FormSectionedTable.getSection('Section131Form').setVisible(true);
                 FormSectionedTable.getSection('Section131FormOutlet').setVisible(false);
             } else if (binding.TYPE?.toLowerCase() === "outlet") {
+             
                 FormSectionedTable.getSection('Section131FormOutlet').setVisible(true);
                 FormSectionedTable.getSection('Section131Form').setVisible(false);
-            } else {
-                // hide both if TYPE is missing or invalid
-                FormSectionedTable.getSection('Section131Form').setVisible(false);
-                FormSectionedTable.getSection('Section131FormOutlet').setVisible(false);
-            }
+            } 
         }
 
         // --- Section Keys (Page 4 only) ---

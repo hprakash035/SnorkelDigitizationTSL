@@ -1,6 +1,6 @@
 export default async function ValidateAndConvertFile(clientAPI) {
     const pageProxy = clientAPI.getPageProxy();
-    console.log("🚀 [ValidateAndConvertFile] Started validation and conversion process.");
+    // console.log("🚀 [ValidateAndConvertFile] Started validation and conversion process.");
 
     try {
         const formSectionedTable = pageProxy.getControl('FormSectionedTable');

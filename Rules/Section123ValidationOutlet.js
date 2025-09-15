@@ -30,11 +30,13 @@ export default function Section123Validation(clientAPI) {
             const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
   
    
-    FormSectionedTable.getSection('Section123FormOutlet').getControl('Section123NextOutlet').setVisible(false);
-            return clientAPI.executeAction({
+    FormSectionedTable.getSection('Section123FormOutlet').getControl('Section123NextOutlet').setVisible(false); clientAPI.executeAction({
                 Name: '/TRL_Snorkel_Digitization_TSL/Actions/Section123CreateOutlet.action'
             });
-           
+          
+            return clientAPI.executeAction({
+                Name: '/TRL_Snorkel_Digitization_TSL/Actions/Nav2Sheet4.action'
+            });
         } else {
             return clientAPI.executeAction({
                 Name: '/TRL_Snorkel_Digitization_TSL/Actions/ValidationFailed.action'

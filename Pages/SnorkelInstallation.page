@@ -20,15 +20,27 @@
 						"ControlSeparator": true
 					},
 					"Controls": [
+						
 						{
 							"Value": "{CUSTOMER_NAME}",
-							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Company",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "Company ",
-							"Enabled": true,
-							"IsEditable": true
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Company:",
+							"PlaceHolder": "Select Type",
+							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": true,
+							"AllowDefaultValueIfOneItem": true,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "TSL",
+									"ReturnValue": "TSL"
+								}
+							]
 						},
 						{
 							"Value": "{SNORKEL_NO}",

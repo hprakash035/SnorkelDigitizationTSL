@@ -8,7 +8,7 @@ export default async function Section131TestFormValidationOutlet(clientAPI) {
         const customerName = pageProxy.binding?.CUSTOMER_NAME;
 
      
-        const water1 = section131.getControl('Section131WaterCasting1')?.getValue();
+        const water1 = section131.getControl('Section131TestWaterCasteing1')?.getValue();
         const ff1 = section131.getControl('Section131FF1')?.getValue();
         const tf1 = section131.getControl('Section131TF1')?.getValue();
         const settingTime1 = section131.getControl('Section131SettingTime1')?.getValue();
@@ -26,7 +26,7 @@ export default async function Section131TestFormValidationOutlet(clientAPI) {
         await clientAPI.executeAction({ Name: '/TRL_Snorkel_Digitization_TSL/Actions/Section131TestCreateAOutlet.action' });
 
         // Test 2
-        const water2 = section131.getControl('Section131WaterCasting2')?.getValue();
+        const water2 = section131.getControl('Section131TestWaterCasteing2')?.getValue();
         const ff2 = section131.getControl('Section131FF2')?.getValue();
         const tf2 = section131.getControl('Section131TF2')?.getValue();
         const settingTime2 = section131.getControl('Section131SettingTime2')?.getValue();
@@ -43,7 +43,7 @@ export default async function Section131TestFormValidationOutlet(clientAPI) {
         await clientAPI.executeAction({ Name: '/TRL_Snorkel_Digitization_TSL/Actions/Section131TestCreateBOutlet.action' });
 
         
-        const water3 = section131.getControl('Section131WaterCasting3')?.getValue();
+        const water3 = section131.getControl('Section131TestWaterCasteing3')?.getValue();
         const ff3 = section131.getControl('Section131FF3')?.getValue();
         const tf3 = section131.getControl('Section131TF3')?.getValue();
         const settingTime3 = section131.getControl('Section131SettingTime3')?.getValue();

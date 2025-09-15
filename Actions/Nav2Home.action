@@ -4,5 +4,6 @@
 		"_Name": "Nav2Home"
 	},
 	"PageToOpen": "/TRL_Snorkel_Digitization_TSL/Pages/Main.page",
-	"BackStackVisible": false
+	"BackStackVisible": false,
+	"ClearHistory": true
 }

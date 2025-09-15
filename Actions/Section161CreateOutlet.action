@@ -1,0 +1,19 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Section161CreateOutlet"
+	},
+	"OnFailure": "/TRL_Snorkel_Digitization_TSL/Actions/CreateEntityFailureMessage.action",
+	"Target": {
+		"Service": "/TRL_Snorkel_Digitization_TSL/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_ITEM"
+	},
+	"Properties": {
+		"DATE_INSPECTED": "#Page:SnorkelInstallation4/#Control:Section161Date/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation4/#Control:Section161DecisionTaken/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation4/#Control:Section161InspectedBy/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation4/#Control:Section161Method/#Value",
+		"QUESTION": "16.1 Selection of drying pattern",
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
+	}
+}

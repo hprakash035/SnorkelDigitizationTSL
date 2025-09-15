@@ -5,10 +5,10 @@
 export default async function ValidateAndConvertFile102(clientAPI) {
     const pageProxy = clientAPI.getPageProxy();
 const binding = pageProxy.getBindingObject();
-
+console.log(clientAPI);
     try {
         const sectionedTable = pageProxy.getControl('FormSectionedTable');
-        const snorkelNo =clientAPI.binding.SNORKEL_NO;
+        const snorkelNo =binding?.SNORKEL_NO;
 
         const photoSection = sectionedTable.getSection('Section102UserInputImage');
         const photoControl = photoSection?.getControl('Section102TakePhoto');
@@ -74,7 +74,17 @@ const binding = pageProxy.getBindingObject();
         });
 
         // ✅ Show next section
-        sectionedTable.getSection('Section103Form').setVisible(true);
+        // sectionedTable.getSection('Section103Form').setVisible(true);
+
+         const section102TestFormName2 = sectionedTable.getSection('Section102TestFormName2');
+        if (section102TestFormName2) {
+            await section102TestFormName2.setVisible(true);
+        }
+
+        const section102Test2Form = sectionedTable.getSection('Section102Test2Form');
+        if (section102Test2Form) {
+            await section102Test2Form.setVisible(true);
+        }
 
     } catch (error) {
         console.log(error);

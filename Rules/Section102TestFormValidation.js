@@ -25,7 +25,7 @@ export default async function Section102TestFormValidation(clientAPI) {
             if (!waterCasting) missingFields.push("Water Casting");
             if (!fludity || fludity.length === 0) missingFields.push("Fludity Of Castable");
             if (!vibration) missingFields.push("Adding Vibration");
-            // Optional: if remark is mandatory, uncomment below
+            // Optional remark validation
             // if (!remark) missingFields.push("Remark");
 
             if (missingFields.length > 0) {
@@ -41,30 +41,33 @@ export default async function Section102TestFormValidation(clientAPI) {
             await clientAPI.executeAction({ Name: actionNames[i - 1] });
         }
 
-        // All 5 test validations passed
+        // Hide Next button
         const nextButton = section102.getControl('Section102Test2NextButton');
         if (nextButton) {
             nextButton.setVisible(false);
         }
-    const Section102TestFormName2 = form.getSection('Section102TestFormName2');
-                if (Section102TestFormName2) {
-                    await Section102TestFormName2.setVisible(true);
-                }
-        const nextSection = form.getSection('Section102Test2Form');
-        if (nextSection) {
-            nextSection.setVisible(true);
-        }
-         const Section102StaticImage = form.getSection('Section102StaticImage');
-                if (Section102StaticImage) {
-                    await Section102StaticImage.setVisible(true);
-                }
-        const nextSection2 = form.getSection('Section102UserInputImage');
-        if (nextSection) {
-            nextSection2.setVisible(true);
+
+        // --- Show Images First ---
+        const section102StaticImage = form.getSection('Section102StaticImage');
+        if (section102StaticImage) {
+            await section102StaticImage.setVisible(true);
         }
 
-        
+        const section102UserInputImage = form.getSection('Section102UserInputImage');
+        if (section102UserInputImage) {
+            await section102UserInputImage.setVisible(true);
+        }
 
+        // --- Then Show Form Sections ---
+        const section102TestFormName2 = form.getSection('Section102TestFormName2');
+        if (section102TestFormName2) {
+            await section102TestFormName2.setVisible(true);
+        }
+
+        const section102Test2Form = form.getSection('Section102Test2Form');
+        if (section102Test2Form) {
+            await section102Test2Form.setVisible(true);
+        }
 
     } catch (e) {
         console.error('❌ Error in Section102TestFormValidation:', e);

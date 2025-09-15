@@ -1,0 +1,55 @@
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+export default function Section184ValidationOutlet(clientAPI) {
+    try {
+        const pageProxy = clientAPI.getPageProxy();
+        const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
+        //  const headerSection = FormSectionedTable.getSection('HeaderSection');
+        // const snorkelNoControl = headerSection.getControl('SnorkelNo');
+        // const snorkelNo = snorkelNoControl.getValue();
+
+        // if (!snorkelNo) {
+        //     return clientAPI.executeAction({
+        //         Name: '/TRL_Snorkel_Digitization_TSL/Actions/ValidationFailed.action',
+        //     });
+        // }
+
+        const Section184 = FormSectionedTable.getSection('Section184FormOutlet');
+        const decisionTakenCtrl = Section184.getControl('Section184DecisionTaken');
+        const inspectedByCtrl = Section184.getControl('Section184InspectedBy');
+        const inspectionMethodCtrl = Section184.getControl('Section184Method');
+
+        const decisionTaken = decisionTakenCtrl?.getValue();
+        const inspectedBy = inspectedByCtrl?.getValue();
+        const inspectionMethod = inspectionMethodCtrl?.getValue();
+
+        if (decisionTaken && inspectedBy && inspectionMethod && decisionTaken != "") {
+    const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
+    const Section184UserInputImage1 =FormSectionedTable.getSection('Section185FormOutlet');
+    Section184UserInputImage1.setVisible('true');
+    
+    // const Section184UserInputImageOutlet =FormSectionedTable.getSection('Section184UserInputImageOutlet');
+    // Section184UserInputImageOutlet.setVisible('true');
+     FormSectionedTable.getSection('Section184FormOutlet').getControl('Section185NextButton').setVisible(false);
+            return clientAPI.executeAction({
+                Name: '/TRL_Snorkel_Digitization_TSL/Actions/Section184CreateOutlet.action'
+            });
+           
+        } else {
+            return clientAPI.executeAction({
+                Name: '/TRL_Snorkel_Digitization_TSL/Actions/ValidationFailed.action'
+            });
+        }
+
+    } catch (error) {
+        return clientAPI.executeAction({
+            Name: '/TRL_Snorkel_Digitization_TSL/Actions/ErrorMessage.action',
+            Properties: {
+                Message: 'Unexpected error during Section 18.4 validation. Please try again.'
+            }
+        });
+    }
+}
+

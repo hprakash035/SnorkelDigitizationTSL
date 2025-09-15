@@ -2521,6 +2521,80 @@
 					"_Name": "Section102TestForm"
 				},
 				{
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.Image",
+					"_Name": "Section102StaticImage",
+					"Visible": false,
+					"Image": "/TRL_Snorkel_Digitization_TSL/Images/Section10Image.png",
+					"Alignment": "Center",
+					"ContentMode": "ScaleAspectFit"
+				},
+				{
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Styles": {
+						"Image": ""
+					},
+					"_Type": "Section.Type.Image",
+					"_Name": "Section102DynamicImage",
+					"Visible": false,
+					"Image": "{imageUri}",
+					"Alignment": "Center",
+					"ContentMode": "ScaleAspectFit"
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"Validation": {
+								"Visible": true
+							},
+							"_Type": "Control.Type.FormCell.Attachment",
+							"_Name": "Section102TakePhoto",
+							"IsVisible": true,
+							"Separator": true,
+							"OnValueChange": "/TRL_Snorkel_Digitization_TSL/Rules/ValidationandConvertFile102.js",
+							"AttachmentActionType": [
+								"TakePhoto",
+								"AddPhoto"
+							],
+							"AttachmentTitle": "Take Photo"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": false,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "Section102UserInputImage"
+				},
+				{
 					"Separators": {
 						"TopSectionSeparator": false,
 						"BottomSectionSeparator": true,
@@ -2753,80 +2827,6 @@
 					"_Name": "Section102Test2Form"
 				},
 				{
-					"EmptySection": {
-						"FooterVisible": false
-					},
-					"Separators": {
-						"TopSectionSeparator": false,
-						"BottomSectionSeparator": true,
-						"HeaderSeparator": true,
-						"FooterSeparator": true,
-						"ControlSeparator": true
-					},
-					"_Type": "Section.Type.Image",
-					"_Name": "Section102StaticImage",
-					"Visible": false,
-					"Image": "/TRL_Snorkel_Digitization_TSL/Images/Section10Image.png",
-					"Alignment": "Center",
-					"ContentMode": "ScaleAspectFit"
-				},
-				{
-					"EmptySection": {
-						"FooterVisible": false
-					},
-					"Separators": {
-						"TopSectionSeparator": false,
-						"BottomSectionSeparator": true,
-						"HeaderSeparator": true,
-						"FooterSeparator": true,
-						"ControlSeparator": true
-					},
-					"Styles": {
-						"Image": ""
-					},
-					"_Type": "Section.Type.Image",
-					"_Name": "Section102DynamicImage",
-					"Visible": false,
-					"Image": "{imageUri}",
-					"Alignment": "Center",
-					"ContentMode": "ScaleAspectFit"
-				},
-				{
-					"Separators": {
-						"TopSectionSeparator": false,
-						"BottomSectionSeparator": true,
-						"HeaderSeparator": true,
-						"FooterSeparator": true,
-						"ControlSeparator": true
-					},
-					"Controls": [
-						{
-							"Validation": {
-								"Visible": true
-							},
-							"_Type": "Control.Type.FormCell.Attachment",
-							"_Name": "Section102TakePhoto",
-							"IsVisible": true,
-							"Separator": true,
-							"OnValueChange": "/TRL_Snorkel_Digitization_TSL/Rules/ValidationandConvertFile102.js",
-							"AttachmentActionType": [
-								"TakePhoto",
-								"AddPhoto"
-							],
-							"AttachmentTitle": "Take Photo"
-						}
-					],
-					"Layout": {
-						"NumberOfColumns": 1
-					},
-					"Visible": false,
-					"EmptySection": {
-						"FooterVisible": false
-					},
-					"_Type": "Section.Type.FormCell",
-					"_Name": "Section102UserInputImage"
-				},
-				{
 					"Separators": {
 						"TopSectionSeparator": false,
 						"BottomSectionSeparator": true,
@@ -2843,7 +2843,7 @@
 							"Separator": true,
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"Value": "{qc_ITEMS/DATE_INSPECTED}",

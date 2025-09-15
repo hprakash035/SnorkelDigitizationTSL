@@ -25,6 +25,7 @@ export default async function LoadSnorkelDataPage1(clientAPI) {
 
         // Header setup
         headerSection.getControl('SnorkelNo').setEditable(false);
+        
         if (clientAPI.binding.SNORKEL_NO) {
             FormSectionedTable.getSection('Section1Form').setVisible(true);
             headerSection.getControl('DownloadReport').setVisible(true);

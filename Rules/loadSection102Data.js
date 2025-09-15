@@ -1,29 +1,23 @@
-export async function loadSection102Data(pageProxy, qcItem102, FormSectionedTable, attachments = [], flags, testdataArray = []) {
+export  async function loadSection102Data(pageProxy, qcItem102, FormSectionedTable, attachments = [], flags, testdataArray = []) {
     try {
-  
         const Section102 = FormSectionedTable.getSection('Section102Form');
         if (!Section102) throw new Error("❌ Section102Form not found in FormSectionedTable.");
 
         await Section102.setVisible(true);
 
-        // Hide Next button if exists
-        const nextButton = Section102.getControl('Section102TestNextButton');
-        if (nextButton) {
-            await nextButton.setVisible(false);
-
-            if (flags?.next === false) {
-                // Show test forms
-                const Section102TestFormName = FormSectionedTable.getSection('Section102TestFormName');
-                const Section102TestForm = FormSectionedTable.getSection('Section102TestForm');
-                await Section102TestFormName?.setVisible(true);
-                await Section102TestForm?.setVisible(true); const Section63StaticImage = FormSectionedTable.getSection('Section102StaticImage');
-                if (Section63StaticImage) {
-                    Section63StaticImage.setVisible(true);
+        const hideNextButton = async (section, buttonName) => {
+            if (section) {
+                const btn = section.getControl(buttonName);
+                if (btn) {
+                    await btn.setVisible(false);
+                    // console.log(`🚫 Hidden ${buttonName}`);
                 }
             }
-        }
+        };
 
-    
+        // -------------------------------
+        // Metadata population
+        // -------------------------------
         const setValueIfPresent = async (controlName, value) => {
             const control = Section102.getControl(controlName);
             if (control && value !== undefined && value !== null) {
@@ -35,8 +29,18 @@ export async function loadSection102Data(pageProxy, qcItem102, FormSectionedTabl
         await setValueIfPresent('Section102Method', qcItem102.METHOD);
         await setValueIfPresent('Section102DecisionTaken', qcItem102.DECISION_TAKEN ? [qcItem102.DECISION_TAKEN] : undefined);
 
+        // 🔴 Hide NEXT button after metadata populated
+        await hideNextButton(Section102, "Section102TestNextButton");
+
+        // -------------------------------
+        // Image handling
+        // -------------------------------
+        FormSectionedTable.getSection('Section102StaticImage').setVisible(true);
         const dynamicImageSection = FormSectionedTable.getSection('Section102DynamicImage');
+        const Section102UserInputImage = FormSectionedTable.getSection('Section102UserInputImage');
         const binding = pageProxy.getBindingObject();
+
+        let hasDynamicImage = false;
 
         if (dynamicImageSection && attachments.length > 0) {
             const firstAttachment = attachments[0];
@@ -45,59 +49,78 @@ export async function loadSection102Data(pageProxy, qcItem102, FormSectionedTabl
 
             if (base64 && base64.length > 100) {
                 binding.imageUri = `data:${mimeType};base64,${base64}`;
-                dynamicImageSection.setVisible(true);
-                dynamicImageSection.redraw();
-            } else {
-                binding.imageUri = '/TRL_Snorkel_Digitization_TSL/Images/NoImageAvailable.png';
-                dynamicImageSection.setVisible(false);
-                dynamicImageSection.redraw();
-            }
-        } else {
-            binding.imageUri = '/TRL_Snorkel_Digitization_TSL/Images/NoImageAvailable.png';
-            dynamicImageSection?.setVisible(false);
-            dynamicImageSection?.redraw();
+                await dynamicImageSection.setVisible(true);
+                await dynamicImageSection.redraw();
 
-            const Section102UserInputImage = FormSectionedTable.getSection('Section102UserInputImage');
-            if (Section102UserInputImage) {
-                Section102UserInputImage.setVisible(true);
+                hasDynamicImage = true;
+                // console.log("✅ Dynamic image loaded");
+
+                if (Section102UserInputImage) {
+                    await Section102UserInputImage.setVisible(false);
+                }
             }
         }
 
-        // --- Load Mixing Test values (*4 Actual situation...) ---
-const testForm = FormSectionedTable.getSection('Section102TestForm');
-if (testForm && testdataArray.length > 0) {
-    const mixingTests = testdataArray.filter(t =>
-        t.testname?.includes("mixing the outer castable")
-    );
+        if (!hasDynamicImage) {
+            binding.imageUri = '/TRL_Snorkel_Digitization_TSL/Images/NoImageAvailable.png';
+            await dynamicImageSection?.setVisible(false);
+            await dynamicImageSection?.redraw();
 
-    for (let i = 0; i < Math.min(mixingTests.length, 5); i++) {
-        const test = mixingTests[i];
-        const suffix = i + 1;
-
-        const setFormValue = async (ctrl, val) => {
-            const c = testForm.getControl(ctrl);
-            if (c && val !== undefined && val !== null) {
-                await c.setValue(val);
+            if (Section102UserInputImage) {
+                await Section102UserInputImage.setVisible(true);
+                // console.log("ℹ️ No dynamic image → showing UserInputImage");
             }
-        };
+        }
 
-        // Populate Batch No
-        await setFormValue(`Section102TestBatchNo${suffix}`, test.batchNo);
+        // -------------------------------
+        // Mixing Test
+        // -------------------------------
+        const Section102TestForm = FormSectionedTable.getSection('Section102TestForm');
+        if (Section102TestForm) {
+            await Section102TestForm.setVisible(true);
 
-        // Populate other fields
-        await setFormValue(`Section102PowerWeight${suffix}`, test.powderweight);
-        await setFormValue(`Section102WaterCasting${suffix}`, test.watercasting);
-        await setFormValue(`Section102FludityOfCastable${suffix}`, test.fluidity ? [test.fluidity] : []);
-        await setFormValue(`Section102AddingVibration${suffix}`, test.vibration);
-        await setFormValue(`Section102Remark${suffix}`, test.remark);
-    }
-}
+            if (testdataArray.length > 0) {
+                const mixingTests = testdataArray.filter(t =>
+                    t.testname?.includes("mixing the outer castable")
+                );
 
+                for (let i = 0; i < Math.min(mixingTests.length, 5); i++) {
+                    const test = mixingTests[i];
+                    const suffix = i + 1;
 
-        // --- Load Gap Measurement tests (*5 The gap between...) ---
+                    const setFormValue = async (ctrl, val) => {
+                        const c = Section102TestForm.getControl(ctrl);
+                        if (c && val !== undefined && val !== null) {
+                            await c.setValue(val);
+                        }
+                    };
+
+                    await setFormValue(`Section102TestBatchNo${suffix}`, test.batchNo);
+                    await setFormValue(`Section102PowerWeight${suffix}`, test.powderweight);
+                    await setFormValue(`Section102WaterCasting${suffix}`, test.watercasting);
+                    await setFormValue(`Section102FludityOfCastable${suffix}`, test.fluidity ? [test.fluidity] : []);
+                    await setFormValue(`Section102AddingVibration${suffix}`, test.vibration);
+                    await setFormValue(`Section102Remark${suffix}`, test.remark);
+                }
+
+                // console.log(`✅ Mixing tests loaded: ${mixingTests.length}`);
+
+                // Hide NEXT button of TestForm AFTER data
+                await hideNextButton(Section102TestForm, "Section102Test2NextButton");
+            } else {
+                // console.log("ℹ️ No mixing test data → form remains empty");
+            }
+        }
+
+        // -------------------------------
+        // Gap Measurement Tests
+        // -------------------------------
         const gapFormHeader = FormSectionedTable.getSection('Section102TestFormName2');
         const gapForm = FormSectionedTable.getSection('Section102Test2Form');
-        if (gapForm && gapFormHeader) {
+
+        let hasGapData = false;
+
+        if (hasDynamicImage && gapForm && gapFormHeader) {
             await gapFormHeader.setVisible(true);
             await gapForm.setVisible(true);
 
@@ -117,13 +140,35 @@ if (testForm && testdataArray.length > 0) {
                 if (!suffix) continue;
 
                 const ctrl = gapForm.getControl(`Section102TestActualGap${suffix}`);
-                if (ctrl) await ctrl.setValue(gap.actualvalue);
+                if (ctrl && gap.actualvalue) {
+                    await ctrl.setValue(gap.actualvalue);
+                    hasGapData = true;
+                }
             }
+
+            // console.log(`✅ Gap test form shown, data found: ${hasGapData}`);
+
+            if (hasGapData) {
+                // Hide NEXT button of Gap Test form AFTER data
+                await hideNextButton(gapForm, "Section102StaticNextButton");
+            }
+        } else {
+            await gapFormHeader?.setVisible(false);
+            await gapForm?.setVisible(false);
+            // console.log("ℹ️ Gap test hidden (no dynamic image)");
         }
-    const Section111Form =FormSectionedTable.getSection('Section103Form');
-    Section111Form.setVisible('true');
-        // console.log('✅ loadSection102Data completed successfully');
+
+        // -------------------------------
+        // Section 103 visibility
+        // -------------------------------
+        const Section103Form = FormSectionedTable.getSection('Section103Form');
+        if (Section103Form) {
+            await Section103Form.setVisible(hasGapData);
+            // console.log(`📌 Section103Form visibility = ${hasGapData}`);
+        }
+
+        // console.log("✅ loadSection102Data completed successfully");
     } catch (error) {
-        console.error("❌ Error in loadSection102Data:", error);
+        // console.error("❌ Error in loadSection102Data:", error);
     }
 }
