@@ -18,9 +18,9 @@
 					},
 					"Controls": [
 						{
-							"Value": "14.1 Clean the brick gaps & bricks with compressed air before installing 3rd ring bricks",
+							"Value": " 14.1 Confirmation of the workability for gap filling castable 'HC-H111B' *9",
 							"_Type": "Control.Type.FormCell.Title",
-							"_Name": "FormCellTitle6",
+							"_Name": "Section141Question",
 							"IsVisible": true,
 							"Separator": true,
 							"PlaceHolder": "PlaceHolder",
@@ -135,7 +135,7 @@
 							]
 						},
 						{
-							"Value": "Visual confirmation",
+							"Value": "Actual Measurement",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section141Method",
 							"IsVisible": true,
@@ -180,7 +180,7 @@
 						},
 						{
 							"_Type": "Control.Type.FormCell.Button",
-							"_Name": "Section142NextButton",
+							"_Name": "Sectiopn141TestNextButton",
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -198,10 +198,10 @@
 					},
 					"Header": {
 						"_Type": "SectionCommon.Type.Header",
-						"_Name": "SectionCommonTypeHeader5",
+						"_Name": "Section15Header",
 						"AccessoryType": "None",
 						"UseTopPadding": true,
-						"Caption": "14. Installation of 3rd ring bricks for Upleg"
+						"Caption": " 14.1 Confirmation of the workability for gap filling  castable 'HC-H111B' *9"
 					},
 					"Visible": false,
 					"EmptySection": {
@@ -218,191 +218,23 @@
 						"FooterSeparator": true,
 						"ControlSeparator": true
 					},
-					"Controls": [
-						{
-							"Value": "14.2 Installation of bricks according to brick no and position (Top mark)",
-							"_Type": "Control.Type.FormCell.Title",
-							"_Name": "Section142Question",
-							"IsVisible": true,
-							"Separator": true,
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": false
-						},
-						{
-							"_Type": "Control.Type.FormCell.DatePicker",
-							"_Name": "Section142Date",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "Date",
-							"IsEditable": true,
-							"Mode": "Date"
-						},
-						{
-							"Value": [
-								"{qc_ITEMS/INSPECTED_BY}"
-							],
-							"_Type": "Control.Type.FormCell.ListPicker",
-							"_Name": "Section142InspectedBy",
-							"IsVisible": true,
-							"Separator": true,
-							"AllowMultipleSelection": false,
-							"AllowEmptySelection": false,
-							"Caption": "Inspected By",
-							"IsSelectedSectionEnabled": false,
-							"AllowDefaultValueIfOneItem": false,
-							"IsEditable": true,
-							"PickerItems": [
-								{
-									"DisplayValue": "SOUMEN JANA",
-									"ReturnValue": "SOUMEN JANA"
-								},
-								{
-									"DisplayValue": "RAHUL CHOUDHARY",
-									"ReturnValue": "RAHUL CHOUDHARY"
-								},
-								{
-									"DisplayValue": "SOURAV JAISWAL",
-									"ReturnValue": "SOURAV JAISWAL"
-								},
-								{
-									"DisplayValue": "SURYAMANI KUMAR",
-									"ReturnValue": "SURYAMANI KUMAR"
-								},
-								{
-									"DisplayValue": "JOSHABANTA SAHU",
-									"ReturnValue": "JOSHABANTA SAHU"
-								},
-								{
-									"DisplayValue": "S PRASANTH KUMAR",
-									"ReturnValue": "S PRASANTH KUMAR"
-								},
-								{
-									"DisplayValue": "ANKIT KUMAR PATRA",
-									"ReturnValue": "ANKIT KUMAR PATRA"
-								},
-								{
-									"DisplayValue": "GAUTAM KIRO",
-									"ReturnValue": "GAUTAM KIRO"
-								},
-								{
-									"DisplayValue": "TAPAS KUMAR SAHU",
-									"ReturnValue": "TAPAS KUMAR SAHU"
-								},
-								{
-									"DisplayValue": "NILACHAL NAHAK",
-									"ReturnValue": "NILACHAL NAHAK"
-								},
-								{
-									"DisplayValue": "SURESH MUNDA",
-									"ReturnValue": "SURESH MUNDA"
-								},
-								{
-									"DisplayValue": "KARTIKA BEHERA",
-									"ReturnValue": "KARTIKA BEHERA"
-								},
-								{
-									"DisplayValue": "NARENDRA NAIK",
-									"ReturnValue": "NARENDRA NAIK"
-								},
-								{
-									"DisplayValue": "HEMANTA KUMAR SINGH",
-									"ReturnValue": "HEMANTA KUMAR SINGH"
-								},
-								{
-									"DisplayValue": "KULDEEP MAHANANDA",
-									"ReturnValue": "KULDEEP MAHANANDA"
-								},
-								{
-									"DisplayValue": "SANJAY RAJ PRADHAN",
-									"ReturnValue": "SANJAY RAJ PRADHAN"
-								},
-								{
-									"DisplayValue": "BANSIDHAR SETH",
-									"ReturnValue": "BANSIDHAR SETH"
-								},
-								{
-									"DisplayValue": "TAPAN KUMAR JENA",
-									"ReturnValue": "TAPAN KUMAR JENA"
-								},
-								{
-									"DisplayValue": "SONU SETH",
-									"ReturnValue": "SONU SETH"
-								},
-								{
-									"DisplayValue": "OMPRAKASH SATNAMI",
-									"ReturnValue": "OMPRAKASH SATNAMI"
-								}
-							]
-						},
-						{
-							"Value": "Visual confirmation",
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section142Method",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "Method",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": false
-						},
-						{
-							"Value": [
-								"{qc_ITEMS/DECISION_TAKEN}"
-							],
-							"_Type": "Control.Type.FormCell.ListPicker",
-							"_Name": "Section142DecisionTaken",
-							"IsVisible": true,
-							"Separator": true,
-							"AllowMultipleSelection": false,
-							"AllowEmptySelection": false,
-							"Caption": "Decision Taken",
-							"DataPaging": {
-								"ShowLoadingIndicator": false,
-								"PageSize": 50
-							},
-							"PickerPrompt": "Please select one single item",
-							"PlaceHolder": "PlaceHolder",
-							"IsSelectedSectionEnabled": true,
-							"IsPickerDismissedOnSelection": false,
-							"IsSearchCancelledAfterSelection": false,
-							"AllowDefaultValueIfOneItem": false,
-							"IsEditable": true,
-							"PickerItems": [
-								{
-									"DisplayValue": "OK",
-									"ReturnValue": "ok"
-								},
-								{
-									"DisplayValue": "Not OK",
-									"ReturnValue": "not_ok"
-								}
-							]
-						},
-						{
-							"_Type": "Control.Type.FormCell.Button",
-							"_Name": "Section143NextButton",
-							"IsVisible": true,
-							"Separator": true,
-							"Title": "Next",
-							"Alignment": "Center",
-							"ButtonType": "Text",
-							"Semantic": "Tint",
-							"Image": "sap-icon://open-command-field",
-							"ImagePosition": "Trailing",
-							"Enabled": true,
-							"OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/Section142Validation.js"
-						}
-					],
+					"Controls": [],
 					"Layout": {
 						"NumberOfColumns": 1
+					},
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader11",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "*9 Inspection result of outer castable workability"
 					},
 					"Visible": false,
 					"EmptySection": {
 						"FooterVisible": false
 					},
 					"_Type": "Section.Type.FormCell",
-					"_Name": "Section142Form"
+					"_Name": "Section141FormName"
 				},
 				{
 					"Separators": {
@@ -414,750 +246,244 @@
 					},
 					"Controls": [
 						{
-							"Value": "14.3 Check the gap between all the bricks (≤0.5mm)",
-							"_Type": "Control.Type.FormCell.Title",
-							"_Name": "Section143Question",
-							"IsVisible": true,
-							"Separator": true,
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": false
-						},
-						{
-							"Value": "{qc_ITEMS/DATE_INSPECTED}",
-							"_Type": "Control.Type.FormCell.DatePicker",
-							"_Name": "Section143Date",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "Date",
-							"IsEditable": true,
-							"Mode": "Date"
-						},
-						{
-							"Value": [
-								"{qc_ITEMS/INSPECTED_BY}"
-							],
-							"_Type": "Control.Type.FormCell.ListPicker",
-							"_Name": "Section143InspectedBy",
-							"IsVisible": true,
-							"Separator": true,
-							"AllowMultipleSelection": false,
-							"AllowEmptySelection": false,
-							"Caption": "Inspected By",
-							"IsSelectedSectionEnabled": false,
-							"AllowDefaultValueIfOneItem": false,
-							"IsEditable": true,
-							"PickerItems": [
-								{
-									"DisplayValue": "SOUMEN JANA",
-									"ReturnValue": "SOUMEN JANA"
-								},
-								{
-									"DisplayValue": "RAHUL CHOUDHARY",
-									"ReturnValue": "RAHUL CHOUDHARY"
-								},
-								{
-									"DisplayValue": "SOURAV JAISWAL",
-									"ReturnValue": "SOURAV JAISWAL"
-								},
-								{
-									"DisplayValue": "SURYAMANI KUMAR",
-									"ReturnValue": "SURYAMANI KUMAR"
-								},
-								{
-									"DisplayValue": "JOSHABANTA SAHU",
-									"ReturnValue": "JOSHABANTA SAHU"
-								},
-								{
-									"DisplayValue": "S PRASANTH KUMAR",
-									"ReturnValue": "S PRASANTH KUMAR"
-								},
-								{
-									"DisplayValue": "ANKIT KUMAR PATRA",
-									"ReturnValue": "ANKIT KUMAR PATRA"
-								},
-								{
-									"DisplayValue": "GAUTAM KIRO",
-									"ReturnValue": "GAUTAM KIRO"
-								},
-								{
-									"DisplayValue": "TAPAS KUMAR SAHU",
-									"ReturnValue": "TAPAS KUMAR SAHU"
-								},
-								{
-									"DisplayValue": "NILACHAL NAHAK",
-									"ReturnValue": "NILACHAL NAHAK"
-								},
-								{
-									"DisplayValue": "SURESH MUNDA",
-									"ReturnValue": "SURESH MUNDA"
-								},
-								{
-									"DisplayValue": "KARTIKA BEHERA",
-									"ReturnValue": "KARTIKA BEHERA"
-								},
-								{
-									"DisplayValue": "NARENDRA NAIK",
-									"ReturnValue": "NARENDRA NAIK"
-								},
-								{
-									"DisplayValue": "HEMANTA KUMAR SINGH",
-									"ReturnValue": "HEMANTA KUMAR SINGH"
-								},
-								{
-									"DisplayValue": "KULDEEP MAHANANDA",
-									"ReturnValue": "KULDEEP MAHANANDA"
-								},
-								{
-									"DisplayValue": "SANJAY RAJ PRADHAN",
-									"ReturnValue": "SANJAY RAJ PRADHAN"
-								},
-								{
-									"DisplayValue": "BANSIDHAR SETH",
-									"ReturnValue": "BANSIDHAR SETH"
-								},
-								{
-									"DisplayValue": "TAPAN KUMAR JENA",
-									"ReturnValue": "TAPAN KUMAR JENA"
-								},
-								{
-									"DisplayValue": "SONU SETH",
-									"ReturnValue": "SONU SETH"
-								},
-								{
-									"DisplayValue": "OMPRAKASH SATNAMI",
-									"ReturnValue": "OMPRAKASH SATNAMI"
-								}
-							]
-						},
-						{
-							"Value": "Warpage cheking Filler Gauge",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section143Method",
+							"_Name": "Section141TestBatchNo1",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "Method",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": false
-						},
-						{
-							"Value": [
-								"{qc_ITEMS/DECISION_TAKEN}"
-							],
-							"_Type": "Control.Type.FormCell.ListPicker",
-							"_Name": "Section143DecisionTaken",
-							"IsVisible": true,
-							"Separator": true,
-							"AllowMultipleSelection": false,
-							"AllowEmptySelection": false,
-							"Caption": "Decision Taken",
-							"DataPaging": {
-								"ShowLoadingIndicator": false,
-								"PageSize": 50
-							},
-							"PickerPrompt": "Please select one single item",
-							"PlaceHolder": "PlaceHolder",
-							"IsSelectedSectionEnabled": true,
-							"IsPickerDismissedOnSelection": false,
-							"IsSearchCancelledAfterSelection": false,
-							"AllowDefaultValueIfOneItem": false,
-							"IsEditable": true,
-							"PickerItems": [
-								{
-									"DisplayValue": "OK",
-									"ReturnValue": "ok"
-								},
-								{
-									"DisplayValue": "Not OK",
-									"ReturnValue": "not_ok"
-								}
-							]
-						},
-						{
-							"_Type": "Control.Type.FormCell.Button",
-							"_Name": "Section144NextButton",
-							"IsVisible": true,
-							"Separator": true,
-							"Title": "Next",
-							"Alignment": "Center",
-							"ButtonType": "Text",
-							"Semantic": "Tint",
-							"Image": "sap-icon://open-command-field",
-							"ImagePosition": "Trailing",
-							"Enabled": true,
-							"OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/Section143Validation.js"
-						}
-					],
-					"Layout": {
-						"NumberOfColumns": 1
-					},
-					"Visible": false,
-					"EmptySection": {
-						"FooterVisible": false
-					},
-					"_Type": "Section.Type.FormCell",
-					"_Name": "Section143Form"
-				},
-				{
-					"Separators": {
-						"TopSectionSeparator": false,
-						"BottomSectionSeparator": true,
-						"HeaderSeparator": true,
-						"FooterSeparator": true,
-						"ControlSeparator": true
-					},
-					"Controls": [
-						{
-							"Value": "14.3. a) Number of gaps which is coming >0.5mm(no)\t\t\t",
-							"_Type": "Control.Type.FormCell.Title",
-							"_Name": "Section144Question",
-							"IsVisible": true,
-							"Separator": true,
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": false
-						},
-						{
-							"Value": "{qc_ITEMS/DATE_INSPECTED}",
-							"_Type": "Control.Type.FormCell.DatePicker",
-							"_Name": "Section144Date",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "Date",
-							"IsEditable": true,
-							"Mode": "Date"
-						},
-						{
-							"Value": [
-								"{qc_ITEMS/INSPECTED_BY}"
-							],
-							"_Type": "Control.Type.FormCell.ListPicker",
-							"_Name": "Section144InspectedBy",
-							"IsVisible": true,
-							"Separator": true,
-							"AllowMultipleSelection": false,
-							"AllowEmptySelection": false,
-							"Caption": "Inspected By",
-							"IsSelectedSectionEnabled": false,
-							"AllowDefaultValueIfOneItem": false,
-							"IsEditable": true,
-							"PickerItems": [
-								{
-									"DisplayValue": "SOUMEN JANA",
-									"ReturnValue": "SOUMEN JANA"
-								},
-								{
-									"DisplayValue": "RAHUL CHOUDHARY",
-									"ReturnValue": "RAHUL CHOUDHARY"
-								},
-								{
-									"DisplayValue": "SOURAV JAISWAL",
-									"ReturnValue": "SOURAV JAISWAL"
-								},
-								{
-									"DisplayValue": "SURYAMANI KUMAR",
-									"ReturnValue": "SURYAMANI KUMAR"
-								},
-								{
-									"DisplayValue": "JOSHABANTA SAHU",
-									"ReturnValue": "JOSHABANTA SAHU"
-								},
-								{
-									"DisplayValue": "S PRASANTH KUMAR",
-									"ReturnValue": "S PRASANTH KUMAR"
-								},
-								{
-									"DisplayValue": "ANKIT KUMAR PATRA",
-									"ReturnValue": "ANKIT KUMAR PATRA"
-								},
-								{
-									"DisplayValue": "GAUTAM KIRO",
-									"ReturnValue": "GAUTAM KIRO"
-								},
-								{
-									"DisplayValue": "TAPAS KUMAR SAHU",
-									"ReturnValue": "TAPAS KUMAR SAHU"
-								},
-								{
-									"DisplayValue": "NILACHAL NAHAK",
-									"ReturnValue": "NILACHAL NAHAK"
-								},
-								{
-									"DisplayValue": "SURESH MUNDA",
-									"ReturnValue": "SURESH MUNDA"
-								},
-								{
-									"DisplayValue": "KARTIKA BEHERA",
-									"ReturnValue": "KARTIKA BEHERA"
-								},
-								{
-									"DisplayValue": "NARENDRA NAIK",
-									"ReturnValue": "NARENDRA NAIK"
-								},
-								{
-									"DisplayValue": "HEMANTA KUMAR SINGH",
-									"ReturnValue": "HEMANTA KUMAR SINGH"
-								},
-								{
-									"DisplayValue": "KULDEEP MAHANANDA",
-									"ReturnValue": "KULDEEP MAHANANDA"
-								},
-								{
-									"DisplayValue": "SANJAY RAJ PRADHAN",
-									"ReturnValue": "SANJAY RAJ PRADHAN"
-								},
-								{
-									"DisplayValue": "BANSIDHAR SETH",
-									"ReturnValue": "BANSIDHAR SETH"
-								},
-								{
-									"DisplayValue": "TAPAN KUMAR JENA",
-									"ReturnValue": "TAPAN KUMAR JENA"
-								},
-								{
-									"DisplayValue": "SONU SETH",
-									"ReturnValue": "SONU SETH"
-								},
-								{
-									"DisplayValue": "OMPRAKASH SATNAMI",
-									"ReturnValue": "OMPRAKASH SATNAMI"
-								}
-							]
-						},
-						{
-							"Value": "Warpage cheking Filler Gauge",
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section144Method",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "Method",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": false
-						},
-						{
-							"Value": [
-								"{qc_ITEMS/DECISION_TAKEN}"
-							],
-							"_Type": "Control.Type.FormCell.ListPicker",
-							"_Name": "Section144DecisionTaken",
-							"IsVisible": true,
-							"Separator": true,
-							"AllowMultipleSelection": false,
-							"AllowEmptySelection": false,
-							"Caption": "Decision Taken",
-							"DataPaging": {
-								"ShowLoadingIndicator": false,
-								"PageSize": 50
-							},
-							"PickerPrompt": "Please select one single item",
-							"PlaceHolder": "PlaceHolder",
-							"IsSelectedSectionEnabled": true,
-							"IsPickerDismissedOnSelection": false,
-							"IsSearchCancelledAfterSelection": false,
-							"AllowDefaultValueIfOneItem": false,
-							"IsEditable": true,
-							"PickerItems": [
-								{
-									"DisplayValue": "OK",
-									"ReturnValue": "ok"
-								},
-								{
-									"DisplayValue": "Not OK",
-									"ReturnValue": "not_ok"
-								}
-							]
-						},
-						{
-							"_Type": "Control.Type.FormCell.Button",
-							"_Name": "Section145NextButton",
-							"IsVisible": true,
-							"Separator": true,
-							"Title": "Next",
-							"Alignment": "Center",
-							"ButtonType": "Text",
-							"Semantic": "Tint",
-							"Image": "sap-icon://open-command-field",
-							"ImagePosition": "Trailing",
-							"Enabled": true,
-							"OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/Section144Validation.js"
-						}
-					],
-					"Layout": {
-						"NumberOfColumns": 1
-					},
-					"Visible": false,
-					"EmptySection": {
-						"FooterVisible": false
-					},
-					"_Type": "Section.Type.FormCell",
-					"_Name": "Section144Form"
-				},
-				{
-					"Separators": {
-						"TopSectionSeparator": false,
-						"BottomSectionSeparator": true,
-						"HeaderSeparator": true,
-						"FooterSeparator": true,
-						"ControlSeparator": true
-					},
-					"Controls": [
-						{
-							"Value": "14.3. b) Maximum gap between two bricks (mm)",
-							"_Type": "Control.Type.FormCell.Title",
-							"_Name": "Section145Question",
-							"IsVisible": true,
-							"Separator": true,
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": false
-						},
-						{
-							"Value": "{qc_ITEMS/DATE_INSPECTED}",
-							"_Type": "Control.Type.FormCell.DatePicker",
-							"_Name": "Section145Date",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "Date",
-							"IsEditable": true,
-							"Mode": "Date"
-						},
-						{
-							"Value": [
-								"{qc_ITEMS/INSPECTED_BY}"
-							],
-							"_Type": "Control.Type.FormCell.ListPicker",
-							"_Name": "Section145InspectedBy",
-							"IsVisible": true,
-							"Separator": true,
-							"AllowMultipleSelection": false,
-							"AllowEmptySelection": false,
-							"Caption": "Inspected By",
-							"IsSelectedSectionEnabled": false,
-							"AllowDefaultValueIfOneItem": false,
-							"IsEditable": true,
-							"PickerItems": [
-								{
-									"DisplayValue": "SOUMEN JANA",
-									"ReturnValue": "SOUMEN JANA"
-								},
-								{
-									"DisplayValue": "RAHUL CHOUDHARY",
-									"ReturnValue": "RAHUL CHOUDHARY"
-								},
-								{
-									"DisplayValue": "SOURAV JAISWAL",
-									"ReturnValue": "SOURAV JAISWAL"
-								},
-								{
-									"DisplayValue": "SURYAMANI KUMAR",
-									"ReturnValue": "SURYAMANI KUMAR"
-								},
-								{
-									"DisplayValue": "JOSHABANTA SAHU",
-									"ReturnValue": "JOSHABANTA SAHU"
-								},
-								{
-									"DisplayValue": "S PRASANTH KUMAR",
-									"ReturnValue": "S PRASANTH KUMAR"
-								},
-								{
-									"DisplayValue": "ANKIT KUMAR PATRA",
-									"ReturnValue": "ANKIT KUMAR PATRA"
-								},
-								{
-									"DisplayValue": "GAUTAM KIRO",
-									"ReturnValue": "GAUTAM KIRO"
-								},
-								{
-									"DisplayValue": "TAPAS KUMAR SAHU",
-									"ReturnValue": "TAPAS KUMAR SAHU"
-								},
-								{
-									"DisplayValue": "NILACHAL NAHAK",
-									"ReturnValue": "NILACHAL NAHAK"
-								},
-								{
-									"DisplayValue": "SURESH MUNDA",
-									"ReturnValue": "SURESH MUNDA"
-								},
-								{
-									"DisplayValue": "KARTIKA BEHERA",
-									"ReturnValue": "KARTIKA BEHERA"
-								},
-								{
-									"DisplayValue": "NARENDRA NAIK",
-									"ReturnValue": "NARENDRA NAIK"
-								},
-								{
-									"DisplayValue": "HEMANTA KUMAR SINGH",
-									"ReturnValue": "HEMANTA KUMAR SINGH"
-								},
-								{
-									"DisplayValue": "KULDEEP MAHANANDA",
-									"ReturnValue": "KULDEEP MAHANANDA"
-								},
-								{
-									"DisplayValue": "SANJAY RAJ PRADHAN",
-									"ReturnValue": "SANJAY RAJ PRADHAN"
-								},
-								{
-									"DisplayValue": "BANSIDHAR SETH",
-									"ReturnValue": "BANSIDHAR SETH"
-								},
-								{
-									"DisplayValue": "TAPAN KUMAR JENA",
-									"ReturnValue": "TAPAN KUMAR JENA"
-								},
-								{
-									"DisplayValue": "SONU SETH",
-									"ReturnValue": "SONU SETH"
-								},
-								{
-									"DisplayValue": "OMPRAKASH SATNAMI",
-									"ReturnValue": "OMPRAKASH SATNAMI"
-								}
-							]
-						},
-						{
-							"Value": "Warpage cheking Filler Gauge",
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section145Method",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "Method",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": false
-						},
-						{
-							"Value": [
-								"{qc_ITEMS/DECISION_TAKEN}"
-							],
-							"_Type": "Control.Type.FormCell.ListPicker",
-							"_Name": "Section145DecisionTaken",
-							"IsVisible": true,
-							"Separator": true,
-							"AllowMultipleSelection": false,
-							"AllowEmptySelection": false,
-							"Caption": "Decision Taken",
-							"DataPaging": {
-								"ShowLoadingIndicator": false,
-								"PageSize": 50
-							},
-							"PickerPrompt": "Please select one single item",
-							"PlaceHolder": "PlaceHolder",
-							"IsSelectedSectionEnabled": true,
-							"IsPickerDismissedOnSelection": false,
-							"IsSearchCancelledAfterSelection": false,
-							"AllowDefaultValueIfOneItem": false,
-							"IsEditable": true,
-							"PickerItems": [
-								{
-									"DisplayValue": "OK",
-									"ReturnValue": "ok"
-								},
-								{
-									"DisplayValue": "Not OK",
-									"ReturnValue": "not_ok"
-								}
-							]
-						},
-						{
-							"_Type": "Control.Type.FormCell.Button",
-							"_Name": "Section146NextButton",
-							"IsVisible": true,
-							"Separator": true,
-							"Title": "Next",
-							"Alignment": "Center",
-							"ButtonType": "Text",
-							"Semantic": "Tint",
-							"Image": "sap-icon://open-command-field",
-							"ImagePosition": "Trailing",
-							"Enabled": true,
-							"OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/Section145Validation.js"
-						}
-					],
-					"Layout": {
-						"NumberOfColumns": 1
-					},
-					"Visible": false,
-					"EmptySection": {
-						"FooterVisible": false
-					},
-					"_Type": "Section.Type.FormCell",
-					"_Name": "Section145Form"
-				},
-				{
-					"Separators": {
-						"TopSectionSeparator": false,
-						"BottomSectionSeparator": true,
-						"HeaderSeparator": true,
-						"FooterSeparator": true,
-						"ControlSeparator": true
-					},
-					"Controls": [
-						{
-							"Value": "14.4 Put Adhesive in alternate bricks and fixing the ring",
-							"_Type": "Control.Type.FormCell.Title",
-							"_Name": "Section146Question",
-							"IsVisible": true,
-							"Separator": true,
+							"Caption": "1.Batch No",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
 						},
 						{
-							"Value": "{qc_ITEMS/DATE_INSPECTED}",
-							"_Type": "Control.Type.FormCell.DatePicker",
-							"_Name": "Section146Date",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "Date",
-							"IsEditable": true,
-							"Mode": "Date"
-						},
-						{
-							"Value": [
-								"{qc_ITEMS/INSPECTED_BY}"
-							],
-							"_Type": "Control.Type.FormCell.ListPicker",
-							"_Name": "Section146InspectedBy",
-							"IsVisible": true,
-							"Separator": true,
-							"AllowMultipleSelection": false,
-							"AllowEmptySelection": false,
-							"Caption": "Inspected By",
-							"IsSelectedSectionEnabled": false,
-							"AllowDefaultValueIfOneItem": false,
-							"IsEditable": true,
-							"PickerItems": [
-								{
-									"DisplayValue": "SOUMEN JANA",
-									"ReturnValue": "SOUMEN JANA"
-								},
-								{
-									"DisplayValue": "RAHUL CHOUDHARY",
-									"ReturnValue": "RAHUL CHOUDHARY"
-								},
-								{
-									"DisplayValue": "SOURAV JAISWAL",
-									"ReturnValue": "SOURAV JAISWAL"
-								},
-								{
-									"DisplayValue": "SURYAMANI KUMAR",
-									"ReturnValue": "SURYAMANI KUMAR"
-								},
-								{
-									"DisplayValue": "JOSHABANTA SAHU",
-									"ReturnValue": "JOSHABANTA SAHU"
-								},
-								{
-									"DisplayValue": "S PRASANTH KUMAR",
-									"ReturnValue": "S PRASANTH KUMAR"
-								},
-								{
-									"DisplayValue": "ANKIT KUMAR PATRA",
-									"ReturnValue": "ANKIT KUMAR PATRA"
-								},
-								{
-									"DisplayValue": "GAUTAM KIRO",
-									"ReturnValue": "GAUTAM KIRO"
-								},
-								{
-									"DisplayValue": "TAPAS KUMAR SAHU",
-									"ReturnValue": "TAPAS KUMAR SAHU"
-								},
-								{
-									"DisplayValue": "NILACHAL NAHAK",
-									"ReturnValue": "NILACHAL NAHAK"
-								},
-								{
-									"DisplayValue": "SURESH MUNDA",
-									"ReturnValue": "SURESH MUNDA"
-								},
-								{
-									"DisplayValue": "KARTIKA BEHERA",
-									"ReturnValue": "KARTIKA BEHERA"
-								},
-								{
-									"DisplayValue": "NARENDRA NAIK",
-									"ReturnValue": "NARENDRA NAIK"
-								},
-								{
-									"DisplayValue": "HEMANTA KUMAR SINGH",
-									"ReturnValue": "HEMANTA KUMAR SINGH"
-								},
-								{
-									"DisplayValue": "KULDEEP MAHANANDA",
-									"ReturnValue": "KULDEEP MAHANANDA"
-								},
-								{
-									"DisplayValue": "SANJAY RAJ PRADHAN",
-									"ReturnValue": "SANJAY RAJ PRADHAN"
-								},
-								{
-									"DisplayValue": "BANSIDHAR SETH",
-									"ReturnValue": "BANSIDHAR SETH"
-								},
-								{
-									"DisplayValue": "TAPAN KUMAR JENA",
-									"ReturnValue": "TAPAN KUMAR JENA"
-								},
-								{
-									"DisplayValue": "SONU SETH",
-									"ReturnValue": "SONU SETH"
-								},
-								{
-									"DisplayValue": "OMPRAKASH SATNAMI",
-									"ReturnValue": "OMPRAKASH SATNAMI"
-								}
-							]
-						},
-						{
-							"Value": "Visual confirmation",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section146Method",
+							"_Name": "Section141TestWaterCasteing1",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "Method",
+							"Caption": "Water of casting(%) (11.0 ± 0.5)",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": false
+							"IsEditable": true
 						},
 						{
-							"Value": [
-								"{qc_ITEMS/DECISION_TAKEN}"
-							],
-							"_Type": "Control.Type.FormCell.ListPicker",
-							"_Name": "Section146DecisionTaken",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section141FF1",
 							"IsVisible": true,
 							"Separator": true,
-							"AllowMultipleSelection": false,
-							"AllowEmptySelection": false,
-							"Caption": "Decision Taken",
-							"DataPaging": {
-								"ShowLoadingIndicator": false,
-								"PageSize": 50
-							},
-							"PickerPrompt": "Please select one single item",
+							"Caption": "FF1\t",
 							"PlaceHolder": "PlaceHolder",
-							"IsSelectedSectionEnabled": true,
-							"IsPickerDismissedOnSelection": false,
-							"IsSearchCancelledAfterSelection": false,
-							"AllowDefaultValueIfOneItem": false,
-							"IsEditable": true,
-							"PickerItems": [
-								{
-									"DisplayValue": "OK",
-									"ReturnValue": "ok"
-								},
-								{
-									"DisplayValue": "Not OK",
-									"ReturnValue": "not_ok"
-								}
-							]
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section141FF12",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "FF2\t",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section141TF1",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "TF1(>180mm)\t",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section141TF12",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "TF2(>180mm)\t",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section141SettingTime1",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Setting time / duration(>2Hr)",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section141TestRemark1",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Remark",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section141TestBatchNo2",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "2.Batch No",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section141TestWaterCasteing2",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": " Water of casting(%) (11.0 ± 0.5)",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section141FF2",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "FF1",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section141FF22",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "FF2\t",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section141TF2",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "TF1(>180mm)",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section141TF22",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "TF2(>180mm)",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section141SettingTime2",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Setting time / duration(>2Hr)",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section141TestRemark2",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Remark",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section141TestBatchNo3",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "3.Batch No",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section141TestWaterCasteing3",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Water of casting(%) (11.0 ± 0.5)",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section141FF3",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "FF1",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section141FF32",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "FF2\t",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section141TF3",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "TF1(>180mm)",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section141TF32",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "TF2(>180mm)",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section141SettingTime3",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Setting time / duration(>2Hr)",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section141TestRemark3",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Remark",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
 						},
 						{
 							"_Type": "Control.Type.FormCell.Button",
@@ -1171,18 +497,18 @@
 							"Image": "sap-icon://open-command-field",
 							"ImagePosition": "Trailing",
 							"Enabled": true,
-							"OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/Section146Validation.js"
+							"OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/Section141TestFormValidation.js"
 						}
 					],
 					"Layout": {
-						"NumberOfColumns": 1
+						"NumberOfColumns": 8
 					},
 					"Visible": false,
 					"EmptySection": {
 						"FooterVisible": false
 					},
 					"_Type": "Section.Type.FormCell",
-					"_Name": "Section146Form"
+					"_Name": "Section141TestForm"
 				},
 				{
 					"Separators": {
@@ -1194,7 +520,7 @@
 					},
 					"Controls": [
 						{
-							"Value": " 15.1 Confirmation of the workability for gap filling castable 'HC-H111B' *9",
+							"Value": "15.1 Situation of Mixing for gap filling castable  'HC-H111B'  *10",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section151Question",
 							"IsVisible": true,
@@ -1356,7 +682,7 @@
 						},
 						{
 							"_Type": "Control.Type.FormCell.Button",
-							"_Name": "Sectiopn151TestNextButton",
+							"_Name": "Section152NextButton",
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -1374,10 +700,10 @@
 					},
 					"Header": {
 						"_Type": "SectionCommon.Type.Header",
-						"_Name": "Section16Header",
+						"_Name": "Section151Header",
 						"AccessoryType": "None",
 						"UseTopPadding": true,
-						"Caption": " 15.1 Confirmation of the workability for gap filling  castable 'HC-H111B' *9"
+						"Caption": "15.1 Situation of Mixing for gap filling castable  'HC-H111B'  *10"
 					},
 					"Visible": false,
 					"EmptySection": {
@@ -1394,221 +720,11 @@
 						"FooterSeparator": true,
 						"ControlSeparator": true
 					},
-					"Controls": [],
-					"Layout": {
-						"NumberOfColumns": 1
-					},
-					"Header": {
-						"_Type": "SectionCommon.Type.Header",
-						"_Name": "SectionCommonTypeHeader11",
-						"AccessoryType": "None",
-						"UseTopPadding": true,
-						"Caption": "*9 Inspection result of outer castable workability"
-					},
-					"Visible": false,
-					"EmptySection": {
-						"FooterVisible": false
-					},
-					"_Type": "Section.Type.FormCell",
-					"_Name": "Section151FormName"
-				},
-				{
-					"Separators": {
-						"TopSectionSeparator": false,
-						"BottomSectionSeparator": true,
-						"HeaderSeparator": true,
-						"FooterSeparator": true,
-						"ControlSeparator": true
-					},
 					"Controls": [
 						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section151WaterCasting1",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "1. Water of casting(%) (11.0 ± 0.5)",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section151FF1",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "1. FF (>180mm)",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section151TF1",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "1. TF (-)",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section151SettingTime1",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "1. Setting time / duration (>2 Hr)",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section151Remark1",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "1. Remark (-)",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section151WaterCasting2",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "2. Water of casting(%) (11.0 ± 0.5)",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section151FF2",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "2. FF (>180mm)",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section151TF2",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "2. TF (-)",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section151SettingTime2",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "2. Setting time / duration (>2 Hr)",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section151Remark2",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "2. Remark (-)",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section151WaterCasting3",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "3. Water of casting(%) (11.0 ± 0.5)",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section151FF3",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "3. FF (>180mm)",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section151TF3",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "3. TF (-)",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section151SettingTime3",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "3. Setting time / duration (>2 Hr)",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section151Remark3",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "3. Remark (-)",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.Button",
-							"_Name": "Section161NextButton",
-							"IsVisible": true,
-							"Separator": true,
-							"Title": "Next",
-							"Alignment": "Center",
-							"ButtonType": "Text",
-							"Semantic": "Tint",
-							"Image": "sap-icon://open-command-field",
-							"ImagePosition": "Trailing",
-							"Enabled": true,
-							"OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/Section151TestFormValidation.js"
-						}
-					],
-					"Layout": {
-						"NumberOfColumns": 5
-					},
-					"Visible": false,
-					"EmptySection": {
-						"FooterVisible": false
-					},
-					"_Type": "Section.Type.FormCell",
-					"_Name": "Section151TestForm"
-				},
-				{
-					"Separators": {
-						"TopSectionSeparator": false,
-						"BottomSectionSeparator": true,
-						"HeaderSeparator": true,
-						"FooterSeparator": true,
-						"ControlSeparator": true
-					},
-					"Controls": [
-						{
-							"Value": "16.1 Situation of Mixing for gap filling castable  'HC-H111B'  *10",
+							"Value": "15.2 The gap between the top of brick surface  to the top face of casting    *11",
 							"_Type": "Control.Type.FormCell.Title",
-							"_Name": "Section161Question",
+							"_Name": "Section152Question",
 							"IsVisible": true,
 							"Separator": true,
 							"PlaceHolder": "PlaceHolder",
@@ -1618,7 +734,7 @@
 						{
 							"Value": "{qc_ITEMS/DATE_INSPECTED}",
 							"_Type": "Control.Type.FormCell.DatePicker",
-							"_Name": "Section161Date",
+							"_Name": "Section152Date",
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Date",
@@ -1630,209 +746,7 @@
 								"{qc_ITEMS/INSPECTED_BY}"
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
-							"_Name": "Section161InspectedBy",
-							"IsVisible": true,
-							"Separator": true,
-							"AllowMultipleSelection": false,
-							"AllowEmptySelection": false,
-							"Caption": "Inspected By",
-							"IsSelectedSectionEnabled": false,
-							"AllowDefaultValueIfOneItem": false,
-							"IsEditable": true,
-							"PickerItems": [
-								{
-									"DisplayValue": "SOUMEN JANA",
-									"ReturnValue": "SOUMEN JANA"
-								},
-								{
-									"DisplayValue": "RAHUL CHOUDHARY",
-									"ReturnValue": "RAHUL CHOUDHARY"
-								},
-								{
-									"DisplayValue": "SOURAV JAISWAL",
-									"ReturnValue": "SOURAV JAISWAL"
-								},
-								{
-									"DisplayValue": "SURYAMANI KUMAR",
-									"ReturnValue": "SURYAMANI KUMAR"
-								},
-								{
-									"DisplayValue": "JOSHABANTA SAHU",
-									"ReturnValue": "JOSHABANTA SAHU"
-								},
-								{
-									"DisplayValue": "S PRASANTH KUMAR",
-									"ReturnValue": "S PRASANTH KUMAR"
-								},
-								{
-									"DisplayValue": "ANKIT KUMAR PATRA",
-									"ReturnValue": "ANKIT KUMAR PATRA"
-								},
-								{
-									"DisplayValue": "GAUTAM KIRO",
-									"ReturnValue": "GAUTAM KIRO"
-								},
-								{
-									"DisplayValue": "TAPAS KUMAR SAHU",
-									"ReturnValue": "TAPAS KUMAR SAHU"
-								},
-								{
-									"DisplayValue": "NILACHAL NAHAK",
-									"ReturnValue": "NILACHAL NAHAK"
-								},
-								{
-									"DisplayValue": "SURESH MUNDA",
-									"ReturnValue": "SURESH MUNDA"
-								},
-								{
-									"DisplayValue": "KARTIKA BEHERA",
-									"ReturnValue": "KARTIKA BEHERA"
-								},
-								{
-									"DisplayValue": "NARENDRA NAIK",
-									"ReturnValue": "NARENDRA NAIK"
-								},
-								{
-									"DisplayValue": "HEMANTA KUMAR SINGH",
-									"ReturnValue": "HEMANTA KUMAR SINGH"
-								},
-								{
-									"DisplayValue": "KULDEEP MAHANANDA",
-									"ReturnValue": "KULDEEP MAHANANDA"
-								},
-								{
-									"DisplayValue": "SANJAY RAJ PRADHAN",
-									"ReturnValue": "SANJAY RAJ PRADHAN"
-								},
-								{
-									"DisplayValue": "BANSIDHAR SETH",
-									"ReturnValue": "BANSIDHAR SETH"
-								},
-								{
-									"DisplayValue": "TAPAN KUMAR JENA",
-									"ReturnValue": "TAPAN KUMAR JENA"
-								},
-								{
-									"DisplayValue": "SONU SETH",
-									"ReturnValue": "SONU SETH"
-								},
-								{
-									"DisplayValue": "OMPRAKASH SATNAMI",
-									"ReturnValue": "OMPRAKASH SATNAMI"
-								}
-							]
-						},
-						{
-							"Value": "Actual Measurement",
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section161Method",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "Method",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": false
-						},
-						{
-							"Value": [
-								"{qc_ITEMS/DECISION_TAKEN}"
-							],
-							"_Type": "Control.Type.FormCell.ListPicker",
-							"_Name": "Section161DecisionTaken",
-							"IsVisible": true,
-							"Separator": true,
-							"AllowMultipleSelection": false,
-							"AllowEmptySelection": false,
-							"Caption": "Decision Taken",
-							"DataPaging": {
-								"ShowLoadingIndicator": false,
-								"PageSize": 50
-							},
-							"PickerPrompt": "Please select one single item",
-							"PlaceHolder": "PlaceHolder",
-							"IsSelectedSectionEnabled": true,
-							"IsPickerDismissedOnSelection": false,
-							"IsSearchCancelledAfterSelection": false,
-							"AllowDefaultValueIfOneItem": false,
-							"IsEditable": true,
-							"PickerItems": [
-								{
-									"DisplayValue": "OK",
-									"ReturnValue": "ok"
-								},
-								{
-									"DisplayValue": "Not OK",
-									"ReturnValue": "not_ok"
-								}
-							]
-						},
-						{
-							"_Type": "Control.Type.FormCell.Button",
-							"_Name": "Section162NextButton",
-							"IsVisible": true,
-							"Separator": true,
-							"Title": "Next",
-							"Alignment": "Center",
-							"ButtonType": "Text",
-							"Semantic": "Tint",
-							"Image": "sap-icon://open-command-field",
-							"ImagePosition": "Trailing",
-							"Enabled": true,
-							"OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/Section161Validation.js"
-						}
-					],
-					"Layout": {
-						"NumberOfColumns": 1
-					},
-					"Header": {
-						"_Type": "SectionCommon.Type.Header",
-						"_Name": "Section161Header",
-						"AccessoryType": "None",
-						"UseTopPadding": true,
-						"Caption": "16.1 Situation of Mixing for gap filling castable  'HC-H111B'  *10"
-					},
-					"Visible": false,
-					"EmptySection": {
-						"FooterVisible": false
-					},
-					"_Type": "Section.Type.FormCell",
-					"_Name": "Section161Form"
-				},
-				{
-					"Separators": {
-						"TopSectionSeparator": false,
-						"BottomSectionSeparator": true,
-						"HeaderSeparator": true,
-						"FooterSeparator": true,
-						"ControlSeparator": true
-					},
-					"Controls": [
-						{
-							"Value": "16.2 The gap between the top of brick surface  to the top face of casting    *11",
-							"_Type": "Control.Type.FormCell.Title",
-							"_Name": "Section162Question",
-							"IsVisible": true,
-							"Separator": true,
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": false
-						},
-						{
-							"Value": "{qc_ITEMS/DATE_INSPECTED}",
-							"_Type": "Control.Type.FormCell.DatePicker",
-							"_Name": "Section162Date",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "Date",
-							"IsEditable": true,
-							"Mode": "Date"
-						},
-						{
-							"Value": [
-								"{qc_ITEMS/INSPECTED_BY}"
-							],
-							"_Type": "Control.Type.FormCell.ListPicker",
-							"_Name": "Section162InspectedBy",
+							"_Name": "Section152InspectedBy",
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -1927,7 +841,7 @@
 						{
 							"Value": "Steel tape or  measurement Gauge",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162Method",
+							"_Name": "Section152Method",
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Method",
@@ -1940,7 +854,7 @@
 								"{qc_ITEMS/DECISION_TAKEN}"
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
-							"_Name": "Section162DecisionTaken",
+							"_Name": "Section152DecisionTaken",
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -1970,7 +884,7 @@
 						},
 						{
 							"_Type": "Control.Type.FormCell.Button",
-							"_Name": "Section162TestNextButton",
+							"_Name": "Section152TestNextButton",
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -1980,7 +894,7 @@
 							"Image": "sap-icon://open-command-field",
 							"ImagePosition": "Trailing",
 							"Enabled": true,
-							"OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/Section162Validation.js"
+							"OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/Section152Validation.js"
 						}
 					],
 					"Layout": {
@@ -1991,7 +905,7 @@
 						"FooterVisible": false
 					},
 					"_Type": "Section.Type.FormCell",
-					"_Name": "Section162Form"
+					"_Name": "Section152Form"
 				},
 				{
 					"Separators": {
@@ -2017,7 +931,7 @@
 						"FooterVisible": false
 					},
 					"_Type": "Section.Type.FormCell",
-					"_Name": "Section162TestName"
+					"_Name": "Section152TestName"
 				},
 				{
 					"Separators": {
@@ -2030,308 +944,42 @@
 					"Controls": [
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162PowerWeight1",
+							"_Name": "Section152TestBatchNo1",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "1.Power Weight",
+							"Caption": "1.Batch No",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162WaterCasting1",
+							"_Name": "Section152PowerWeight1",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "1.Water Casting(11.0 %± 0.5%)",
+							"Caption": "Powder Weight",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section152WaterCasting1",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Water Casting(5.25 ± 0.5)",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
 						},
 						{
 							"_Type": "Control.Type.FormCell.ListPicker",
-							"_Name": "Section162FludityOfCastable1",
-							"IsVisible": true,
-							"Separator": true,
-							"AllowMultipleSelection": true,
-							"AllowEmptySelection": true,
-							"Caption": "1.Fludity Of Castable",
-							"DataPaging": {
-								"ShowLoadingIndicator": false,
-								"PageSize": 50
-							},
-							"PickerPrompt": "Please select one single item",
-							"PlaceHolder": "PlaceHolder",
-							"IsSelectedSectionEnabled": false,
-							"IsPickerDismissedOnSelection": false,
-							"IsSearchCancelledAfterSelection": false,
-							"AllowDefaultValueIfOneItem": false,
-							"IsEditable": true,
-							"PickerItems": [
-								{
-									"DisplayValue": "OK",
-									"ReturnValue": "ok"
-								},
-								{
-									"DisplayValue": "Not OK",
-									"ReturnValue": "not_ok"
-								}
-							]
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162AddingVibration1",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "1.Adding Vibration",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162Remark1",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "1.Remark",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162PowerWeight2",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "2.Power Weight",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162WaterCasting2",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "2.Water Casting(11.0% ± 0.5%)",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.ListPicker",
-							"_Name": "Section162FludityOfCastable2",
-							"IsVisible": true,
-							"Separator": true,
-							"AllowMultipleSelection": true,
-							"AllowEmptySelection": true,
-							"Caption": "2.Fludity Of Castable",
-							"DataPaging": {
-								"ShowLoadingIndicator": false,
-								"PageSize": 50
-							},
-							"PickerPrompt": "Please select one single item",
-							"PlaceHolder": "PlaceHolder",
-							"IsSelectedSectionEnabled": false,
-							"IsPickerDismissedOnSelection": false,
-							"IsSearchCancelledAfterSelection": false,
-							"AllowDefaultValueIfOneItem": false,
-							"IsEditable": true,
-							"PickerItems": [
-								{
-									"DisplayValue": "OK",
-									"ReturnValue": "ok"
-								},
-								{
-									"DisplayValue": "Not OK",
-									"ReturnValue": "not_ok"
-								}
-							]
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162AddingVibration2",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "2.Adding Vibration",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162Remark2",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "2.Remark",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162PowerWeight3",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "3.Power Weight",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162WaterCasting3",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "3.Water Casting(11.0% ± 0.5%)",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.ListPicker",
-							"_Name": "Section162FludityOfCastable3",
+							"_Name": "Section152FludityOfCastable1",
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
 							"AllowEmptySelection": true,
-							"Caption": "3.Fludity Of Castable",
-							"DataPaging": {
-								"ShowLoadingIndicator": false,
-								"PageSize": 50
-							},
-							"PickerPrompt": "Please select one single item",
-							"PlaceHolder": "PlaceHolder",
-							"IsSelectedSectionEnabled": false,
-							"AllowDefaultValueIfOneItem": false,
-							"IsEditable": true,
-							"PickerItems": [
-								{
-									"DisplayValue": "OK",
-									"ReturnValue": "ok"
-								},
-								{
-									"DisplayValue": "Not OK",
-									"ReturnValue": "not_ok"
-								}
-							]
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162AddingVibration3",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "3.Adding Vibration",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162Remark3",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "3.Remark",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162PowerWeight4",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "4.Power Weight",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162WaterCasting4",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "4.Water Casting(11.0% ± 0.5%)",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.ListPicker",
-							"_Name": "Section162FludityOfCastable4",
-							"IsVisible": true,
-							"Separator": true,
-							"AllowMultipleSelection": false,
-							"AllowEmptySelection": true,
-							"Caption": "4.Fludity Of Castable",
-							"DataPaging": {
-								"ShowLoadingIndicator": false,
-								"PageSize": 50
-							},
-							"PickerPrompt": "Please select one single item",
-							"PlaceHolder": "PlaceHolder",
-							"IsSelectedSectionEnabled": false,
-							"AllowDefaultValueIfOneItem": false,
-							"IsEditable": true,
-							"PickerItems": [
-								{
-									"DisplayValue": "OK",
-									"ReturnValue": "ok"
-								},
-								{
-									"DisplayValue": "Not OK",
-									"ReturnValue": "not_ok"
-								}
-							]
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162AddingVibration4",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "4.Adding Vibration",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162Remark4",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "4.Remark",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162PowerWeight5",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "5.Power Weight",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162WaterCasting5",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "5.Water Casting(11.0% ± 0.5%)",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": true
-						},
-						{
-							"_Type": "Control.Type.FormCell.ListPicker",
-							"_Name": "Section162FludityOfCastable5",
-							"IsVisible": true,
-							"Separator": true,
-							"AllowMultipleSelection": true,
-							"AllowEmptySelection": true,
-							"Caption": "5.Fludity Of Castable",
+							"Caption": "Fludity Of Castable",
 							"DataPaging": {
 								"ShowLoadingIndicator": false,
 								"PageSize": 50
@@ -2355,28 +1003,414 @@
 							]
 						},
 						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162AddingVibration5",
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section152AddingVibration1",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "5.Adding Vibration",
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Adding Vibration",
+							"PickerPrompt": "Please select Yes or No",
+							"PlaceHolder": "Select",
+							"IsSelectedSectionEnabled": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "Yes",
+									"ReturnValue": "yes"
+								},
+								{
+									"DisplayValue": "No",
+									"ReturnValue": "no"
+								}
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section152Remark1",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Remark",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162Remark5",
+							"_Name": "Section152TestBatchNo2",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "5.Remark",
+							"Caption": "2.Batch No",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section152PowerWeight2",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Powder Weight",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section152WaterCasting2",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Water Casting(5.25 ± 0.5)",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section152FludityOfCastable2",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Fludity Of Castable",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"PlaceHolder": "PlaceHolder",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": false,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "OK",
+									"ReturnValue": "ok"
+								},
+								{
+									"DisplayValue": "Not OK",
+									"ReturnValue": "not_ok"
+								}
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section152AddingVibration2",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Adding Vibration",
+							"PickerPrompt": "Please select Yes or No",
+							"PlaceHolder": "Select",
+							"IsSelectedSectionEnabled": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "Yes",
+									"ReturnValue": "yes"
+								},
+								{
+									"DisplayValue": "No",
+									"ReturnValue": "no"
+								}
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section152Remark2",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Remark",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section152TestBatchNo3",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "3.Batch No",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section152PowerWeight3",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Powder Weight",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section152WaterCasting3",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Water Casting(5.25 ± 0.5)",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section152FludityOfCastable3",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Fludity Of Castable",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"PlaceHolder": "PlaceHolder",
+							"IsSelectedSectionEnabled": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "OK",
+									"ReturnValue": "ok"
+								},
+								{
+									"DisplayValue": "Not OK",
+									"ReturnValue": "not_ok"
+								}
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section152AddingVibration3",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Adding Vibration",
+							"PickerPrompt": "Please select Yes or No",
+							"PlaceHolder": "Select",
+							"IsSelectedSectionEnabled": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "Yes",
+									"ReturnValue": "yes"
+								},
+								{
+									"DisplayValue": "No",
+									"ReturnValue": "no"
+								}
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section152Remark3",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Remark",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section152TestBatchNo4",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "4.Batch No",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section152PowerWeight4",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Powder Weight",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section152WaterCasting4",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Water Casting(5.25 ± 0.5)",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section152FludityOfCastable4",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Fludity Of Castable",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"PlaceHolder": "PlaceHolder",
+							"IsSelectedSectionEnabled": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "OK",
+									"ReturnValue": "ok"
+								},
+								{
+									"DisplayValue": "Not OK",
+									"ReturnValue": "not_ok"
+								}
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section152AddingVibration4",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Adding Vibration",
+							"PickerPrompt": "Please select Yes or No",
+							"PlaceHolder": "Select",
+							"IsSelectedSectionEnabled": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "Yes",
+									"ReturnValue": "yes"
+								},
+								{
+									"DisplayValue": "No",
+									"ReturnValue": "no"
+								}
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section152Remark4",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Remark",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section152TestBatchNo5",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "5.Batch No",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section152PowerWeight5",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Powder Weight",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section152WaterCasting5",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Water Casting(5.25 ± 0.5)",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section152FludityOfCastable5",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Fludity Of Castable",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"PlaceHolder": "PlaceHolder",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": false,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "OK",
+									"ReturnValue": "ok"
+								},
+								{
+									"DisplayValue": "Not OK",
+									"ReturnValue": "not_ok"
+								}
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section152AddingVibration5",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Adding Vibration",
+							"PickerPrompt": "Please select Yes or No",
+							"PlaceHolder": "Select",
+							"IsSelectedSectionEnabled": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "Yes",
+									"ReturnValue": "yes"
+								},
+								{
+									"DisplayValue": "No",
+									"ReturnValue": "no"
+								}
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section152Remark5",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Remark",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
 						},
 						{
 							"_Type": "Control.Type.FormCell.Button",
-							"_Name": "Section162Test2NextButton",
+							"_Name": "Section152Test2NextButton",
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -2386,18 +1420,18 @@
 							"Image": "sap-icon://open-command-field",
 							"ImagePosition": "Trailing",
 							"Enabled": true,
-							"OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/Section162TestFormValidation.js"
+							"OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/Section152TestFormValidation.js"
 						}
 					],
 					"Layout": {
-						"NumberOfColumns": 5
+						"NumberOfColumns": 6
 					},
 					"Visible": false,
 					"EmptySection": {
 						"FooterVisible": false
 					},
 					"_Type": "Section.Type.FormCell",
-					"_Name": "Section162TestForm"
+					"_Name": "Section152TestForm"
 				},
 				{
 					"Separators": {
@@ -2437,7 +1471,7 @@
 						{
 							"Value": "12:00 direction",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162TestPositionGapA",
+							"_Name": "Section152TestPositionGapA",
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "1.Position",
@@ -2448,7 +1482,7 @@
 						{
 							"Value": "100 ± 3 mm",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162TestToleranceA",
+							"_Name": "Section152TestToleranceA",
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "1.Tolerance",
@@ -2459,7 +1493,7 @@
 						{
 							"Value": "Steel tape or measurement Gauge",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162TestMethodA",
+							"_Name": "Section152TestMethodA",
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "1.Method",
@@ -2469,7 +1503,7 @@
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162TestActualGapA",
+							"_Name": "Section152TestActualGapA",
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "1.Actual Gap",
@@ -2480,7 +1514,7 @@
 						{
 							"Value": "3:00 direction",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162TestPositionGapB",
+							"_Name": "Section152TestPositionGapB",
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "2.Position",
@@ -2491,7 +1525,7 @@
 						{
 							"Value": "100 ± 3 mm",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162TestToleranceB",
+							"_Name": "Section152TestToleranceB",
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "2.Tolerance",
@@ -2502,7 +1536,7 @@
 						{
 							"Value": "Steel tape or measurement Gauge",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162TestMethodB",
+							"_Name": "Section152TestMethodB",
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "2.Method",
@@ -2512,7 +1546,7 @@
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162TestActualGapB",
+							"_Name": "Section152TestActualGapB",
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "2.Actual Gap",
@@ -2523,7 +1557,7 @@
 						{
 							"Value": "6:00 direction",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162TestPositionGapC",
+							"_Name": "Section152TestPositionGapC",
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "3.Position",
@@ -2534,7 +1568,7 @@
 						{
 							"Value": "100 ± 3 mm",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162TestToleranceC",
+							"_Name": "Section152TestToleranceC",
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "3.Tolerance",
@@ -2545,7 +1579,7 @@
 						{
 							"Value": "Steel tape or measurement Gauge",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162TestMethodC",
+							"_Name": "Section152TestMethodC",
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "3.Method",
@@ -2555,7 +1589,7 @@
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162TestActualGapC",
+							"_Name": "Section152TestActualGapC",
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "3.Actual Gap",
@@ -2566,7 +1600,7 @@
 						{
 							"Value": "9:00 direction",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162TestPositionGapD",
+							"_Name": "Section152TestPositionGapD",
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "4.Position",
@@ -2577,7 +1611,7 @@
 						{
 							"Value": "100 ± 3 mm",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162TestToleranceD",
+							"_Name": "Section152TestToleranceD",
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "4.Tolerance",
@@ -2588,7 +1622,7 @@
 						{
 							"Value": "Steel tape or measurement Gauge",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162TestMethodD",
+							"_Name": "Section152TestMethodD",
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "4.Method",
@@ -2598,7 +1632,7 @@
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section162TestActualGapD",
+							"_Name": "Section152TestActualGapD",
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "4.Actual Gap",
@@ -2608,7 +1642,7 @@
 						},
 						{
 							"_Type": "Control.Type.FormCell.Button",
-							"_Name": "Section162StaticNextButton",
+							"_Name": "Section152StaticNextButton",
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -2618,7 +1652,7 @@
 							"Image": "sap-icon://open-command-field",
 							"ImagePosition": "Trailing",
 							"Enabled": true,
-							"OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/Section162Test2FormValidation.js"
+							"OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/Section152Test2FormValidation.js"
 						}
 					],
 					"Layout": {
@@ -2629,7 +1663,7 @@
 						"FooterVisible": false
 					},
 					"_Type": "Section.Type.FormCell",
-					"_Name": "Section162Test2Form"
+					"_Name": "Section152Test2Form"
 				},
 				{
 					"EmptySection": {
@@ -2643,9 +1677,9 @@
 						"ControlSeparator": true
 					},
 					"_Type": "Section.Type.Image",
-					"_Name": "Section162StaticImage",
+					"_Name": "Section152StaticImage",
 					"Visible": false,
-					"Image": "/TRL_Snorkel_Digitization_TSL/Images/Section162Image.png",
+					"Image": "/TRL_Snorkel_Digitization_TSL/Images/Section152Image.png",
 					"Alignment": "Center",
 					"ContentMode": "ScaleAspectFit"
 				},
@@ -2661,7 +1695,7 @@
 						"ControlSeparator": true
 					},
 					"_Type": "Section.Type.Image",
-					"_Name": "Section162DynamicImage",
+					"_Name": "Section152DynamicImage",
 					"Visible": false,
 					"Image": "{imageUri}",
 					"Alignment": "Center",
@@ -2681,10 +1715,10 @@
 								"Visible": true
 							},
 							"_Type": "Control.Type.FormCell.Attachment",
-							"_Name": "Section162TakePhoto",
+							"_Name": "Section152TakePhoto",
 							"IsVisible": true,
 							"Separator": true,
-							"OnValueChange": "/TRL_Snorkel_Digitization_TSL/Rules/ValidationandConvertFile162.js",
+							"OnValueChange": "/TRL_Snorkel_Digitization_TSL/Rules/ValidationandConvertFile152.js",
 							"AttachmentActionType": [
 								"TakePhoto"
 							],
@@ -2706,7 +1740,7 @@
 						"FooterVisible": false
 					},
 					"_Type": "Section.Type.FormCell",
-					"_Name": "Section162UserInputImage"
+					"_Name": "Section152UserInputImage"
 				},
 				{
 					"Separators": {
@@ -4785,10 +3819,9 @@
 					},
 					"Header": {
 						"_Type": "SectionCommon.Type.Header",
-						"_Name": "SectionCommonTypeHeader16",
+						"_Name": "SectionCommonTypeHeader15",
 						"AccessoryType": "None",
-						"UseTopPadding": true,
-						"Caption": "19. Packing"
+						"UseTopPadding": true
 					},
 					"Visible": false,
 					"EmptySection": {

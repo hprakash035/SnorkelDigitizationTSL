@@ -1,12 +1,5 @@
-// import { loadSection141Data } from './loadSection141Data';
-// import { loadSection142Data } from './loadSection142Data';
-// import { loadSection143Data } from './loadSection143Data';
-// import { loadSection144Data } from './loadSection144Data';
-// import { loadSection145Data } from './loadSection145Data';
-// import { loadSection146Data } from './loadSection146Data';
-// import { loadSection151Data } from './loadSection151Data';
-// import { loadSection161Data } from './loadSection161Data';
-// import { loadSection162Data } from './loadSection162Data';
+import { loadInletSectionLoader } from './loadInletSectionLoader5';
+import { loadOutletSectionLoader } from './loadOutletSectionLoader5';
 
 export default async function LoadSnorkelDataPage5(clientAPI) {
     try {
@@ -17,10 +10,6 @@ export default async function LoadSnorkelDataPage5(clientAPI) {
         const readLink = binding['@odata.readLink'];
         const service = '/TRL_Snorkel_Digitization_TSL/Services/TRL_Snorkel_CAP_SRV.service';
         const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
-        // const headerSection = FormSectionedTable.getSection('HeaderSection');
-
-        // --- Header Setup ---
-       
 
         // --- Read Data ---
         const [itemsResult, headerFiles, attachmentsResult, testdata] = await Promise.all([
@@ -35,51 +24,40 @@ export default async function LoadSnorkelDataPage5(clientAPI) {
         const attachmentGroups = groupAttachmentsByQuestion(attachments);
         const flags = { next: false };
 
-         if (binding.SNORKEL_NO) {
-            if (binding.TYPE?.toLowerCase() === "inlet") {
-               
-                FormSectionedTable.getSection('Section141Form').setVisible(true);
-                FormSectionedTable.getSection('Section171FormOutlet').setVisible(false);
-            } else if (binding.TYPE?.toLowerCase() === "outlet") {
-             
-                FormSectionedTable.getSection('Section171FormOutlet').setVisible(true);
-                FormSectionedTable.getSection('Section141Form').setVisible(false);
-            } 
-        }
-       
-        // --- Section Keys (Page 4 only) ---
-        const orderedSectionKeys = [
-         '14.1', '14.2', '14.3',
-            '14.4', '14.5','14.6', '15.1', '16.1', '16.2'
-        ];
+        // --- Handle TYPE condition ---
+        const type = binding.TYPE?.toLowerCase();
+        console.log("📌 Page4 Snorkel TYPE:", type);
 
-        for (const sectionKey of orderedSectionKeys) {
-            const loader = getSectionLoader(sectionKey);
-            if (!loader) continue;
+        if (type === "inlet") {
+            FormSectionedTable.getSection('Section141Form').setVisible(true);
+            FormSectionedTable.getSection('Section171FormOutlet').setVisible(false);
 
-            const item = items.find(it => {
-                const sectionKeyFromItem = it.QUESTION?.trimStart().split(' ')[0];
-                return sectionKeyFromItem === sectionKey;
-            });
+            const orderedSectionKeys = ['14.1', '15.1', '15.2'];
+            for (const sectionKey of orderedSectionKeys) {
+                const loader = loadInletSectionLoader(sectionKey);
+                if (!loader) continue;
 
-            if (item  && item.INSPECTED_BY) {
-                const question = item.QUESTION?.trim();
-                const normalize = str => str?.replace(/\s+/g, ' ')?.trim();
-                const matchingAttachments = attachmentGroups[normalize(question)] || [];
+                const item = findItemBySectionKey(items, sectionKey);
+                if (!item?.INSPECTED_BY) continue;
 
-                try {
-                    await loader(
-                        pageProxy,
-                        item,
-                        FormSectionedTable,
-                        matchingAttachments,
-                        flags,
-                        testdata._array
-                    );
-                    console.log(`✅ Loader for ${sectionKey} executed successfully`);
-                } catch (err) {
-                    console.error(`❌ Error running loader for section ${sectionKey}:`, err);
-                }
+                const matchingAttachments = attachmentGroups[normalize(item.QUESTION)] || [];
+                await runLoader(loader, pageProxy, item, FormSectionedTable, matchingAttachments, flags, testdata._array, sectionKey);
+            }
+
+        } else if (type === "outlet") {
+            FormSectionedTable.getSection('Section141FormOutlet').setVisible(true);
+            FormSectionedTable.getSection('Section141Form').setVisible(false);
+
+            const orderedSectionKeys = ['14.1', '14.1', '14.2', '15.1', '16.1', '16.2', '16.3'];
+            for (const sectionKey of orderedSectionKeys) {
+                const loader = loadOutletSectionLoader(sectionKey);
+                if (!loader) continue;
+
+                const item = findItemBySectionKey(items, sectionKey);
+                if (!item?.INSPECTED_BY) continue;
+
+                const matchingAttachments = attachmentGroups[normalize(item.QUESTION)] || [];
+                await runLoader(loader, pageProxy, item, FormSectionedTable, matchingAttachments, flags, testdata._array, sectionKey);
             }
         }
 
@@ -96,51 +74,28 @@ function groupAttachmentsByQuestion(attachments = []) {
     const grouped = {};
     for (const attachment of attachments) {
         const rawKey = attachment.QUESTION || attachment.question || '';
-        const key = rawKey.replace(/\s+/g, ' ').trim();
+        const key = normalize(rawKey);
         if (!grouped[key]) grouped[key] = [];
         grouped[key].push(attachment);
     }
     return grouped;
 }
 
-function getSectionLoader(sectionKey) {
-    const sectionLoaders = {
-       '14.1': loadSection141Data,
-        '14.2': loadSection142Data,
-        '14.3': loadSection143Data,
-        '14.4': loadSection144Data,
-        '14.5': loadSection145Data,
-        
-        '14.6': loadSection146Data,
-        '15.1': loadSection151Data,
-        '16.1': loadSection161Data,
-        '16.2': loadSection162Data,
-    };
-    return sectionLoaders[sectionKey];
+function normalize(str) {
+    return str?.replace(/\s+/g, ' ')?.trim();
 }
 
-async function processFileData(headerFile) {
-    const base64File = headerFile.file;
-    const fileName = headerFile.name;
-    let cleanBase64 = base64File;
-    if (base64File.startsWith('data:')) {
-        cleanBase64 = base64File.split(',')[1];
-    }
-    const arrayBuffer = convertBase64ToArrayBuffer(cleanBase64);
-    return {
-        urlString: fileName,
-        content: arrayBuffer,
-        contentType: 'application/pdf',
-        size: arrayBuffer.byteLength
-    };
+function findItemBySectionKey(items, sectionKey) {
+    return items.find(it => {
+        const sectionKeyFromItem = it.QUESTION?.trimStart().split(' ')[0];
+        return sectionKeyFromItem === sectionKey;
+    });
 }
 
-function convertBase64ToArrayBuffer(base64) {
-    const binaryString = atob(base64);
-    const len = binaryString.length;
-    const bytes = new Uint8Array(len);
-    for (let i = 0; i < len; i++) {
-        bytes[i] = binaryString.charCodeAt(i);
+async function runLoader(loader, pageProxy, item, FormSectionedTable, attachments, flags, testdata, sectionKey) {
+    try {
+        await loader(pageProxy, item, FormSectionedTable, attachments, flags, testdata);
+    } catch (err) {
+        console.error(`❌ Error running loader for section ${sectionKey}:`, err);
     }
-    return bytes.buffer;
 }

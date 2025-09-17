@@ -28,7 +28,7 @@ export default function Section132Validation(clientAPI) {
             takePhotoControl.setVisible(true);
             const Section132Form = FormSectionedTable.getSection('Section132StaticImage');
             Section132Form.setVisible(true);
-
+FormSectionedTable.getSection('Section132Form').getControl('Section132StaticNextButton').setVisible(false);
             return clientAPI.executeAction({
                 Name: '/TRL_Snorkel_Digitization_TSL/Actions/Section132Create.action'
             });
@@ -42,7 +42,7 @@ export default function Section132Validation(clientAPI) {
         return clientAPI.executeAction({
             Name: '/TRL_Snorkel_Digitization_TSL/Actions/ErrorMessage.action',
             Properties: {
-                Message: 'Unexpected error during Section 13.1 validation. Please try again.'
+                Message: 'Unexpected error during Section 13.2 validation. Please try again.'
             }
         });
     }

@@ -19,7 +19,7 @@ export default function Section103Validation(clientAPI) {
 
         if (decisionTaken && inspectedBy && inspectionMethod && decisionTaken != "") {
            
-            // FormSectionedTable.getSection('Section103Form').getControl('Section111NextButton').setVisible(false);
+             FormSectionedTable.getSection('Section111Form').setVisible(true);
            
             clientAPI.executeAction({
                 Name: '/TRL_Snorkel_Digitization_TSL/Actions/Section103Create.action'

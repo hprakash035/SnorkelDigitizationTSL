@@ -1,7 +1,7 @@
 {
 	"_Type": "Action.Type.ODataService.CreateEntity",
 	"ActionResult": {
-		"_Name": "SectionL141Create"
+		"_Name": "Section141Create"
 	},
 	"OnFailure": "/TRL_Snorkel_Digitization_TSL/Actions/CreateEntityFailureMessage.action",
 	"Target": {
@@ -13,7 +13,7 @@
 		"DECISION_TAKEN": "#Page:SnorkelInstallation5/#Control:Section141DecisionTaken/#SelectedValue",
 		"INSPECTED_BY": "#Page:SnorkelInstallation5/#Control:Section141InspectedBy/#SelectedValue",
 		"METHOD": "#Page:SnorkelInstallation5/#Control:Section141Method/#Value",
-		"QUESTION": "14.1 Clean the brick gaps & bricks with compressed air before installing 3rd ring bricks",
+		"QUESTION": "14.1 Confirmation of the workability for gap filling castable 'HC-H111B' *9",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}
 }

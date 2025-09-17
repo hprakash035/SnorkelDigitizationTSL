@@ -1,18 +1,18 @@
 {
 	"_Type": "Action.Type.ODataService.CreateEntity",
 	"ActionResult": {
-		"_Name": "Section122TestCreate3Outlet"
+		"_Name": "Section122TestCreate4Outlet"
 	},
 	"Target": {
 		"Service": "/TRL_Snorkel_Digitization_TSL/Services/TRL_Snorkel_CAP_SRV.service",
 		"EntitySet": "QC_Test_Table"
 	},
 	"Properties": {
-		"actualvalue": "#Page:SnorkelInstallation3/#Control:Section122ActualValue3/#Value",
-		"method": "#Page:SnorkelInstallation3/#Control:Section122Method3/#Value",
-		"position": "#Page:SnorkelInstallation3/#Control:Section122Position3/#Value",
+		"actualvalue": "#Page:SnorkelInstallation3/#Control:Section122ActualValue4/#Value",
+		"method": "#Page:SnorkelInstallation3/#Control:Section122Method4/#Value",
+		"position": "#Page:SnorkelInstallation3/#Control:Section122Position4/#Value",
 		"testname": "*7 Gap measurement between 2nd ring brick and the Core Shell ",
-		"tolerance": "#Page:SnorkelInstallation3/#Control:Section122Tolerence3/#Value",
+		"tolerance": "#Page:SnorkelInstallation3/#Control:Section122Tolerence4/#Value",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}
 }

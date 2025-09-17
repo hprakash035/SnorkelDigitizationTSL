@@ -26,13 +26,11 @@ export default function Section141Validation(clientAPI) {
         const inspectionMethod = inspectionMethodCtrl?.getValue();
 
         if (decisionTaken && inspectedBy && inspectionMethod && decisionTaken != "") {
-            const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
-  
-
- 
-    const Section141UserInputImage1 =FormSectionedTable.getSection('Section142Form');
+    const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
+    const Section141UserInputImage1 =FormSectionedTable.getSection('Section141TestForm');
     Section141UserInputImage1.setVisible('true');
-    FormSectionedTable.getSection('Section141Form').getControl('Section142NextButton').setVisible(false);
+     FormSectionedTable.getSection('Section141FormName').setVisible(true);
+    FormSectionedTable.getSection('Section141Form').getControl('Sectiopn141TestNextButton').setVisible(false);
             return clientAPI.executeAction({
                 Name: '/TRL_Snorkel_Digitization_TSL/Actions/Section141Create.action'
             });

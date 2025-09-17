@@ -1836,7 +1836,7 @@
 							"_Name": "Section122TakePhotoInlet",
 							"IsVisible": true,
 							"Separator": true,
-							"OnValueChange": "/TRL_Snorkel_Digitization_TSL/Rules/ValidationandConvertFile122Inlet.js",
+							"OnValueChange": "/TRL_Snorkel_Digitization_TSL/Rules/ValidationandConvertFile122Outlet.js",
 							"AttachmentActionType": [
 								"TakePhoto"
 							],
@@ -2264,7 +2264,7 @@
 							"IsEditable": false
 						},
 						{
-							"Value": "37.5±2mm",
+							"Value": "±2mm",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section122Tolerence1",
 							"IsVisible": true,
@@ -2307,7 +2307,7 @@
 							"IsEditable": false
 						},
 						{
-							"Value": "37.5±2mm",
+							"Value": "±2mm",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section122Tolerence2",
 							"IsVisible": true,
@@ -2350,7 +2350,7 @@
 							"IsEditable": false
 						},
 						{
-							"Value": "37.5±2mm",
+							"Value": "±2mm",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section122Tolerence3",
 							"IsVisible": true,
@@ -2393,7 +2393,7 @@
 							"IsEditable": false
 						},
 						{
-							"Value": "37.5±2mm",
+							"Value": "±2mm",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section122Tolerence4",
 							"IsVisible": true,

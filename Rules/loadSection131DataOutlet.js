@@ -1,4 +1,4 @@
-export async function loadSection131Data(pageProxy, qcItem131, FormSectionedTable, attachments, flags, testdataArray) {
+export async function loadSection131DataOutlet(pageProxy, qcItem131, FormSectionedTable, attachments, flags, testdataArray) {
   try {
     const Section131 = FormSectionedTable.getSection('Section131FormOutlet');
     if (!Section131) {

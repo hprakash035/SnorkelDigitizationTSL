@@ -1895,10 +1895,20 @@
 					"Controls": [
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section131TestBatchNo1",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "1. Batch No",
+							"PlaceHolder": "Enter Batch No",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131PowerWeight1",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "1.Powder Weight",
+							"Caption": "1. Powder Weight",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
@@ -1979,10 +1989,20 @@
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section131TestBatchNo2",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "2. Batch No",
+							"PlaceHolder": "Enter Batch No",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131PowerWeight2",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "2.Powder Weight",
+							"Caption": "2. Powder Weight",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
@@ -2063,10 +2083,20 @@
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section131TestBatchNo3",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "3. Batch No",
+							"PlaceHolder": "Enter Batch No",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131PowerWeight3",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "3.Powder Weight",
+							"Caption": "3. Powder Weight",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
@@ -2096,6 +2126,8 @@
 							"PickerPrompt": "Please select one single item",
 							"PlaceHolder": "PlaceHolder",
 							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": false,
+							"IsSearchCancelledAfterSelection": false,
 							"AllowDefaultValueIfOneItem": false,
 							"IsEditable": true,
 							"PickerItems": [
@@ -2145,10 +2177,20 @@
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section131TestBatchNo4",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "4. Batch No",
+							"PlaceHolder": "Enter Batch No",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131PowerWeight4",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "4.Powder Weight",
+							"Caption": "4. Powder Weight",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
@@ -2178,6 +2220,8 @@
 							"PickerPrompt": "Please select one single item",
 							"PlaceHolder": "PlaceHolder",
 							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": false,
+							"IsSearchCancelledAfterSelection": false,
 							"AllowDefaultValueIfOneItem": false,
 							"IsEditable": true,
 							"PickerItems": [
@@ -2227,10 +2271,20 @@
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section131TestBatchNo5",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "5. Batch No",
+							"PlaceHolder": "Enter Batch No",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131PowerWeight5",
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "5.Powder Weight",
+							"Caption": "5. Powder Weight",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
@@ -2325,7 +2379,7 @@
 						}
 					],
 					"Layout": {
-						"NumberOfColumns": 5
+						"NumberOfColumns": 6
 					},
 					"Visible": false,
 					"EmptySection": {

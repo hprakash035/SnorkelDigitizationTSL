@@ -5,13 +5,14 @@ export async function loadSection131Data(pageProxy, qcItem131, FormSectionedTabl
         if (!section131) {
             throw new Error("Section131Form not found.");
         }
+             await section131.setVisible(true);
 
         const nextButton = section131.getControl('Secion131StaticButton');
         if (nextButton) {
             await nextButton.setVisible(false);
         }
 
-        await section131.setVisible(true);
+   
 
         if (qcItem131?.DATE_INSPECTED) {
             const dateControl = section131.getControl('Section131Date');

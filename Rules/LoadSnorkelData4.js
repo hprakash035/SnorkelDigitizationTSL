@@ -1,9 +1,5 @@
-// import { loadSection131Data } from './loadSection131Data';
-// import { loadSection132Data } from './loadSection132Data';
-// import { loadSection133Data } from './loadSection133Data';
-// import { loadSection134Data } from './loadSection134Data';
-// import { loadSection135Data } from './loadSection135Data';
-// import { loadSection136Data } from './loadSection136Data';
+import { loadInletSectionLoader } from './loadInletSectionLoader4';
+import { loadOutletSectionLoader } from './loadOutletSectionLoader4';
 
 export default async function LoadSnorkelDataPage4(clientAPI) {
     try {
@@ -29,49 +25,39 @@ export default async function LoadSnorkelDataPage4(clientAPI) {
         const flags = { next: false };
 
         // --- Handle TYPE condition ---
-        if (binding.SNORKEL_NO) {
-            if (binding.TYPE?.toLowerCase() === "inlet") {
-               
-                FormSectionedTable.getSection('Section131Form').setVisible(true);
-                FormSectionedTable.getSection('Section131FormOutlet').setVisible(false);
-            } else if (binding.TYPE?.toLowerCase() === "outlet") {
-             
-                FormSectionedTable.getSection('Section131FormOutlet').setVisible(true);
-                FormSectionedTable.getSection('Section131Form').setVisible(false);
-            } 
-        }
+        const type = binding.TYPE?.toLowerCase();
+        console.log("📌 Page4 Snorkel TYPE:", type);
 
-        // --- Section Keys (Page 4 only) ---
-        const orderedSectionKeys = [
-          '13.1', '13.2', '13.3', '13.4', '13.5', '13.6'
-        ];
+        if (type === "inlet") {
+            FormSectionedTable.getSection('Section131Form').setVisible(true);
+            FormSectionedTable.getSection('Section131FormOutlet').setVisible(false);
 
-        for (const sectionKey of orderedSectionKeys) {
-            const loader = getSectionLoader(sectionKey);
-            if (!loader) continue;
+            const orderedSectionKeys = ['13.1', '13.2', '13.3', '13.4', '13.5', '13.6'];
+            for (const sectionKey of orderedSectionKeys) {
+                const loader = loadInletSectionLoader(sectionKey);
+                if (!loader) continue;
 
-            const item = items.find(it => {
-                const sectionKeyFromItem = it.QUESTION?.trimStart().split(' ')[0];
-                return sectionKeyFromItem === sectionKey;
-            });
+                const item = findItemBySectionKey(items, sectionKey);
+                if (!item?.INSPECTED_BY) continue;
 
-            if (item && item.INSPECTED_BY) {
-                const question = item.QUESTION?.trim();
-                const normalize = str => str?.replace(/\s+/g, ' ')?.trim();
-                const matchingAttachments = attachmentGroups[normalize(question)] || [];
+                const matchingAttachments = attachmentGroups[normalize(item.QUESTION)] || [];
+                await runLoader(loader, pageProxy, item, FormSectionedTable, matchingAttachments, flags, testdata._array, sectionKey);
+            }
 
-                try {
-                    await loader(
-                        pageProxy,
-                        item,
-                        FormSectionedTable,
-                        matchingAttachments,
-                        flags,
-                        testdata._array
-                    );
-                } catch (err) {
-                    console.error(`❌ Error running loader for section ${sectionKey}:`, err);
-                }
+        } else if (type === "outlet") {
+            FormSectionedTable.getSection('Section131FormOutlet').setVisible(true);
+            FormSectionedTable.getSection('Section131Form').setVisible(false);
+
+            const orderedSectionKeys = ['13.1', '14.1', '14.2', '15.1', '16.1', '16.2', '16.3'];
+            for (const sectionKey of orderedSectionKeys) {
+                const loader = loadOutletSectionLoader(sectionKey);
+                if (!loader) continue;
+
+                const item = findItemBySectionKey(items, sectionKey);
+                if (!item?.INSPECTED_BY) continue;
+
+                const matchingAttachments = attachmentGroups[normalize(item.QUESTION)] || [];
+                await runLoader(loader, pageProxy, item, FormSectionedTable, matchingAttachments, flags, testdata._array, sectionKey);
             }
         }
 
@@ -88,47 +74,28 @@ function groupAttachmentsByQuestion(attachments = []) {
     const grouped = {};
     for (const attachment of attachments) {
         const rawKey = attachment.QUESTION || attachment.question || '';
-        const key = rawKey.replace(/\s+/g, ' ').trim();
+        const key = normalize(rawKey);
         if (!grouped[key]) grouped[key] = [];
         grouped[key].push(attachment);
     }
     return grouped;
 }
 
-function getSectionLoader(sectionKey) {
-    const sectionLoaders = {
-        '13.1': loadSection131Data,
-        '13.2': loadSection132Data,
-        '13.3': loadSection133Data,
-        '13.4': loadSection134Data,
-        '13.5': loadSection135Data,
-        '13.6': loadSection136Data
-    };
-    return sectionLoaders[sectionKey];
+function normalize(str) {
+    return str?.replace(/\s+/g, ' ')?.trim();
 }
 
-async function processFileData(headerFile) {
-    const base64File = headerFile.file;
-    const fileName = headerFile.name;
-    let cleanBase64 = base64File;
-    if (base64File.startsWith('data:')) {
-        cleanBase64 = base64File.split(',')[1];
-    }
-    const arrayBuffer = convertBase64ToArrayBuffer(cleanBase64);
-    return {
-        urlString: fileName,
-        content: arrayBuffer,
-        contentType: 'application/pdf',
-        size: arrayBuffer.byteLength
-    };
+function findItemBySectionKey(items, sectionKey) {
+    return items.find(it => {
+        const sectionKeyFromItem = it.QUESTION?.trimStart().split(' ')[0];
+        return sectionKeyFromItem === sectionKey;
+    });
 }
 
-function convertBase64ToArrayBuffer(base64) {
-    const binaryString = atob(base64);
-    const len = binaryString.length;
-    const bytes = new Uint8Array(len);
-    for (let i = 0; i < len; i++) {
-        bytes[i] = binaryString.charCodeAt(i);
+async function runLoader(loader, pageProxy, item, FormSectionedTable, attachments, flags, testdata, sectionKey) {
+    try {
+        await loader(pageProxy, item, FormSectionedTable, attachments, flags, testdata);
+    } catch (err) {
+        console.error(`❌ Error running loader for section ${sectionKey}:`, err);
     }
-    return bytes.buffer;
 }

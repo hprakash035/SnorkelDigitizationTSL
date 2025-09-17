@@ -1,20 +1,7 @@
-/**
- * Describe this function...
- * @param {IClientAPI} clientAPI
- */
-export default function Section151Validation(clientAPI) {
+export default async function Section151Validation(clientAPI) {
     try {
         const pageProxy = clientAPI.getPageProxy();
         const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
-        //  const headerSection = FormSectionedTable.getSection('HeaderSection');
-        // const snorkelNoControl = headerSection.getControl('SnorkelNo');
-        // const snorkelNo = snorkelNoControl.getValue();
-
-        // if (!snorkelNo) {
-        //     return clientAPI.executeAction({
-        //         Name: '/TRL_Snorkel_Digitization_TSL/Actions/ValidationFailed.action',
-        //     });
-        // }
 
         const Section151 = FormSectionedTable.getSection('Section151Form');
         const decisionTakenCtrl = Section151.getControl('Section151DecisionTaken');
@@ -25,16 +12,24 @@ export default function Section151Validation(clientAPI) {
         const inspectedBy = inspectedByCtrl?.getValue();
         const inspectionMethod = inspectionMethodCtrl?.getValue();
 
-        if (decisionTaken && inspectedBy && inspectionMethod && decisionTaken != "") {
-    const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
-    const Section151UserInputImage1 =FormSectionedTable.getSection('Section151TestForm');
-    Section151UserInputImage1.setVisible('true');
-     FormSectionedTable.getSection('Section151FormName').setVisible(true);
-    FormSectionedTable.getSection('Section151Form').getControl('Sectiopn151TestNextButton').setVisible(false);
+        if (decisionTaken && inspectedBy && inspectionMethod && decisionTaken !== "") {
+
+            // Show Section152
+            const Section152 = FormSectionedTable.getSection('Section152Form');
+            if (Section152) {
+                await Section152.setVisible(true);
+            }
+
+            // Hide the "Next" button inside Section151Form
+            const nextButton = Section151.getControl('Section152NextButton');
+            if (nextButton) {
+                await nextButton.setVisible(false);
+            }
+
             return clientAPI.executeAction({
                 Name: '/TRL_Snorkel_Digitization_TSL/Actions/Section151Create.action'
             });
-           
+
         } else {
             return clientAPI.executeAction({
                 Name: '/TRL_Snorkel_Digitization_TSL/Actions/ValidationFailed.action'
@@ -50,4 +45,3 @@ export default function Section151Validation(clientAPI) {
         });
     }
 }
-

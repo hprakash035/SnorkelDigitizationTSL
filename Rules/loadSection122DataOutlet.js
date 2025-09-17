@@ -7,26 +7,24 @@ export async function loadSection122DataOutlet(
   testdataArray = []
 ) {
   try {
-    // --- Sections ---
-    const section122 = FormSectionedTable.getSection('Section122FormOutlet');
-    if (!section122) throw new Error('❌ Section122Form not found');
+    // --- Section References ---
+    const Section122 = FormSectionedTable.getSection('Section122FormOutlet');
+    if (!Section122) throw new Error("❌ Section122FormOutlet not found");
 
     const testHeader = FormSectionedTable.getSection('Section122TestFormNameOutlet');
     const testForm = FormSectionedTable.getSection('Section122TestFormOutlet');
 
-    await section122.setVisible(true);
-    await testHeader?.setVisible(true);
-    await testForm?.setVisible(true);
+    const dynamicImageSection = FormSectionedTable.getSection('Section122DynamicImageOutlet');
+    const userInputImageSection = FormSectionedTable.getSection('Section122UserInputImageOutlet');
+    const staticImageSection = FormSectionedTable.getSection('Section122ImageOutlet');
 
-    // --- Helpers ---
+    const binding = pageProxy.getBindingObject();
+
+    // --- Helper Functions ---
     const setHeaderValue = async (ctrlName, value, { asArray = false } = {}) => {
-      const c = section122.getControl(ctrlName);
-      if (!c) {
-        return;
-      }
-      const v = asArray
-        ? (value !== undefined && value !== null ? [value] : [])
-        : (value ?? '');
+      const c = Section122.getControl(ctrlName);
+      if (!c) return;
+      const v = asArray ? (value !== undefined && value !== null ? [value] : []) : (value ?? '');
       await c.setValue(v);
       if (c.redraw) await c.redraw();
     };
@@ -34,9 +32,7 @@ export async function loadSection122DataOutlet(
     const setTestValue = async (ctrlName, value) => {
       if (!testForm) return;
       const c = testForm.getControl(ctrlName);
-      if (!c) {
-        return;
-      }
+      if (!c) return;
       await c.setValue(value ?? '');
       if (c.redraw) await c.redraw();
     };
@@ -44,31 +40,26 @@ export async function loadSection122DataOutlet(
     const compat = (obj, ...keys) =>
       keys.reduce((acc, k) => (acc !== undefined && acc !== null ? acc : obj?.[k]), undefined);
 
-    // --- Header values ---
+    // --- Header Values ---
     const rawDate = qcItem122?.DATE_INSPECTED;
     const dateVal = rawDate ? new Date(rawDate) : undefined;
 
+    await Section122.setVisible(true);
     await setHeaderValue('Section122DateOutlet', dateVal);
     await setHeaderValue('Section122InspectedByOutlet', qcItem122?.INSPECTED_BY, { asArray: true });
     await setHeaderValue('Section122MethodOutlet', qcItem122?.METHOD);
     await setHeaderValue('Section122DecisionTakenOutlet', qcItem122?.DECISION_TAKEN, { asArray: true });
 
-    // --- Dynamic image logic ---
-    const dynamicImageSection = FormSectionedTable.getSection('Section122DynamicImageOutlet');
-    const staticImageSection = FormSectionedTable.getSection('Section122ImageOutlet');
-    const userInputImageSection = FormSectionedTable.getSection('Section122UserInputImageOutlet');
-    const binding = pageProxy.getBindingObject();
-
+    // --- Image Logic ---
     if (staticImageSection) await staticImageSection.setVisible(true);
 
     if (dynamicImageSection && attachments?.length > 0) {
       const first = attachments[0];
       const base64 = first?.file;
       const mime = first?.mimeType || 'image/png';
-console.log(first)
+
       if (base64 && base64.length > 100) {
         binding.imageUri = `data:${mime};base64,${base64}`;
-
         await dynamicImageSection.setVisible(true);
         await dynamicImageSection.redraw();
         await userInputImageSection?.setVisible(false);
@@ -79,7 +70,7 @@ console.log(first)
       await userInputImageSection?.setVisible(true);
     }
 
-    // --- Filter and sort test data for Section 122 ---
+    // --- Filter and Sort Test Data (Same as 132 logic) ---
     const testsFor122 = Array.isArray(testdataArray)
       ? testdataArray.filter((t) => {
           const q = (compat(t, 'QUESTION', 'question', 'testname') || '').toLowerCase();
@@ -92,10 +83,9 @@ console.log(first)
         })
       : [];
 
-    // --- Sort by position label suffix: e.g., Gap-A, Gap-B, etc.
     const extractSuffixLetter = (str) => {
       const match = str?.match(/Gap-([A-Z])/i);
-      return match ? match[1].toUpperCase() : 'Z'; // Default Z to sort unknowns last
+      return match ? match[1].toUpperCase() : 'Z'; // Default Z for unknowns
     };
 
     const sortByPosition = (a, b) => {
@@ -106,7 +96,10 @@ console.log(first)
 
     const sortedTests = [...testsFor122].sort(sortByPosition);
 
-    // --- Map up to 4 test entries into the controls
+    // --- Populate up to 4 test entries ---
+    await testHeader?.setVisible(true);
+    await testForm?.setVisible(true);
+
     for (let i = 0; i < Math.min(sortedTests.length, 4); i++) {
       const t = sortedTests[i];
       const idx = i + 1;
@@ -124,14 +117,14 @@ console.log(first)
       await setTestValue(`Section122ActualValue${idx}`, actualValue);
     }
 
-    // --- Next button logic ---
+    // --- Next Button Logic ---
     if (testForm) {
       const nextBtn = testForm.getControl('Section133NextButton');
       if (nextBtn) {
         if (sortedTests.length > 0) {
           await nextBtn.setVisible(false);
           if (flags?.next === false) {
-            const nextSection = FormSectionedTable.getSection('Section123FormOutlet');
+            const nextSection = FormSectionedTable.getSection('Section133Form');
             await nextSection?.setVisible(true);
           }
         } else {
@@ -140,6 +133,6 @@ console.log(first)
       }
     }
   } catch (error) {
-    // Handle error if needed, or silently ignore
+    // Handle error
   }
 }

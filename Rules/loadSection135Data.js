@@ -8,7 +8,7 @@ export async function loadSection135Data(pageProxy, qcItem135, FormSectionedTabl
         }
         // console.log("Section135Form found.");
 
-        const nextButton = section135.getControl('SectionNextButton');
+        const nextButton = section135.getControl('Section135StaticNextButton');
         if (nextButton) {
             // console.log("Hiding SectionNextButton");
             await nextButton.setVisible(false);

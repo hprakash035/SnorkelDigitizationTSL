@@ -1,0 +1,22 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Section141TestCreateB"
+	},
+	"Target": {
+		"Service": "/TRL_Snorkel_Digitization_TSL/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_Test_Table"
+	},
+	"Properties": {
+		"ff1": "#Page:SnorkelInstallation5/#Control:Section141FF2/#Value",
+		"ff2": "#Page:SnorkelInstallation5/#Control:Section141FF22/#Value",
+		"remark": "#Page:SnorkelInstallation5/#Control:Section141TestRemark2/#Value",
+		"settleduration": "#Page:SnorkelInstallation5/#Control:Section141SettingTime2/#Value",
+		"testname": "*9 Inspection result of outer castable workablity",
+		"tf1": "#Page:SnorkelInstallation5/#Control:Section141TF2/#Value",
+		"tf2": "#Page:SnorkelInstallation5/#Control:Section141TF22/#Value",
+		"watercasting": "#Page:SnorkelInstallation5/#Control:Section141TestWaterCasteing2/#Value",
+		"batchNo": "#Page:SnorkelInstallation5/#Control:Section141TestBatchNo2/#Value",
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
+	}
+}

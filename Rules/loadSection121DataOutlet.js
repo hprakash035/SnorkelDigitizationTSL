@@ -1,54 +1,52 @@
-export async function loadSection121DataOutlet(pageProxy, qcItem121, FormSectionedTable, attachments, flags, testdataArray) {
+export async function loadSection121DataOutlet(pageProxy, qcItem121, FormSectionedTable, attachments = [], flags, testdataArray = []) {
     try {
         const Section121 = FormSectionedTable.getSection('Section121FormOutlet');
-        if (!Section121) {
-            throw new Error("Section121FormOutlet not found in FormSectionedTable.");
-        }
+        if (!Section121) throw new Error("❌ Section121FormOutlet not found in FormSectionedTable.");
 
         await Section121.setVisible(true);
 
-        const nextButton = Section121.getControl('Section123NextButton');
-        if (nextButton) {
-            await nextButton.setVisible(false);
-            
-            if (flags?.next === false) {
-              
-                const Section41Form = FormSectionedTable.getSection('Section121StaticImageOutlet');
-                if (Section41Form) {
-                    await Section41Form.setVisible(true);
-                }
-                  const Section121UserInputImageOutlet = FormSectionedTable.getSection('Section121UserInputImageOutlet');
-                if (Section121UserInputImageOutlet) {
-                    await Section121UserInputImageOutlet.setVisible(true);
+        // -------------------------------
+        // Helpers
+        // -------------------------------
+        const hideNextButton = async (section, buttonName) => {
+            if (section) {
+                const btn = section.getControl(buttonName);
+                if (btn) {
+                    await btn.setVisible(false);
+                    // console.log(`🚫 Hidden ${buttonName}`);
                 }
             }
-           
+        };
+
+        const setValueIfPresent = async (controlName, value) => {
+            const control = Section121.getControl(controlName);
+            if (control && value !== undefined && value !== null) {
+                await control.setValue(value);
+            }
+        };
+
+        // -------------------------------
+        // Metadata
+        // -------------------------------
+        await setValueIfPresent('Section121DateOutlet', qcItem121.DATE_INSPECTED);
+        await setValueIfPresent('Section121InspectedByOutlet', qcItem121.INSPECTED_BY ? [qcItem121.INSPECTED_BY] : undefined);
+        await setValueIfPresent('Section121MethodOutlet', qcItem121.METHOD);
+        await setValueIfPresent('Section121DecisionTakenOutlet', qcItem121.DECISION_TAKEN ? [qcItem121.DECISION_TAKEN] : undefined);
+
+        // Hide static NEXT after metadata if data exists
+        if (qcItem121?.DATE_INSPECTED || qcItem121?.INSPECTED_BY || qcItem121?.METHOD || qcItem121?.DECISION_TAKEN) {
+            await hideNextButton(Section121, "Section122NextButtonOutlet");
         }
 
-        const Section121Date31Control = Section121.getControl('Section121DateOutlet');
-        if (Section121Date31Control && qcItem121.DATE_INSPECTED) {
-            await Section121Date31Control.setValue(qcItem121.DATE_INSPECTED); 
-        }
-
-        const Section121InspectedBy31Control = Section121.getControl('Section121InspectedByOutlet');
-        if (Section121InspectedBy31Control && qcItem121.INSPECTED_BY) {
-            await Section121InspectedBy31Control.setValue([qcItem121.INSPECTED_BY]);
-        }
-
-        const Section121InspectionMethod31Control = Section121.getControl('Section121MethodOutlet');
-        if (Section121InspectionMethod31Control && qcItem121.METHOD) {
-            await Section121InspectionMethod31Control.setValue(qcItem121.METHOD);
-        }
-
-        const Section121DecisionTaken31Control = Section121.getControl('Section121DecisionTakenOutlet');
-        if (Section121DecisionTaken31Control && qcItem121.DECISION_TAKEN) {
-            await Section121DecisionTaken31Control.setValue([qcItem121.DECISION_TAKEN]);
-        }
-   // ✅ Dynamic Image Logic
+        // -------------------------------
+        // Image handling
+        // -------------------------------
+        FormSectionedTable.getSection('Section121ImageOutlet')?.setVisible(true);
         const dynamicImageSection = FormSectionedTable.getSection('Section121DynamicImageOutlet');
         const userInputImageSection = FormSectionedTable.getSection('Section121UserInputImageOutlet');
-         FormSectionedTable.getSection('Section121ImageOutlet').setVisible(true);
         const binding = pageProxy.getBindingObject();
+
+        let hasDynamicImage = false;
 
         if (dynamicImageSection && attachments.length > 0) {
             const firstAttachment = attachments[0];
@@ -60,35 +58,41 @@ export async function loadSection121DataOutlet(pageProxy, qcItem121, FormSection
                 await dynamicImageSection.setVisible(true);
                 await dynamicImageSection.redraw();
 
-                // Hide user input image section
+                hasDynamicImage = true;
+
                 if (userInputImageSection) {
                     await userInputImageSection.setVisible(false);
                 }
-            } else {
-                binding.imageUri = '/TRL_Snorkel_Digitization_TSL/Images/NoImageAvailable.png';
-                await dynamicImageSection.setVisible(false);
-                await dynamicImageSection.redraw();
-
-                // Show user input image section
-                if (userInputImageSection) {
-                    await userInputImageSection.setVisible(true);
-                }
             }
-        } else {
+        }
+
+        if (!hasDynamicImage) {
             binding.imageUri = '/TRL_Snorkel_Digitization_TSL/Images/NoImageAvailable.png';
             await dynamicImageSection?.setVisible(false);
             await dynamicImageSection?.redraw();
 
-            // Show user input image section
             if (userInputImageSection) {
                 await userInputImageSection.setVisible(true);
             }
         }
-        
-         FormSectionedTable.getSection('Section122FormOutlet').setVisible(true);
 
-    
+        // -------------------------------
+        // Show next form automatically if data exists
+        // -------------------------------
+        const Section122 = FormSectionedTable.getSection('Section122FormOutlet');
+
+        if (qcItem121?.DATE_INSPECTED || hasDynamicImage) {
+            // ✅ Auto-show Section122
+            await Section122?.setVisible(true);
+
+            // Hide its Next button too if data is present
+            await hideNextButton(Section122, "Section122StaticNextButtonOutlet");
+        } else {
+            // ❌ Keep Section122 hidden until button pressed
+            await Section122?.setVisible(false);
+        }
+
     } catch (error) {
-        console.error("Error in loadSection121DataOutlet:", error);
+        console.error("❌ Error in loadSection121DataOutlet:", error);
     }
 }
