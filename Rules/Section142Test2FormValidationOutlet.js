@@ -45,11 +45,11 @@ export default async function Section142Test2FormValidation(clientAPI) {
      
     const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
     FormSectionedTable.getSection('Section142Test2FormOutlet').getControl('Section142StaticNextButton').setVisible(false);
-    const Section142Form =FormSectionedTable.getSection('Section142StaticImageOutlet');
-    const Section142Form1 =FormSectionedTable.getSection('Section142UserInputImageOutlet');
+    const Section142Form =FormSectionedTable.getSection('Section151FormOutlet');
+    // const Section142Form1 =FormSectionedTable.getSection('Section142UserInputImageOutlet');
   
     Section142Form.setVisible('true');
-    Section142Form1.setVisible('true');
+//  Section142Form1.setVisible('true');
 
     } catch (e) {
         console.error("❌ Error in Section142Test2FormValidation:", e);

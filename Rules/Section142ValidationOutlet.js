@@ -30,7 +30,7 @@ export default function Section142ValidationOutlet(clientAPI) {
     const Section142UserInputImage1 =FormSectionedTable.getSection('Section142TestFormOutlet');
     Section142UserInputImage1.setVisible('true');
     FormSectionedTable.getSection('Section142TestNameOutlet').setVisible(true);
-    FormSectionedTable.getSection('Section142FormOutlet').getControl('Section142TestNextButton').setVisible(false);
+    FormSectionedTable.getSection('Section142FormOutlet').getControl('Section142TestNextButtonOutlet').setVisible(false);
             return clientAPI.executeAction({
                 Name: '/TRL_Snorkel_Digitization_TSL/Actions/Section142CreateOutlet.action'
             });

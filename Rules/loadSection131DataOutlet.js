@@ -6,12 +6,12 @@ export async function loadSection131DataOutlet(pageProxy, qcItem131, FormSection
     }
     await Section131.setVisible(true);
 
-    const nextButton = Section131.getControl('Section131TestNextButton');
+    const nextButton = Section131.getControl('Section131TestNextButtonOutlet');
     if (nextButton) {
       await nextButton.setVisible(false);
 
       if (flags?.next === false) {
-        const Section131TestNameForm = FormSectionedTable.getSection('Section131TestNameFormOutlet');
+        const Section131TestNameForm = FormSectionedTable.getSection('Section131TestFormNameOutlet');
         if (Section131TestNameForm) {
           await Section131TestNameForm.setVisible(true);
         }
@@ -60,18 +60,22 @@ export async function loadSection131DataOutlet(pageProxy, qcItem131, FormSection
     };
 
     // ✅ Collect all "outer castable workablity" tests
-    const parsedTestDataArray = testdataArray
-      .filter(item => (item.testname || '').toLowerCase().includes('outer castable workablity'))
-      .map(item => ({
-        batchNo: safeVal(item.batchNo),
-        water: safeVal(item.watercasting || item.water),
-        ff1: safeVal(item.ff1),
-        ff2: safeVal(item.ff2),
-        tf1: safeVal(item.tf1),
-        tf2: safeVal(item.tf2),
-        settingtime: safeVal(item.settleduration || item.settingtime),
-        remark: safeVal(item.remark)
-      }));
+   const parsedTestDataArray = testdataArray
+  .filter(item => {
+    const name = (item.testname || '').toLowerCase();
+    return name.includes('*8') ;
+  })
+  .map(item => ({
+    batchNo: safeVal(item.batchNo),
+    water: safeVal(item.watercasting || item.water),
+    ff1: safeVal(item.ff1),
+    ff2: safeVal(item.ff2),
+    tf1: safeVal(item.tf1),
+    tf2: safeVal(item.tf2),
+    settingtime: safeVal(item.settleduration || item.settingtime),
+    remark: safeVal(item.remark)
+  }));
+
 
     // console.log("✅ Parsed Section131 data:", parsedTestDataArray);
 
@@ -136,22 +140,22 @@ export async function loadSection131DataOutlet(pageProxy, qcItem131, FormSection
       if (remarkCtrl){ await remarkCtrl.setValue(test.remark); await remarkCtrl.redraw(); dataMapped = true; }
     }
 
-    // Handle Next button visibility for Section92
-    const nextButtonTest = testForm.getControl('Section141NextButtonOutlet');
-    if (nextButtonTest && flags?.next === false) {
-      const nextSection = FormSectionedTable.getSection('Section92Form');
-      if (nextSection) {
-        await nextSection.setVisible(true);
-      }
-    }
+    // // Handle Next button visibility for Section92
+    // const nextButtonTest = testForm.getControl('Section141NextButtonOutlet');
+    // if (nextButtonTest && flags?.next === false) {
+    //   const nextSection = FormSectionedTable.getSection('Section141FormOutlet');
+    //   if (nextSection) {
+    //     await nextSection.setVisible(true);
+    //   }
+    // }
 
     // ✅ If data mapped, show Section101Form & hide its Next button
     if (dataMapped) {
-      const section101 = FormSectionedTable.getSection('Section101Form');
+      const section101 = FormSectionedTable.getSection('Section141FormOutlet');
       if (section101) {
         await section101.setVisible(true);
       }
-      const section101NextBtn = FormSectionedTable.getControl('Section101NextButton');
+      const section101NextBtn = FormSectionedTable.getControl('Section141NextButtonOutlet');
       if (section101NextBtn) {
         await section101NextBtn.setVisible(false);
       }

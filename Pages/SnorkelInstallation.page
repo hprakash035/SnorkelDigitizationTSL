@@ -20,7 +20,6 @@
 						"ControlSeparator": true
 					},
 					"Controls": [
-						
 						{
 							"Value": "{CUSTOMER_NAME}",
 							"_Type": "Control.Type.FormCell.ListPicker",
@@ -3153,7 +3152,7 @@
 							"_Name": "Section71NextButton",
 							"IsVisible": true,
 							"Separator": true,
-							"Title": "Next Sheet",
+							"Title": "Next",
 							"Alignment": "Center",
 							"ButtonType": "Text",
 							"Semantic": "Tint",

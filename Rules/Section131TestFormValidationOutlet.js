@@ -18,12 +18,7 @@ export default async function Section131TestFormValidationOutlet(clientAPI) {
         await clientAPI.executeAction({
             Name: '/TRL_Snorkel_Digitization_TSL/Actions/Section131TestCreateCOutlet.action'
         });
-         await clientAPI.executeAction({
-            Name: '/TRL_Snorkel_Digitization_TSL/Actions/Section131TestCreateDOutlet.action'
-        });
- await clientAPI.executeAction({
-            Name: '/TRL_Snorkel_Digitization_TSL/Actions/Section131TestCreateEOutlet.action'
-        });
+        
 
 
         const FormSectionedTable = pageProxy.getControl('FormSectionedTable');

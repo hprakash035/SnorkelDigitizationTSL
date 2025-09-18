@@ -37,9 +37,9 @@ export default function Section162ValidationOutlet(clientAPI) {
 
 
 
-            return   clientAPI.executeAction({
-                Name: '/TRL_Snorkel_Digitization_TSL/Actions/Nav2Sheet5.action'
-            });
+            // return   clientAPI.executeAction({
+            //     Name: '/TRL_Snorkel_Digitization_TSL/Actions/Nav2Sheet5.action'
+            // });
            
         } else {
             return clientAPI.executeAction({

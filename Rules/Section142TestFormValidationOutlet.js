@@ -63,16 +63,17 @@ export default async function Section142TestFormValidationOutlet(clientAPI) {
         // All validations passed
         console.log("🎉 All 5 test validations passed successfully.");
 
-        const nextButton = section142.getControl('Section142Test2NextButton');
+        const nextButton = section142.getControl('Section142Test2NextButtonOutlet');
         if (nextButton) {
             console.log("⏩ Hiding Next button");
             nextButton.setVisible(false);
         } else {
-            console.warn("⚠️ Section142Test2NextButton not found");
+            console.warn("⚠️ Section142Test2NextButtonOutlet not found");
         }
 
         const nextSection = form.getSection('Section142Test2FormOutlet');
         if (nextSection) {
+            form.getSection('Section142Test2NameOutlet').setVisible(true);;
             console.log("⏩ Showing Section142Test2FormOutlet");
             nextSection.setVisible(true);
         } else {

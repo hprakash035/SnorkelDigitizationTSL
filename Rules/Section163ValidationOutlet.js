@@ -26,9 +26,9 @@ export default function Section163ValidationOutlet(clientAPI) {
         const inspectionMethod = inspectionMethodCtrl?.getValue();
 
         if (decisionTaken && inspectedBy && inspectionMethod && decisionTaken != "") {
-    const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
-    const Section163UserInputImage1 =FormSectionedTable.getSection('Section171FormOutlet');
-    Section163UserInputImage1.setVisible('true');
+    // const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
+    // const Section163UserInputImage1 =FormSectionedTable.getSection('Section171FormOutlet');
+    // Section163UserInputImage1.setVisible('true');
     FormSectionedTable.getSection('Section163FormOutlet').getControl('Section171NextButton').setVisible(false);
             return clientAPI.executeAction({
                 Name: '/TRL_Snorkel_Digitization_TSL/Actions/Section163CreateOutlet.action'

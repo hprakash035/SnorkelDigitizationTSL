@@ -29,7 +29,7 @@ export default function Section141ValidationOutlet(clientAPI) {
     const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
     const Section141UserInputImage1 =FormSectionedTable.getSection('Section142FormOutlet');
     Section141UserInputImage1.setVisible('true');
-    // FormSectionedTable.getSection('Section141Form').getControl('Section162NextButton').setVisible(false);
+     FormSectionedTable.getSection('Section141FormOutlet').getControl('Section142NextButtonOutlet').setVisible(false);
             return clientAPI.executeAction({
                 Name: '/TRL_Snorkel_Digitization_TSL/Actions/Section141CreateOutlet.action'
             });
