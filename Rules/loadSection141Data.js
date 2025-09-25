@@ -54,7 +54,7 @@ export async function loadSection141Data(pageProxy, qcItem141, FormSectionedTabl
 
             if (testdataArray.length > 0) {
                 const tests = testdataArray.filter(t =>
-                    t.testname?.includes("*9 Inspection result of outer castable workablity")
+                    t.testname?.includes("*8 Inspection result of outer castable workablity")
                 );
 
                 for (let i = 0; i < Math.min(tests.length, 3); i++) {

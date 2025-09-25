@@ -13,7 +13,7 @@
 		"DECISION_TAKEN": "#Page:SnorkelInstallation6/#Control:Section181DecisionTaken/#SelectedValue",
 		"INSPECTED_BY": "#Page:SnorkelInstallation6/#Control:Section181InspectedBy/#SelectedValue",
 		"METHOD": "#Page:SnorkelInstallation6/#Control:Section181Method/#Value",
-		"QUESTION": "18.1 Drying pattern according to Process Chart",
+		"QUESTION": "18.1  Selection Of Drying Pattern",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}
 }

@@ -81,7 +81,7 @@
 					"_Type": "Section.Type.Image",
 					"_Name": "SectionFinalADynamicImage",
 					"Visible": false,
-					"Image": "",
+					"Image": "{imageUri}",
 					"Alignment": "Center",
 					"ContentMode": "ScaleAspectFit"
 				},
@@ -158,7 +158,7 @@
 					"_Type": "Section.Type.Image",
 					"_Name": "SectionFinalBDynamicImage",
 					"Visible": false,
-					"Image": "",
+					"Image": "{imageUri}",
 					"Alignment": "Center",
 					"ContentMode": "ScaleAspectFit"
 				},
@@ -1569,6 +1569,7 @@
 	],
 	"_Type": "Page",
 	"_Name": "FinalInspection",
+	"OnLoaded": "/TRL_Snorkel_Digitization_TSL/Rules/LoadSectionFinalData.js",
 	"ActionBar": {
 		"Items": [
 			{

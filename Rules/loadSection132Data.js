@@ -121,7 +121,7 @@ export async function loadSection132Data(
       ? testdataArray.filter((t) => {
           const q = (compat(t, 'QUESTION', 'question', 'testname') || '').toLowerCase();
           return (
-            q.includes('*8') ||
+            q.includes('*7') ||
             q.includes('13.2') ||
             q.includes('gap measurement between 2nd ring brick') ||
             q.includes('center position of the ring brick')

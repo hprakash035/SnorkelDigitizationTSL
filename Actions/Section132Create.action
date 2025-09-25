@@ -13,7 +13,7 @@
 		"DECISION_TAKEN": "#Page:SnorkelInstallation4/#Control:Section132DecisionTaken/#SelectedValue",
 		"INSPECTED_BY": "#Page:SnorkelInstallation4/#Control:Section132InspectedBy/#SelectedValue",
 		"METHOD": "#Page:SnorkelInstallation4/#Control:Section132Method/#Value",
-		"QUESTION": "13.2 Center position of the ring brick  *8",
+		"QUESTION": "13.2 Center position of the ring brick  *7",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}
 }

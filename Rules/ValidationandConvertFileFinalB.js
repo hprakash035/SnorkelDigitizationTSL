@@ -14,7 +14,7 @@ export default async function ValidateAndConvertFileFinalB(clientAPI) {
     const photoControl = photoSection?.getControl('SectionFinalTakePhotoB');
     const attachments = photoControl?.getValue() || [];
 
-    const question = "Final Inspection";
+    const question = "Final Inspection B";
     // --- Validation: Only one file allowed ---
     if (attachments.length > 1) {
       photoControl.setValue([attachments[0]]);

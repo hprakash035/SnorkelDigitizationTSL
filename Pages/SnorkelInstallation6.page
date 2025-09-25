@@ -18,7 +18,7 @@
 					},
 					"Controls": [
 						{
-							"Value": " 17.1 Curing time   > 24Hr",
+							"Value": " 16.1 Curing time   > 24Hr",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section171Question",
 							"IsVisible": true,
@@ -201,7 +201,7 @@
 						"_Name": "Section171Header",
 						"AccessoryType": "None",
 						"UseTopPadding": true,
-						"Caption": "17. Curing in the room temperature"
+						"Caption": "16. Curing in the room temperature"
 					},
 					"Visible": false,
 					"EmptySection": {
@@ -220,7 +220,7 @@
 					},
 					"Controls": [
 						{
-							"Value": " 18.1 Drying pattern according to Process Chart",
+							"Value": " 17.1 Selection Of Drying Pattern",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section181Question",
 							"IsVisible": true,
@@ -403,7 +403,7 @@
 						"_Name": "Section181Header",
 						"AccessoryType": "None",
 						"UseTopPadding": true,
-						"Caption": "18. Drying"
+						"Caption": "17. Drying(Furnace)"
 					},
 					"Visible": false,
 					"EmptySection": {
@@ -422,7 +422,7 @@
 					},
 					"Controls": [
 						{
-							"Value": "18.2 Drying time (76~80 hrs)",
+							"Value": "17.2 Drying time ",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section182Question",
 							"IsVisible": true,
@@ -617,7 +617,7 @@
 					},
 					"Controls": [
 						{
-							"Value": "18.3 Drying temperature (350°C with 10 hrs soaking)",
+							"Value": "17.3 Drying temperature ",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section183Question",
 							"IsVisible": true,
@@ -812,7 +812,7 @@
 					},
 					"Controls": [
 						{
-							"Value": "18.4 Installation of the removal equipment with automatically for the hanging hooks ",
+							"Value": "17.4 Installation of the removal equipment with automatically for the hanging hooks ",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section184Question",
 							"IsVisible": true,
@@ -937,7 +937,7 @@
 							"Caption": "Method",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"Value": [
@@ -1007,7 +1007,7 @@
 					},
 					"Controls": [
 						{
-							"Value": " 19.1 Coating on the outer castable",
+							"Value": " 18.1 Coating on the outer castable",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section191Question",
 							"IsVisible": true,
@@ -1131,7 +1131,7 @@
 							"Caption": "Method",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"Value": [
@@ -1184,6 +1184,13 @@
 					"Layout": {
 						"NumberOfColumns": 1
 					},
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader0",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "18. Furnishing"
+					},
 					"Visible": false,
 					"EmptySection": {
 						"FooterVisible": false
@@ -1201,7 +1208,7 @@
 					},
 					"Controls": [
 						{
-							"Value": "19.2 Confirmation of the uneven/trace on the ring brick after removing hanging hooks",
+							"Value": "18.2 Confirmation of the uneven/trace on the ring brick after removing hanging hooks",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section192Question",
 							"IsVisible": true,
@@ -1326,7 +1333,7 @@
 							"Caption": "Method",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"Value": [
@@ -1396,7 +1403,7 @@
 					},
 					"Controls": [
 						{
-							"Value": "19.3 Putting the mark with clearly *12",
+							"Value": "18.3 Putting the mark with clearly",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section193Question",
 							"IsVisible": true,
@@ -1591,7 +1598,7 @@
 					},
 					"Controls": [
 						{
-							"Value": "19.4 Putting the manufacturing control numbers *12",
+							"Value": "18.4 Putting the manufacturing control numbers ",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section194Question",
 							"IsVisible": true,
@@ -1777,201 +1784,6 @@
 					"_Name": "Section194Form"
 				},
 				{
-					"Separators": {
-						"TopSectionSeparator": false,
-						"BottomSectionSeparator": true,
-						"HeaderSeparator": true,
-						"FooterSeparator": true,
-						"ControlSeparator": true
-					},
-					"Controls": [
-						{
-							"Value": "19.5 Putting logo",
-							"_Type": "Control.Type.FormCell.Title",
-							"_Name": "Section195Question",
-							"IsVisible": true,
-							"Separator": true,
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": false
-						},
-						{
-							"Value": "{qc_ITEMS/DATE_INSPECTED}",
-							"_Type": "Control.Type.FormCell.DatePicker",
-							"_Name": "Section195Date",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "Date",
-							"IsEditable": true,
-							"Mode": "Date"
-						},
-						{
-							"Value": [
-								"{qc_ITEMS/INSPECTED_BY}"
-							],
-							"_Type": "Control.Type.FormCell.ListPicker",
-							"_Name": "Section195InspectedBy",
-							"IsVisible": true,
-							"Separator": true,
-							"AllowMultipleSelection": false,
-							"AllowEmptySelection": false,
-							"Caption": "Inspected By",
-							"IsSelectedSectionEnabled": false,
-							"AllowDefaultValueIfOneItem": false,
-							"IsEditable": true,
-							"PickerItems": [
-								{
-									"DisplayValue": "SOUMEN JANA",
-									"ReturnValue": "SOUMEN JANA"
-								},
-								{
-									"DisplayValue": "RAHUL CHOUDHARY",
-									"ReturnValue": "RAHUL CHOUDHARY"
-								},
-								{
-									"DisplayValue": "SOURAV JAISWAL",
-									"ReturnValue": "SOURAV JAISWAL"
-								},
-								{
-									"DisplayValue": "SURYAMANI KUMAR",
-									"ReturnValue": "SURYAMANI KUMAR"
-								},
-								{
-									"DisplayValue": "JOSHABANTA SAHU",
-									"ReturnValue": "JOSHABANTA SAHU"
-								},
-								{
-									"DisplayValue": "S PRASANTH KUMAR",
-									"ReturnValue": "S PRASANTH KUMAR"
-								},
-								{
-									"DisplayValue": "ANKIT KUMAR PATRA",
-									"ReturnValue": "ANKIT KUMAR PATRA"
-								},
-								{
-									"DisplayValue": "GAUTAM KIRO",
-									"ReturnValue": "GAUTAM KIRO"
-								},
-								{
-									"DisplayValue": "TAPAS KUMAR SAHU",
-									"ReturnValue": "TAPAS KUMAR SAHU"
-								},
-								{
-									"DisplayValue": "NILACHAL NAHAK",
-									"ReturnValue": "NILACHAL NAHAK"
-								},
-								{
-									"DisplayValue": "SURESH MUNDA",
-									"ReturnValue": "SURESH MUNDA"
-								},
-								{
-									"DisplayValue": "KARTIKA BEHERA",
-									"ReturnValue": "KARTIKA BEHERA"
-								},
-								{
-									"DisplayValue": "NARENDRA NAIK",
-									"ReturnValue": "NARENDRA NAIK"
-								},
-								{
-									"DisplayValue": "HEMANTA KUMAR SINGH",
-									"ReturnValue": "HEMANTA KUMAR SINGH"
-								},
-								{
-									"DisplayValue": "KULDEEP MAHANANDA",
-									"ReturnValue": "KULDEEP MAHANANDA"
-								},
-								{
-									"DisplayValue": "SANJAY RAJ PRADHAN",
-									"ReturnValue": "SANJAY RAJ PRADHAN"
-								},
-								{
-									"DisplayValue": "BANSIDHAR SETH",
-									"ReturnValue": "BANSIDHAR SETH"
-								},
-								{
-									"DisplayValue": "TAPAN KUMAR JENA",
-									"ReturnValue": "TAPAN KUMAR JENA"
-								},
-								{
-									"DisplayValue": "SONU SETH",
-									"ReturnValue": "SONU SETH"
-								},
-								{
-									"DisplayValue": "OMPRAKASH SATNAMI",
-									"ReturnValue": "OMPRAKASH SATNAMI"
-								}
-							]
-						},
-						{
-							"Value": "Steel tape",
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Section195Method",
-							"IsVisible": true,
-							"Separator": true,
-							"Caption": "Method",
-							"PlaceHolder": "PlaceHolder",
-							"Enabled": true,
-							"IsEditable": false
-						},
-						{
-							"Value": [
-								"{qc_ITEMS/DECISION_TAKEN}"
-							],
-							"_Type": "Control.Type.FormCell.ListPicker",
-							"_Name": "Section195DecisionTaken",
-							"IsVisible": true,
-							"Separator": true,
-							"AllowMultipleSelection": false,
-							"AllowEmptySelection": false,
-							"Caption": "Decision Taken",
-							"DataPaging": {
-								"ShowLoadingIndicator": false,
-								"PageSize": 50
-							},
-							"PickerPrompt": "Please select one single item",
-							"PlaceHolder": "PlaceHolder",
-							"IsSelectedSectionEnabled": true,
-							"IsPickerDismissedOnSelection": false,
-							"IsSearchCancelledAfterSelection": false,
-							"AllowDefaultValueIfOneItem": false,
-							"IsEditable": true,
-							"PickerItems": [
-								{
-									"DisplayValue": "OK",
-									"ReturnValue": "ok"
-								},
-								{
-									"DisplayValue": "Not OK",
-									"ReturnValue": "not_ok"
-								}
-							]
-						},
-						{
-							"_Type": "Control.Type.FormCell.Button",
-							"_Name": "Section195StaticNextButton",
-							"IsVisible": true,
-							"Separator": true,
-							"Title": "Next",
-							"Alignment": "Center",
-							"ButtonType": "Text",
-							"Semantic": "Tint",
-							"Image": "sap-icon://open-command-field",
-							"ImagePosition": "Trailing",
-							"Enabled": true,
-							"OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/Section195Validation.js"
-						}
-					],
-					"Layout": {
-						"NumberOfColumns": 1
-					},
-					"Visible": false,
-					"EmptySection": {
-						"FooterVisible": false
-					},
-					"_Type": "Section.Type.FormCell",
-					"_Name": "Section195Form"
-				},
-				{
 					"EmptySection": {
 						"FooterVisible": false
 					},
@@ -2047,41 +1859,6 @@
 					},
 					"_Type": "Section.Type.FormCell",
 					"_Name": "Section195UserInputImage"
-				},
-				{
-					"Separators": {
-						"TopSectionSeparator": false,
-						"BottomSectionSeparator": true,
-						"HeaderSeparator": true,
-						"FooterSeparator": true,
-						"ControlSeparator": true
-					},
-					"Layout": {
-						"LayoutType": "Vertical",
-						"HorizontalAlignment": "Leading"
-					},
-					"_Type": "Section.Type.ButtonTable",
-					"_Name": "Sheet6To7NavButtonContainer",
-					"Visible": true,
-					"EmptySection": {
-						"FooterVisible": false
-					},
-					"Buttons": [
-						{
-							"_Type": "ButtonTable.Type.Button",
-							"_Name": "Sheet6To7NavButton",
-							"Title": "Next Sheet",
-							"Alignment": "Center",
-							"ButtonType": "Text",
-							"Semantic": "Tint",
-							"Image": "sap-icon://open-command-field",
-							"ImagePosition": "Trailing",
-							"FullWidth": false,
-							"Visible": true,
-							"Enabled": true,
-							"OnPress": "/TRL_Snorkel_Digitization_TSL/Actions/Nav2Sheet7.action"
-						}
-					]
 				}
 			]
 		}
@@ -2103,16 +1880,6 @@
 			},
 			{
 				"_Type": "Control.Type.ActionBarItem",
-				"_Name": "UpdateButton",
-				"Caption": "",
-				"Icon": "sap-icon://save",
-				"Position": "Right",
-				"IsIconCircular": false,
-				"Visible": true,
-				"OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/UpdateSnorkelData_Sheet6.js"
-			},
-			{
-				"_Type": "Control.Type.ActionBarItem",
 				"_Name": "NextPage",
 				"Caption": "",
 				"Icon": "sap-icon://navigation-right-arrow",
@@ -2120,6 +1887,16 @@
 				"IsIconCircular": false,
 				"Visible": true,
 				"OnPress": "/TRL_Snorkel_Digitization_TSL/Actions/Nav2Sheet7.action"
+			},
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "UpdateButton",
+				"Caption": "",
+				"Icon": "sap-icon://save",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/UpdateSnorkelData_Sheet6.js"
 			},
 			{
 				"_Type": "Control.Type.ActionBarItem",

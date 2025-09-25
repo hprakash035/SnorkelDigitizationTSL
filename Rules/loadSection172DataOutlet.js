@@ -1,57 +1,64 @@
-export async function loadSection192Data(pageProxy, qcItem192, FormSectionedTable, attachments, flags, testdataArray) {
+export async function loadSection172DataOutlet(
+    pageProxy,
+    qcItem172,
+    FormSectionedTable,
+    attachments,
+    flags,
+    testdataArray
+) {
     try {
-        const Section192 = FormSectionedTable.getSection('Section192Form');
-        if (!Section192) {
-            throw new Error("Section192Form not found in FormSectionedTable.");
+        const Section172 = FormSectionedTable.getSection('Section172FormOutlet');
+        if (!Section172) {
+            throw new Error("Section172Form not found in FormSectionedTable.");
         }
 
-        await Section192.setVisible(true);
+        // Always make Section172 visible
+        await Section172.setVisible(true);
 
-        const nextButton = Section192.getControl('Section193NextButton');
+        // --- Hide Next button after loading ---
+        const nextButton = Section172.getControl('Section173NextButton');
         if (nextButton) {
             await nextButton.setVisible(false);
-            
-            if (flags?.next === false) {
-              
-                const Section41Form = FormSectionedTable.getSection('Section193Form');
-                if (Section41Form) {
-                    await Section41Form.setVisible(true);
-                }
-            }
-           
         }
 
-        await Section192.setVisible(true);
+        // --- Conditionally open Section172 if next flag is false ---
+        if (flags?.next === false) {
+            const Section172Form = FormSectionedTable.getSection('Section173FormOutlet');
+            if (Section172Form) {
+                await Section172Form.setVisible(true);
+            }
+        }
 
-        if (qcItem192?.DATE_INSPECTED) {
-            const dateControl = Section192.getControl('Section192Date');
+        // --- Populate fields if values exist ---
+        if (qcItem172?.DATE_INSPECTED) {
+            const dateControl = Section172.getControl('Section172Date');
             if (dateControl) {
-                await dateControl.setValue(qcItem192.DATE_INSPECTED);
+                await dateControl.setValue(qcItem172.DATE_INSPECTED);
             }
         }
 
-        if (qcItem192?.INSPECTED_BY) {
-            const inspectedByControl = Section192.getControl('Section192InspectedBy');
+        if (qcItem172?.INSPECTED_BY) {
+            const inspectedByControl = Section172.getControl('Section172InspectedBy');
             if (inspectedByControl) {
-                await inspectedByControl.setValue(qcItem192.INSPECTED_BY);
+                await inspectedByControl.setValue(qcItem172.INSPECTED_BY);
             }
         }
 
-        if (qcItem192?.METHOD) {
-            const methodControl = Section192.getControl('Section192Method');
+        if (qcItem172?.METHOD) {
+            const methodControl = Section172.getControl('Section172Method');
             if (methodControl) {
-                await methodControl.setValue(qcItem192.METHOD);
+                await methodControl.setValue(qcItem172.METHOD);
             }
         }
 
-        if (qcItem192?.DECISION_TAKEN) {
-            const decisionControl = Section192.getControl('Section192DecisionTaken');
+        if (qcItem172?.DECISION_TAKEN) {
+            const decisionControl = Section172.getControl('Section172DecisionTaken');
             if (decisionControl) {
-                await decisionControl.setValue(qcItem192.DECISION_TAKEN);
+                await decisionControl.setValue(qcItem172.DECISION_TAKEN);
             }
         }
 
     } catch (error) {
-        console.error("Error loading Section192 data:", error);
+        console.error("Error loading Section172 data:", error);
     }
 }

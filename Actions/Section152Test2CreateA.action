@@ -13,6 +13,7 @@
 		"position": "#Page:SnorkelInstallation5/#Control:Section152TestPositionGapA/#Value",
 		"tolerance": "#Page:SnorkelInstallation5/#Control:Section152TestToleranceA/#Value",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value",
-		"testname": "*11 The gap between the top of brick surface to the top face of castable"
+		"QUESTION": "15.2 The gap between the top of brick surface  to the top face of casting  *10",
+		"testname": "*10 The gap between the top of brick surface to the top face of castable"
 	}
 }

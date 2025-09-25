@@ -2,5 +2,5 @@
     "include": [
         "Rules/**/*",
         ".typings/**/*"
-    ]
+, "Rules/LoadSectionFinalData.js"    ]
 }

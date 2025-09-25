@@ -1,11 +1,20 @@
 /**
- * Section 204 Validation and make Section 205 controls visible
+ * Describe this function...
  * @param {IClientAPI} clientAPI
  */
 export default function Section204Validation(clientAPI) {
     try {
         const pageProxy = clientAPI.getPageProxy();
         const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
+        //  const headerSection = FormSectionedTable.getSection('HeaderSection');
+        // const snorkelNoControl = headerSection.getControl('SnorkelNo');
+        // const snorkelNo = snorkelNoControl.getValue();
+
+        // if (!snorkelNo) {
+        //     return clientAPI.executeAction({
+        //         Name: '/TRL_Snorkel_Digitization_TSL/Actions/ValidationFailed.action',
+        //     });
+        // }
 
         const Section204 = FormSectionedTable.getSection('Section204Form');
         const decisionTakenCtrl = Section204.getControl('Section204DecisionTaken');
@@ -16,40 +25,16 @@ export default function Section204Validation(clientAPI) {
         const inspectedBy = inspectedByCtrl?.getValue();
         const inspectionMethod = inspectionMethodCtrl?.getValue();
 
-        if (decisionTaken && inspectedBy && inspectionMethod && decisionTaken !== "") {
-
-            // ✅ Make Section 205 parts visible
-            const sectionIDs = [
-                'Section205AStaticImageInlet',
-                'Section205BStaticImageInlet',
-                'Section205MeasureName',
-                'Section205QCMeasurements',
-                'Section205Casting',
-                'Section205CastingForm',
-                'Section205CastingRemarkStatusFormA',
-                'Section205CastingRemarkStatusFormB',
-                'Section205Check',
-                'Section205CheckForm',
-                'Section205CheckRemark',
-                'Section205CheckRemarkBSnorkelLot',
-                'Section205UserInputImageA',
-                'Section205UserInputImageB'
-            ];
-
-            sectionIDs.forEach(id => {
-                const section = FormSectionedTable.getSection(id);
-                if (section) {
-                    section.setVisible(true);
-                }
-            });
-
-            // Example: hide Next button if needed
-            Section204.getControl('Section205NextButton')?.setVisible(false);
-
+        if (decisionTaken && inspectedBy && inspectionMethod && decisionTaken != "") {
+    const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
+    
+    const Section204TakePhoto =FormSectionedTable.getSection('Section205Form');
+    Section204TakePhoto.setVisible('true');
+    FormSectionedTable.getSection('Section204Form').getControl('Section205NextButton').setVisible(false);
             return clientAPI.executeAction({
                 Name: '/TRL_Snorkel_Digitization_TSL/Actions/Section204Create.action'
             });
-
+           
         } else {
             return clientAPI.executeAction({
                 Name: '/TRL_Snorkel_Digitization_TSL/Actions/ValidationFailed.action'
@@ -65,3 +50,4 @@ export default function Section204Validation(clientAPI) {
         });
     }
 }
+

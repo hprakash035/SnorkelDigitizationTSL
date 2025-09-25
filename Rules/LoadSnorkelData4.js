@@ -26,7 +26,7 @@ export default async function LoadSnorkelDataPage4(clientAPI) {
 
         // --- Handle TYPE condition ---
         const type = binding.TYPE?.toLowerCase();
-        console.log("📌 Page4 Snorkel TYPE:", type);
+        // console.log("📌 Page4 Snorkel TYPE:", type);
 
         if (type === "inlet") {
             FormSectionedTable.getSection('Section131Form').setVisible(true);

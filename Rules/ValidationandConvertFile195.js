@@ -14,10 +14,8 @@ const binding = pageProxy.getBindingObject();
         const photoControl = photoSection?.getControl('Section195TakePhoto');
         const attachments = photoControl?.getValue();
 
-        const question = sectionedTable
-            .getSection('Section195Form')
-            .getControl('Section195Question')
-            .getValue();
+        const question = "19.4 Putting the manufacturing control numbers"
+
 
         // Validate attachment
         // if (!attachments || attachments.length === 0 || !attachments[0].content) {
@@ -75,6 +73,9 @@ const binding = pageProxy.getBindingObject();
 
         // ✅ Show next section
         // sectionedTable.getSection('Section201Form').setVisible(true);
+         return clientAPI.executeAction({
+                Name: '/TRL_Snorkel_Digitization_TSL/Actions/Nav2Sheet6.action',
+            });
 
     } catch (error) {
         await clientAPI.executeAction({

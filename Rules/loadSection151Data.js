@@ -54,7 +54,7 @@ export async function loadSection151Data(pageProxy, qcItem151, FormSectionedTabl
             }
         }
 
-        console.log("✅ loadSection151Data executed. Header has data:", headerHasData);
+        // console.log("✅ loadSection151Data executed. Header has data:", headerHasData);
     } catch (error) {
         console.error("❌ Error loading Section151 data:", error);
     }

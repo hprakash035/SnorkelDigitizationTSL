@@ -42,6 +42,7 @@ export default async function Section152Test2FormValidation(clientAPI) {
         });
 
 
+
      
     const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
     FormSectionedTable.getSection('Section152Test2Form').getControl('Section152StaticNextButton').setVisible(false);
@@ -51,11 +52,9 @@ export default async function Section152Test2FormValidation(clientAPI) {
     // Section152Form.setVisible('true');
     // Section152Form1.setVisible('true');
 
-    const nextSection = form.getSection('Section152Test2Form');
-        if (nextSection) {
-            nextSection.setVisible(true);
-        }
-
+    return clientAPI.executeAction({
+                Name: '/TRL_Snorkel_Digitization_TSL/Actions/Nav2Sheet6.action',
+            });
     } catch (e) {
         console.error("❌ Error in Section152Test2FormValidation:", e);
     }

@@ -13,6 +13,7 @@
 		"position": "#Page:SnorkelInstallation3/#Control:Section122Position3/#Value",
 		"testname": "*7 Gap measurement between 2nd ring brick and the Core Shell ",
 		"tolerance": "#Page:SnorkelInstallation3/#Control:Section122Tolerence3/#Value",
+		"QUESTION": "12.2 Center position of the ring brick  *7",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}
 }

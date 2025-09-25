@@ -54,9 +54,9 @@ export default async function Section152TestFormValidation(clientAPI) {
 
 
 
-    const Section152Form =FormSectionedTable.getSection('Section152StaticImage');
+    const Section152Form =form.getSection('Section152StaticImage');
    
-    const Section152Form1 =FormSectionedTable.getSection('Section152UserInputImage');
+    const Section152Form1 =form.getSection('Section152UserInputImage');
      Section152Form.setVisible('true');
     Section152Form1.setVisible('true');
 

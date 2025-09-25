@@ -26,9 +26,12 @@ export default function Section194Validation(clientAPI) {
         const inspectionMethod = inspectionMethodCtrl?.getValue();
 
         if (decisionTaken && inspectedBy && inspectionMethod && decisionTaken != "") {
-    const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
-    const Section194UserInputImage1 =FormSectionedTable.getSection('Section195Form');
-    Section194UserInputImage1.setVisible('true');
+    // const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
+      const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
+    const Section195UserInputImage1 =FormSectionedTable.getSection('Section195StaticImage');
+    Section195UserInputImage1.setVisible('true');
+     const Section195UserInputImage =FormSectionedTable.getSection('Section195UserInputImage');
+    Section195UserInputImage.setVisible('true');
     FormSectionedTable.getSection('Section194Form').getControl('Section195NextButton').setVisible(false);
             return clientAPI.executeAction({
                 Name: '/TRL_Snorkel_Digitization_TSL/Actions/Section194Create.action'

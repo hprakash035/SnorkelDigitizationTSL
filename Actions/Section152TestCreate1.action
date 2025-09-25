@@ -11,10 +11,11 @@
 		"fluidity": "#Page:SnorkelInstallation5/#Control:Section152FludityOfCastable1/#SelectedValue",
 		"powderweight": "#Page:SnorkelInstallation5/#Control:Section152PowerWeight1/#Value",
 		"remark": "#Page:SnorkelInstallation5/#Control:Section152Remark1/#Value",
-		"testname": "*10 Actual situation for mixing the outer castable",
+		"testname": "*9 Actual situation for mixing the outer castable",
 		"vibration": "#Page:SnorkelInstallation5/#Control:Section152AddingVibration1/#SelectedValue",
 		"watercasting": "#Page:SnorkelInstallation5/#Control:Section152WaterCasting1/#Value",
 		"batchNo": "#Page:SnorkelInstallation5/#Control:Section152TestBatchNo1/#Value",
+		"QUESTION": "15.2 The gap between the top of brick surface  to the top face of casting  *10",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}
 }

@@ -297,7 +297,7 @@
 					},
 					"Controls": [
 						{
-							"Value": " 13.2 Center position of the ring brick  *8",
+							"Value": " 13.2 Center position of the ring brick  *7",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section132Question",
 							"IsVisible": true,
@@ -1625,10 +1625,10 @@
 						},
 						{
 							"_Type": "Control.Type.FormCell.Button",
-							"_Name": "Section136NextPageButton",
+							"_Name": "Section136NextButton",
 							"IsVisible": true,
 							"Separator": true,
-							"Title": "Next Sheet",
+							"Title": "Next ",
 							"Alignment": "Center",
 							"ButtonType": "Text",
 							"Semantic": "Tint",

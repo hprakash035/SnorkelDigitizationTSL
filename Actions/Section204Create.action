@@ -14,6 +14,18 @@
 		"INSPECTED_BY": "#Page:SnorkelInstallation7/#Control:Section204InspectedBy/#SelectedValue",
 		"METHOD": "#Page:SnorkelInstallation7/#Control:Section204Method/#Value",
 		"QUESTION": "20.4 Confirmation of uniform discharged gas flow among each Ar pipes",
+		"PipeNo1": "#Page:SnorkelInstallation7/#Control:PipeNo1/#Value",
+		"PipeNo2": "#Page:SnorkelInstallation7/#Control:PipeNo2/#Value",
+		"PipeNo7": "#Page:SnorkelInstallation7/#Control:PipeNo3/#Value",
+		"PipeNo4": "#Page:SnorkelInstallation7/#Control:PipeNo4/#Value",
+		"PipeNo5": "#Page:SnorkelInstallation7/#Control:PipeNo5/#Value",
+		"PipeNo6": "#Page:SnorkelInstallation7/#Control:PipeNo6/#Value",
+		"PipeNo7": "#Page:SnorkelInstallation7/#Control:PipeNo7/#Value",
+		"PipeNo8": "#Page:SnorkelInstallation7/#Control:PipeNo8/#Value",
+		"PipeNo9": "#Page:SnorkelInstallation7/#Control:PipeNo9/#Value",
+		"PipeNo10": "#Page:SnorkelInstallation7/#Control:PipeNo10/#Value",
+		"PipeNo11": "#Page:SnorkelInstallation7/#Control:PipeNo11/#Value",
+		"PipeNo12": "#Page:SnorkelInstallation7/#Control:PipeNo12/#Value",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}
 }

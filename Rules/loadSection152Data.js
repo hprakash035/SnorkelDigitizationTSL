@@ -7,163 +7,177 @@ export async function loadSection152Data(
     testdataArray = []
 ) {
     try {
-        console.log("▶ loadSection152Data: Starting...");
-
         const section152 = FormSectionedTable.getSection('Section152Form');
-        if (!section152) return console.error("❌ Section152Form not found.");
+        if (!section152) return;
 
         await section152.setVisible(true);
 
-        // Helper to set control values safely
-        const setValueIfPresent = async (section, controlName, value) => {
-            const ctrl = section?.getControl(controlName);
-            if (ctrl && value !== undefined && value !== null) {
-                await ctrl.setValue(value);
+        // Next button of Section152
+        const nextButton = section152.getControl('Section152TestNextButton');
+
+        // Check if Section152 form has metadata
+        const hasFormData =
+            qcItem152?.DATE_INSPECTED ||
+            qcItem152?.INSPECTED_BY ||
+            qcItem152?.METHOD ||
+            qcItem152?.DECISION_TAKEN;
+
+        if (hasFormData) {
+            if (nextButton) await nextButton.setVisible(false);
+
+            // --- Populate metadata fields ---
+            if (qcItem152?.DATE_INSPECTED) {
+                const ctrl = section152.getControl('Section152Date');
+                if (ctrl) await ctrl.setValue(qcItem152.DATE_INSPECTED);
             }
-        };
 
-        const setButtonVisibility = async (section, buttonName, visible) => {
-            const btn = section?.getControl(buttonName);
-            if (btn) {
-                await btn.setVisible(visible);
+            if (qcItem152?.INSPECTED_BY) {
+                const ctrl = section152.getControl('Section152InspectedBy');
+                if (ctrl) await ctrl.setValue([qcItem152.INSPECTED_BY]); // ListPicker expects array
             }
-        };
 
-        // ---- Header Data ----
-        let headerHasData = false;
-
-        if (qcItem152?.DATE_INSPECTED) {
-            await setValueIfPresent(section152, 'Section152InspectionDate', qcItem152.DATE_INSPECTED);
-            headerHasData = true;
-        }
-
-        if (qcItem152?.INSPECTED_BY) {
-            await setValueIfPresent(section152, 'Section152InspectedBy', qcItem152.INSPECTED_BY);
-            headerHasData = true;
-        }
-
-        if (qcItem152?.METHOD) {
-            await setValueIfPresent(section152, 'Section152InspectionMethod', qcItem152.METHOD);
-            headerHasData = true;
-        }
-
-        if (qcItem152?.DECISION_TAKEN) {
-            await setValueIfPresent(section152, 'Section152DecisionTaken', qcItem152.DECISION_TAKEN);
-            headerHasData = true;
-        }
-
-        // ---- Button Visibility ----
-        await setButtonVisibility(section152, 'Section152NextButton', !headerHasData);
-
-        // Show Section171Form if flagged and header has data
-        if (flags?.next === false && headerHasData) {
-            const section171 = FormSectionedTable.getSection('Section171Form');
-            if (section171) {
-                await section171.setVisible(true);
+            if (qcItem152?.METHOD) {
+                const ctrl = section152.getControl('Section152Method');
+                if (ctrl) await ctrl.setValue(qcItem152.METHOD);
             }
-        }
 
-        // ---- Mixing Test Section ----
-        const mixingTests = testdataArray.filter(t =>
-            t.testname?.includes("mixing the outer castable")
-        );
+            if (qcItem152?.DECISION_TAKEN) {
+                const ctrl = section152.getControl('Section152DecisionTaken');
+                if (ctrl) await ctrl.setValue([qcItem152.DECISION_TAKEN]); // ListPicker expects array
+            }
 
-        const testForm = FormSectionedTable.getSection('Section152TestForm');
-        const testHeader = FormSectionedTable.getSection('Section152TestName');
+            // --- Show Test1 header & form
+            const testHeader = FormSectionedTable.getSection('Section152TestName');
+            const testForm = FormSectionedTable.getSection('Section152TestForm');
+            if (testHeader) await testHeader.setVisible(true);
+            if (testForm) await testForm.setVisible(true);
 
-        if (testHeader) await testHeader.setVisible(true);
-        if (testForm && mixingTests.length > 0) {
-            await testForm.setVisible(true);
+            // --- Test 1 (Mixing test data)
+            const mixingTests = testdataArray.filter(t =>
+                t.testname?.includes("*9")
+            );
 
-            for (let i = 0; i < Math.min(mixingTests.length, 5); i++) {
-                const test = mixingTests[i];
-                const suffix = i + 1;
+            let hasTest1Data = false;
 
-                const setTestValue = async (ctrl, val) => {
-                    const c = testForm.getControl(ctrl);
-                    if (c && val !== undefined && val !== null) {
-                        await c.setValue(val);
+            if (mixingTests.length > 0 && testForm) {
+                for (let i = 0; i < Math.min(mixingTests.length, 5); i++) {
+                    const test = mixingTests[i];
+                    const suffix = i + 1;
+
+                    const setVal = async (ctrl, val) => {
+                        const c = testForm.getControl(ctrl);
+                        if (c && val != null) await c.setValue(val);
+                    };
+
+                    if (test.batchNo) {
+                        hasTest1Data = true;
+                        await setVal(`Section152TestBatchNo${suffix}`, test.batchNo);
                     }
-                };
-
-                await setTestValue(`Section152PowerWeight${suffix}`, test.powderweight);
-                await setTestValue(`Section152WaterCasting${suffix}`, test.watercasting);
-
-                const fluidity = test.fluidity?.toLowerCase();
-                if (fluidity === "ok" || fluidity === "not_ok") {
-                    await setTestValue(`Section152FludityOfCastable${suffix}`, [fluidity]);
+                    if (test.powderweight) {
+                        hasTest1Data = true;
+                        await setVal(`Section152PowerWeight${suffix}`, test.powderweight);
+                    }
+                    if (test.watercasting) {
+                        hasTest1Data = true;
+                        await setVal(`Section152WaterCasting${suffix}`, test.watercasting);
+                    }
+                    if (test.fluidity) {
+                        hasTest1Data = true;
+                        await setVal(`Section152FludityOfCastable${suffix}`, [test.fluidity.toLowerCase()]);
+                    }
+                    if (test.vibration) {
+                        hasTest1Data = true;
+                        await setVal(`Section152AddingVibration${suffix}`, [test.vibration.toLowerCase()]);
+                    }
+                    if (test.remark) {
+                        hasTest1Data = true;
+                        await setVal(`Section152Remark${suffix}`, test.remark);
+                    }
                 }
 
-                await setTestValue(`Section152AddingVibration${suffix}`, test.vibration);
-                await setTestValue(`Section152Remark${suffix}`, test.remark);
+                // Hide Test1 Next button if data filled
+                const test1Next = testForm.getControl('Section152Test2NextButton');
+                if (hasTest1Data && test1Next) await test1Next.setVisible(false);
             }
-        }
 
-        // ---- Gap Test Section ----
-        const gapHeader = FormSectionedTable.getSection('SectionFormCell5');
-        const gapForm = FormSectionedTable.getSection('Section152Test2Form');
-        const gapTests = testdataArray.filter(t =>
-            t.testname?.includes("*10  Actual situation for mixing the outer castable")
-        );
+            // --- Show image sections ONLY if TestForm has data ---
+            let hasDynamicImage = false;
+            if (hasTest1Data) {
+                const staticImg = FormSectionedTable.getSection('Section152StaticImage');
+                if (staticImg) await staticImg.setVisible(true);
 
-        const positionMap = {
-            "12:00 direction": "A",
-            "3:00 direction": "B",
-            "6:00 direction": "C",
-            "9:00 direction": "D"
-        };
+                const dynamicImg = FormSectionedTable.getSection('Section152DynamicImage');
+                const userInputImg = FormSectionedTable.getSection('Section152UserInputImage');
+                const binding = pageProxy.getBindingObject();
 
-        if (gapHeader) await gapHeader.setVisible(true);
+                if (dynamicImg && attachments.length > 0) {
+                    const file = attachments[0]?.file;
+                    const mimeType = attachments[0]?.mimeType || 'image/png';
 
-        if (gapForm && gapTests.length > 0) {
-            await gapForm.setVisible(true);
-
-            for (const gap of gapTests) {
-                const suffix = positionMap[gap.position];
-                if (!suffix) continue;
-
-                const ctrlName = `Section152TestActualGap${suffix}`;
-                const ctrl = gapForm.getControl(ctrlName);
-                if (ctrl) {
-                    await ctrl.setValue(gap.actualvalue ?? "0");
+                    if (file && file.length > 100) {
+                        binding.imageUri = `data:${mimeType};base64,${file}`;
+                        await dynamicImg.setVisible(true);
+                        await dynamicImg.redraw();
+                        if (userInputImg) await userInputImg.setVisible(false);
+                        hasDynamicImage = true;
+                    } else {
+                        binding.imageUri = '/TRL_RH_SnorkelApp/Images/NoImageAvailable.png';
+                        await dynamicImg.setVisible(false);
+                        await userInputImg?.setVisible(true);
+                    }
+                } else {
+                    binding.imageUri = '/TRL_RH_SnorkelApp/Images/NoImageAvailable.png';
+                    await dynamicImg?.setVisible(false);
+                    await userInputImg?.setVisible(true);
                 }
             }
-        }
 
-        // ---- Static & Dynamic Image Handling ----
-        const staticImg = FormSectionedTable.getSection('Section152StaticImage');
-        if (staticImg) await staticImg.setVisible(true);
+            // --- Test 2 (Gap test, only if Test1 data + dynamic image exist)
+            if ( hasDynamicImage) {
+                const gapHeader = FormSectionedTable.getSection('SectionFormCell5');
+                const gapForm = FormSectionedTable.getSection('Section152Test2Form');
 
-        const dynamicImageSection = FormSectionedTable.getSection('Section152DynamicImage');
-        const userImageSection = FormSectionedTable.getSection('Section152UserInputImage');
-        const binding = pageProxy.getBindingObject();
+                if (gapHeader) await gapHeader.setVisible(true);
+                if (gapForm) {
+                    await gapForm.setVisible(true);
 
-        let dynamicImageVisible = false;
-        if (attachments.length > 0 && dynamicImageSection) {
-            const firstAttachment = attachments[0];
-            const base64 = firstAttachment?.file;
-            const mimeType = firstAttachment?.mimeType || 'image/png';
+                    const positionMap = {
+                        "12:00 direction": "A",
+                        "3:00 direction": "B",
+                        "6:00 direction": "C",
+                        "9:00 direction": "D"
+                    };
 
-            if (base64 && base64.length > 100) {
-                binding.imageUri = `data:${mimeType};base64,${base64}`;
-                await dynamicImageSection.setVisible(true);
-                await dynamicImageSection.redraw();
-                dynamicImageVisible = true;
+                    const gapTests = testdataArray.filter(t =>
+                        t.testname?.includes("*10")
+                    );
+
+                    let hasGapData = false;
+
+                    for (const gap of gapTests) {
+                        const suffix = positionMap[gap.position];
+                        if (!suffix) continue;
+
+                        const ctrl = gapForm.getControl(`Section152TestActualGap${suffix}`);
+                        if (ctrl && gap.actualvalue) {
+                            await ctrl.setValue(gap.actualvalue);
+                            hasGapData = true;
+                            //   FormSectionedTable.getSection('Section151FormOutlet').setVisible(true);
+                              gapForm.getControl('Section152StaticNextButton').setVisible(false);;
+                        }
+                    }
+
+                  
+                }
+            } else {
+                // Hide Test2 if either Test1 data or dynamic image is missing
+                await FormSectionedTable.getSection('Section152Test2FormName')?.setVisible(false);
+                await FormSectionedTable.getSection('Section152Test2Form')?.setVisible(false);
             }
+        } else {
+            if (nextButton) await nextButton.setVisible(true);
         }
-
-        if (!dynamicImageVisible) {
-            binding.imageUri = '/TRL_Snorkel_Digitization_TSL/Images/NoImageAvailable.png';
-            await dynamicImageSection?.setVisible(false);
-            await dynamicImageSection?.redraw();
-
-            if (userImageSection) {
-                await userImageSection.setVisible(true);
-            }
-        }
-
-        console.log("✔ loadSection152Data: Finished successfully.");
-    } catch (error) {
-        console.error("❌ Error loading Section152 data:", error);
+    } catch (err) {
+        console.error("❌ Error in loadSection152Data:", err);
     }
 }

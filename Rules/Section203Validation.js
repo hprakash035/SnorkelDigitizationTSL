@@ -27,11 +27,10 @@ export default function Section203Validation(clientAPI) {
 
         if (decisionTaken && inspectedBy && inspectionMethod && decisionTaken != "") {
     const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
-    const Section203UserInputImage1 =FormSectionedTable.getSection('Section203StaticImage');
-    Section203UserInputImage1.setVisible('true');
-    const Section203TakePhoto =FormSectionedTable.getSection('Section203UserInputForm');
+    
+    const Section203TakePhoto =FormSectionedTable.getSection('Section204Form');
     Section203TakePhoto.setVisible('true');
-    FormSectionedTable.getSection('Section203Form').getControl('Section203StaticNextButton').setVisible(false);
+    FormSectionedTable.getSection('Section203Form').getControl('Section204NextButton').setVisible(false);
             return clientAPI.executeAction({
                 Name: '/TRL_Snorkel_Digitization_TSL/Actions/Section203Create.action'
             });

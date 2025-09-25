@@ -1,15 +1,15 @@
-// import { loadSection171Data } from './loadSection171Data';
-// import { loadSection181Data } from './loadSection181Data';
-// import { loadSection182Data } from './loadSection182Data';
-// import { loadSection183Data } from './loadSection183Data';
-// import { loadSection184Data } from './loadSection184Data';
-// import { loadSection191Data } from './loadSection191Data';
-// import { loadSection192Data } from './loadSection192Data';
-// import { loadSection193Data } from './loadSection193Data';
-// import { loadSection194Data } from './loadSection194Data';
-// import { loadSection195Data } from './loadSection195Data';
+import { loadSection171Data } from './loadSection171Data';
+import { loadSection181Data } from './loadSection181Data';
+import { loadSection182Data } from './loadSection182Data';
+import { loadSection183Data } from './loadSection183Data';
+import { loadSection184Data } from './loadSection184Data';
+import { loadSection191Data } from './loadSection191Data';
+import { loadSection192Data } from './loadSection192Data';
+import { loadSection193Data } from './loadSection193Data';
+import { loadSection194Data } from './loadSection194Data';
+import { loadSection195Data } from './loadSection195Data';
 
-export default async function LoadSnorkelDataPage5(clientAPI) {
+export default async function LoadSnorkelDataPage6(clientAPI) {
     try {
         clientAPI.showActivityIndicator("Loading data...");
 
@@ -19,9 +19,6 @@ export default async function LoadSnorkelDataPage5(clientAPI) {
         const service = '/TRL_Snorkel_Digitization_TSL/Services/TRL_Snorkel_CAP_SRV.service';
         const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
         const headerSection = FormSectionedTable.getSection('HeaderSection');
-
-        // --- Header Setup ---
-       
 
         // --- Read Data ---
         const [itemsResult, headerFiles, attachmentsResult, testdata] = await Promise.all([
@@ -33,53 +30,45 @@ export default async function LoadSnorkelDataPage5(clientAPI) {
 
         const items = itemsResult._array;
         const attachments = attachmentsResult._array;
-        const attachmentGroups = groupAttachmentsByQuestion(attachments);
+        const testArray = testdata._array;
+
+        const attachmentGroups = groupAttachmentsBySectionKey(attachments);
         const flags = { next: false };
 
-          if (binding.SNORKEL_NO) {
-            if (binding.TYPE?.toLowerCase() === "inlet") {
-               
-                FormSectionedTable.getSection('Section141Form').setVisible(true);
-                FormSectionedTable.getSection('Section171FormOutlet').setVisible(false);
-            } else if (binding.TYPE?.toLowerCase() === "outlet") {
-             
-                FormSectionedTable.getSection('Section171FormOutlet').setVisible(true);
-                FormSectionedTable.getSection('Section141Form').setVisible(false);
-            } 
-        }
-       
-        // --- Section Keys (Page 4 only) ---
+        FormSectionedTable.getSection('Section171Form').setVisible(true);
+
         const orderedSectionKeys = [
-          '17.1', '18.1', '18.2', '18.3', '18.4', '19.1', '19.2', '19.3', '19.4', '19.5'
+            '17.1', '18.1', '18.2', '18.3', '18.4', '19.1', '19.2', '19.3', '19.4', '19.5'
         ];
 
         for (const sectionKey of orderedSectionKeys) {
             const loader = getSectionLoader(sectionKey);
-            if (!loader) continue;
+            if (!loader) {
+                // console.warn(`⚠️ No loader found for section ${sectionKey}`);
+                continue;
+            }
 
-            const item = items.find(it => {
-                const sectionKeyFromItem = it.QUESTION?.trimStart().split(' ')[0];
-                return sectionKeyFromItem === sectionKey;
-            });
+            const item = findItemBySectionKey(items, sectionKey);
+            if (!item || !item.INSPECTED_BY) {
+                // console.log(`⛔ Skipping section ${sectionKey}: No item or INSPECTED_BY`);
+                continue;
+            }
 
-            if (item  && item.INSPECTED_BY) {
-                const question = item.QUESTION?.trim();
-                const normalize = str => str?.replace(/\s+/g, ' ')?.trim();
-                const matchingAttachments = attachmentGroups[normalize(question)] || [];
+            const attachmentsForSection = attachmentGroups[sectionKey] || [];
+            // console.log(`📎 Attachments for ${sectionKey}:`, attachmentsForSection.length);
 
-                try {
-                    await loader(
-                        pageProxy,
-                        item,
-                        FormSectionedTable,
-                        matchingAttachments,
-                        flags,
-                        testdata._array
-                    );
-                    console.log(`✅ Loader for ${sectionKey} executed successfully`);
-                } catch (err) {
-                    console.error(`❌ Error running loader for section ${sectionKey}:`, err);
-                }
+            try {
+                await loader(
+                    pageProxy,
+                    item,
+                    FormSectionedTable,
+                    attachmentsForSection,
+                    flags,
+                    testArray
+                );
+                // console.log(`✅ Loader for ${sectionKey} executed successfully`);
+            } catch (err) {
+                // console.error(`❌ Error running loader for section ${sectionKey}:`, err);
             }
         }
 
@@ -87,25 +76,39 @@ export default async function LoadSnorkelDataPage5(clientAPI) {
 
     } catch (error) {
         clientAPI.dismissActivityIndicator();
-        console.error('❌ Fatal error in LoadSnorkelDataPage4:', error);
+        // console.error('❌ Fatal error in LoadSnorkelDataPage6:', error);
     }
 }
 
-// --- Helpers ---
-function groupAttachmentsByQuestion(attachments = []) {
+// --- Group attachments by section key (e.g., "18.4") ---
+function groupAttachmentsBySectionKey(attachments = []) {
     const grouped = {};
     for (const attachment of attachments) {
-        const rawKey = attachment.QUESTION || attachment.question || '';
-        const key = rawKey.replace(/\s+/g, ' ').trim();
-        if (!grouped[key]) grouped[key] = [];
-        grouped[key].push(attachment);
+        const rawQuestion = attachment.QUESTION || attachment.question || '';
+        const normalized = normalize(rawQuestion);
+        const sectionKey = normalized.split(' ')[0]; // e.g., "18.4" from "18.4 Some description"
+        if (!grouped[sectionKey]) grouped[sectionKey] = [];
+        grouped[sectionKey].push(attachment);
     }
     return grouped;
 }
 
+function normalize(str) {
+    return str?.replace(/\s+/g, ' ')?.trim();
+}
+
+function findItemBySectionKey(items, sectionKey) {
+    return items.find(it => {
+        const rawQuestion = it.QUESTION || '';
+        const normalized = normalize(rawQuestion);
+        const itemKey = normalized.split(' ')[0];
+        return itemKey === sectionKey;
+    });
+}
+
 function getSectionLoader(sectionKey) {
     const sectionLoaders = {
-          '17.1': loadSection171Data,
+        '17.1': loadSection171Data,
         '18.1': loadSection181Data,
         '18.2': loadSection182Data,
         '18.3': loadSection183Data,
@@ -119,6 +122,7 @@ function getSectionLoader(sectionKey) {
     return sectionLoaders[sectionKey];
 }
 
+// Optional (unused in current logic)
 async function processFileData(headerFile) {
     const base64File = headerFile.file;
     const fileName = headerFile.name;

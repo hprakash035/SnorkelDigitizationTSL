@@ -12,11 +12,12 @@
 		"ff2": "#Page:SnorkelInstallation5/#Control:Section141FF32/#Value",
 		"remark": "#Page:SnorkelInstallation5/#Control:Section141TestRemark3/#Value",
 		"settleduration": "#Page:SnorkelInstallation5/#Control:Section141SettingTime3/#Value",
-		"testname": "*9 Inspection result of outer castable workablity",
+		"testname": "*8 Inspection result of outer castable workablity",
 		"tf1": "#Page:SnorkelInstallation5/#Control:Section141TF3/#Value",
 		"tf2": "#Page:SnorkelInstallation5/#Control:Section141TF32/#Value",
 		"watercasting": "#Page:SnorkelInstallation5/#Control:Section141TestWaterCasteing3/#Value",
 		"batchNo": "#Page:SnorkelInstallation5/#Control:Section141TestBatchNo3/#Value",
+		"QUESTION": "14.1 Confirmation of the workability for gap filling castable 'HC-H111B' *8",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}
 }

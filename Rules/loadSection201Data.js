@@ -5,24 +5,23 @@ export async function loadSection201Data(pageProxy, qcItem201, FormSectionedTabl
             throw new Error("Section201Form not found in FormSectionedTable.");
         }
 
+        // Show current section
         await Section201.setVisible(true);
 
+        // Handle next button visibility + next section logic
         const nextButton = Section201.getControl('Section202NextButton');
         if (nextButton) {
             await nextButton.setVisible(false);
-            
+
             if (flags?.next === false) {
-              
-                const Section41Form = FormSectionedTable.getSection('Section202Form');
-                if (Section41Form) {
-                    await Section41Form.setVisible(true);
+                const Section202Form = FormSectionedTable.getSection('Section202Form');
+                if (Section202Form) {
+                    await Section202Form.setVisible(true);
                 }
             }
-           
         }
 
-        await Section201.setVisible(true);
-
+        // Populate controls if data exists
         if (qcItem201?.DATE_INSPECTED) {
             const dateControl = Section201.getControl('Section201Date');
             if (dateControl) {
@@ -33,7 +32,7 @@ export async function loadSection201Data(pageProxy, qcItem201, FormSectionedTabl
         if (qcItem201?.INSPECTED_BY) {
             const inspectedByControl = Section201.getControl('Section201InspectedBy');
             if (inspectedByControl) {
-                await inspectedByControl.setValue(qcItem201.INSPECTED_BY);
+                await inspectedByControl.setValue([qcItem201.INSPECTED_BY]);
             }
         }
 
@@ -47,37 +46,9 @@ export async function loadSection201Data(pageProxy, qcItem201, FormSectionedTabl
         if (qcItem201?.DECISION_TAKEN) {
             const decisionControl = Section201.getControl('Section201DecisionTaken');
             if (decisionControl) {
-                await decisionControl.setValue(qcItem201.DECISION_TAKEN);
+                await decisionControl.setValue([qcItem201.DECISION_TAKEN]);
             }
         }
-
-
-        
-    // --- Dynamic image logic ---
-    const dynamicImageSection = FormSectionedTable.getSection('Section201DynamicImage');
-    const staticImageSection = FormSectionedTable.getSection('Section201StaticImage');
-    const userInputImageSection = FormSectionedTable.getSection('Section201UserInputImage');
-    const binding = pageProxy.getBindingObject();
-
-    if (staticImageSection) await staticImageSection.setVisible(true);
-
-    if (dynamicImageSection && attachments?.length > 0) {
-      const first = attachments[0];
-      const base64 = first?.file;
-      const mime = first?.mimeType || 'image/png';
-
-      if (base64 && base64.length > 100) {
-        binding.imageUri = `data:${mime};base64,${base64}`;
-
-        await dynamicImageSection.setVisible(true);
-        await dynamicImageSection.redraw();
-        await userInputImageSection?.setVisible(false);
-      } else {
-        await userInputImageSection?.setVisible(true);
-      }
-    } else {
-      await userInputImageSection?.setVisible(true);
-    }
 
     } catch (error) {
         console.error("Error loading Section201 data:", error);

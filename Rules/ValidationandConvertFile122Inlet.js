@@ -63,8 +63,9 @@ export default async function ValidateAndConvertFile122Inlet(clientAPI) {
       }
     });
 
-    // ✅ Show next section
-    // sectionedTable.getSection('Section131Form').setVisible(true);
+    return clientAPI.executeAction({
+                Name: '/TRL_Snorkel_Digitization_TSL/Actions/Nav2Sheet4.action',
+            });
 
   } catch (error) {
     await clientAPI.executeAction({

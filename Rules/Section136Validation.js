@@ -31,11 +31,12 @@ export default function Section136Validation(clientAPI) {
   
 
    
-            clientAPI.executeAction({
+    FormSectionedTable.getSection('Section136Form').getControl('Section136NextButton').setVisible(false);
+             clientAPI.executeAction({
                 Name: '/TRL_Snorkel_Digitization_TSL/Actions/Section136Create.action'
             });
              return clientAPI.executeAction({
-                Name: '/TRL_Snorkel_Digitization_TSL/Actions/Nav2Sheet5.action'
+                Name: '/TRL_Snorkel_Digitization_TSL/Actions/Nav2Sheet5.action',
             });
            
         } else {
@@ -48,7 +49,7 @@ export default function Section136Validation(clientAPI) {
         return clientAPI.executeAction({
             Name: '/TRL_Snorkel_Digitization_TSL/Actions/ErrorMessage.action',
             Properties: {
-                Message: 'Unexpected error during Section 13.6 validation. Please try again.'
+                Message: 'Unexpected error during Section 13.4 validation. Please try again.'
             }
         });
     }

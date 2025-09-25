@@ -60,7 +60,7 @@ const binding = pageProxy.getBindingObject();
         clientAPI.getClientData().uploadedFile = uploadedFile;
 
         await clientAPI.executeAction({
-            Name: "/TRL_Snorkel_Digitization_TSL/Actions/AttachmentCreate162.action",
+            Name: "/TRL_Snorkel_Digitization_TSL/Actions/AttachmentCreate.action",
             Properties: {
                 Properties: {
                     question: question,
