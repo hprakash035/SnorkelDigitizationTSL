@@ -28,14 +28,14 @@ export default async function Section102TestFormValidation(clientAPI) {
             // Optional remark validation
             // if (!remark) missingFields.push("Remark");
 
-            if (missingFields.length > 0) {
-                return clientAPI.executeAction({
-                    Name: '/TRL_Snorkel_Digitization_TSL/Actions/ValidationFailed.action',
-                    Properties: {
-                        Message: `Please enter ${missingFields.join(', ')} for Test ${i}.`
-                    }
-                });
-            }
+            // if (missingFields.length > 0) {
+            //     return clientAPI.executeAction({
+            //         Name: '/TRL_Snorkel_Digitization_TSL/Actions/ValidationFailed.action',
+            //         Properties: {
+            //             Message: `Please enter ${missingFields.join(', ')} for Test ${i}.`
+            //         }
+            //     });
+            // }
 
             // Proceed with save if all fields are valid
             await clientAPI.executeAction({ Name: actionNames[i - 1] });

@@ -12,7 +12,7 @@ export async function loadSection1Data(pageProxy, qcItem1, FormSectionedTable, a
             await nextButton.setVisible(false);
 
             if (flags?.next === false) {
-                const Section2Form = FormSectionedTable.getSection('Section12Form');
+                const Section2Form = FormSectionedTable.getSection('Section2Form');
                 if (Section2Form) {
                     await Section2Form.setVisible(true);
                 }

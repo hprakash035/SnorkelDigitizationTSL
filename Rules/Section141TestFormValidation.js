@@ -14,14 +14,14 @@ export default async function Section141TestFormValidation(clientAPI) {
         const tf1 = section141.getControl('Section141TF1')?.getValue();
         const settingTime1 = section141.getControl('Section141SettingTime1')?.getValue();
 
-        if (!batchNo1 || !water1 || !ff1 || !tf1 || !settingTime1) {
-            return clientAPI.executeAction({
-                Name: '/TRL_Snorkel_Digitization_TSL/Actions/ValidationFailed.action',
-                Properties: {
-                    Message: 'All values must be entered for Test 1 (Batch No, Water of casting, FF, TF, Setting time).'
-                }
-            });
-        }
+        // if (!batchNo1 || !water1 || !ff1 || !tf1 || !settingTime1) {
+        //     return clientAPI.executeAction({
+        //         Name: '/TRL_Snorkel_Digitization_TSL/Actions/ValidationFailed.action',
+        //         Properties: {
+        //             Message: 'All values must be entered for Test 1 (Batch No, Water of casting, FF, TF, Setting time).'
+        //         }
+        //     });
+        // }
 
         await clientAPI.executeAction({ Name: '/TRL_Snorkel_Digitization_TSL/Actions/Section141TestCreateA.action' });
 
@@ -32,14 +32,14 @@ export default async function Section141TestFormValidation(clientAPI) {
         const tf2 = section141.getControl('Section141TF2')?.getValue();
         const settingTime2 = section141.getControl('Section141SettingTime2')?.getValue();
 
-        if (!batchNo2 || !water2 || !ff2 || !tf2 || !settingTime2) {
-            return clientAPI.executeAction({
-                Name: '/TRL_Snorkel_Digitization_TSL/Actions/ValidationFailed.action',
-                Properties: {
-                    Message: 'All values must be entered for Test 2 (Batch No, Water of casting, FF, TF, Setting time).'
-                }
-            });
-        }
+        // if (!batchNo2 || !water2 || !ff2 || !tf2 || !settingTime2) {
+        //     return clientAPI.executeAction({
+        //         Name: '/TRL_Snorkel_Digitization_TSL/Actions/ValidationFailed.action',
+        //         Properties: {
+        //             Message: 'All values must be entered for Test 2 (Batch No, Water of casting, FF, TF, Setting time).'
+        //         }
+        //     });
+        // }
 
         await clientAPI.executeAction({ Name: '/TRL_Snorkel_Digitization_TSL/Actions/Section141TestCreateB.action' });
 
@@ -50,14 +50,14 @@ export default async function Section141TestFormValidation(clientAPI) {
         const tf3 = section141.getControl('Section141TF3')?.getValue();
         const settingTime3 = section141.getControl('Section141SettingTime3')?.getValue();
 
-        if (!batchNo3 || !water3 || !ff3 || !tf3 || !settingTime3) {
-            return clientAPI.executeAction({
-                Name: '/TRL_Snorkel_Digitization_TSL/Actions/ValidationFailed.action',
-                Properties: {
-                    Message: 'All values must be entered for Test 3 (Batch No, Water of casting, FF, TF, Setting time).'
-                }
-            });
-        }
+        // if (!batchNo3 || !water3 || !ff3 || !tf3 || !settingTime3) {
+        //     return clientAPI.executeAction({
+        //         Name: '/TRL_Snorkel_Digitization_TSL/Actions/ValidationFailed.action',
+        //         Properties: {
+        //             Message: 'All values must be entered for Test 3 (Batch No, Water of casting, FF, TF, Setting time).'
+        //         }
+        //     });
+        // }
 
         await clientAPI.executeAction({ Name: '/TRL_Snorkel_Digitization_TSL/Actions/Section141TestCreateC.action' });
 

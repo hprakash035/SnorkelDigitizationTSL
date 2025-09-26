@@ -18,14 +18,14 @@ export default async function Section142Test2FormValidation(clientAPI) {
             }
         }
 
-        if (missingPoints.length > 0) {
-            return clientAPI.executeAction({
-                Name: '/TRL_Snorkel_Digitization_TSL/Actions/ValidationFailed.action',
-                Properties: {
-                    Message: `Please fill in all required fields (Position, Tolerance, Method, Actual Gap) for point(s): ${missingPoints.join(', ')}.`
-                }
-            });
-        }
+        // if (missingPoints.length > 0) {
+        //     return clientAPI.executeAction({
+        //         Name: '/TRL_Snorkel_Digitization_TSL/Actions/ValidationFailed.action',
+        //         Properties: {
+        //             Message: `Please fill in all required fields (Position, Tolerance, Method, Actual Gap) for point(s): ${missingPoints.join(', ')}.`
+        //         }
+        //     });
+        // }
 
         // If all points are filled, execute action(s) as needed
         await clientAPI.executeAction({

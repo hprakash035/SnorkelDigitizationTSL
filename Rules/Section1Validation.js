@@ -22,7 +22,7 @@ export default function Section1Validation(clientAPI) {
         const inspectionMethod = inspectionMethodCtrl?.getValue();
 
         if (decisionTaken && inspectedBy && inspectionMethod && decisionTaken != ""  && inspectedBy !="") {
-            const Section2 = FormSectionedTable.getSection('Section12Form');
+            const Section2 = FormSectionedTable.getSection('Section2Form');
  
             return clientAPI.executeAction({
                 Name: '/TRL_Snorkel_Digitization_TSL/Actions/Section1Create.action'

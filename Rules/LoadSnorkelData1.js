@@ -1,5 +1,5 @@
 import { loadSection1Data } from './loadSection1Data';
-import { loadSection12Data } from './loadSection12Data';
+// import { loadSection12Data } from './loadSection12Data';
 import { loadSection2Data } from './loadSection2Data';
 import { loadSection3Data } from './loadSection3Data';
 import { loadSection32Data } from './loadSection32Data';
@@ -70,7 +70,7 @@ export default async function LoadSnorkelDataPage1(clientAPI) {
 
         // Sections for Page 1
         const orderedSectionKeys = [
-            '1.1','1.2', '2.1', '3.1', '3.2', '4.1', '4.2',
+            '1.1', '2.1', '3.1', '3.2', '4.1', '4.2',
             '5.1', '5.2', '5.3', '6.1', '6.2', '6.3'
         ];
 
@@ -107,7 +107,7 @@ export default async function LoadSnorkelDataPage1(clientAPI) {
 function getSectionLoader(sectionKey) {
     const sectionLoaders = {
         '1.1': loadSection1Data,
-        '1.2': loadSection12Data,
+        // '1.2': loadSection12Data,
         '2.1': loadSection2Data,
         '3.1': loadSection3Data,
         '3.2': loadSection32Data,
