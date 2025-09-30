@@ -1,4 +1,4 @@
-export  async function loadSection102Data(pageProxy, qcItem102, FormSectionedTable, attachments = [], flags, testdataArray = []) {
+export async function loadSection102Data(pageProxy, qcItem102, FormSectionedTable, attachments = [], flags, testdataArray = []) {
     try {
         const Section102 = FormSectionedTable.getSection('Section102Form');
         if (!Section102) throw new Error("❌ Section102Form not found in FormSectionedTable.");
@@ -18,19 +18,23 @@ export  async function loadSection102Data(pageProxy, qcItem102, FormSectionedTab
         // -------------------------------
         // Metadata population
         // -------------------------------
+        let hasMetadata = false;
         const setValueIfPresent = async (controlName, value) => {
             const control = Section102.getControl(controlName);
             if (control && value !== undefined && value !== null) {
                 await control.setValue(value);
+                hasMetadata = true;
             }
         };
+
         await setValueIfPresent('Section102Date', qcItem102.DATE_INSPECTED);
         await setValueIfPresent('Section102InspectedBy', qcItem102.INSPECTED_BY ? [qcItem102.INSPECTED_BY] : undefined);
         await setValueIfPresent('Section102Method', qcItem102.METHOD);
         await setValueIfPresent('Section102DecisionTaken', qcItem102.DECISION_TAKEN ? [qcItem102.DECISION_TAKEN] : undefined);
 
-        // 🔴 Hide NEXT button after metadata populated
-        await hideNextButton(Section102, "Section102TestNextButton");
+        if (hasMetadata) {
+            await hideNextButton(Section102, "Section102TestNextButton");
+        }
 
         // -------------------------------
         // Image handling
@@ -53,7 +57,6 @@ export  async function loadSection102Data(pageProxy, qcItem102, FormSectionedTab
                 await dynamicImageSection.redraw();
 
                 hasDynamicImage = true;
-                // console.log("✅ Dynamic image loaded");
 
                 if (Section102UserInputImage) {
                     await Section102UserInputImage.setVisible(false);
@@ -68,7 +71,6 @@ export  async function loadSection102Data(pageProxy, qcItem102, FormSectionedTab
 
             if (Section102UserInputImage) {
                 await Section102UserInputImage.setVisible(true);
-                // console.log("ℹ️ No dynamic image → showing UserInputImage");
             }
         }
 
@@ -77,13 +79,15 @@ export  async function loadSection102Data(pageProxy, qcItem102, FormSectionedTab
         // -------------------------------
         const Section102TestForm = FormSectionedTable.getSection('Section102TestForm');
         if (Section102TestForm) {
+            const Section102TestFormName = FormSectionedTable.getSection('Section102TestFormName');
+            await Section102TestFormName?.setVisible(true);
             await Section102TestForm.setVisible(true);
 
-            if (testdataArray.length > 0) {
-                const mixingTests = testdataArray.filter(t =>
-                    t.testname?.includes("mixing the outer castable")
-                );
+            const mixingTests = testdataArray.filter(t =>
+                t.testname?.includes("mixing the outer castable")
+            );
 
+            if (mixingTests.length > 0) {
                 for (let i = 0; i < Math.min(mixingTests.length, 5); i++) {
                     const test = mixingTests[i];
                     const suffix = i + 1;
@@ -103,12 +107,8 @@ export  async function loadSection102Data(pageProxy, qcItem102, FormSectionedTab
                     await setFormValue(`Section102Remark${suffix}`, test.remark);
                 }
 
-                // console.log(`✅ Mixing tests loaded: ${mixingTests.length}`);
-
-                // Hide NEXT button of TestForm AFTER data
+                // hide NEXT only if mixing data exists
                 await hideNextButton(Section102TestForm, "Section102Test2NextButton");
-            } else {
-                // console.log("ℹ️ No mixing test data → form remains empty");
             }
         }
 
@@ -146,16 +146,12 @@ export  async function loadSection102Data(pageProxy, qcItem102, FormSectionedTab
                 }
             }
 
-            // console.log(`✅ Gap test form shown, data found: ${hasGapData}`);
-
             if (hasGapData) {
-                // Hide NEXT button of Gap Test form AFTER data
                 await hideNextButton(gapForm, "Section102StaticNextButton");
             }
         } else {
             await gapFormHeader?.setVisible(false);
             await gapForm?.setVisible(false);
-            // console.log("ℹ️ Gap test hidden (no dynamic image)");
         }
 
         // -------------------------------
@@ -164,7 +160,6 @@ export  async function loadSection102Data(pageProxy, qcItem102, FormSectionedTab
         const Section103Form = FormSectionedTable.getSection('Section103Form');
         if (Section103Form) {
             await Section103Form.setVisible(hasGapData);
-            // console.log(`📌 Section103Form visibility = ${hasGapData}`);
         }
 
         // console.log("✅ loadSection102Data completed successfully");

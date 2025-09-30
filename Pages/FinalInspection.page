@@ -45,15 +45,10 @@
 							"Separator": true,
 							"OnValueChange": "/TRL_Snorkel_Digitization_TSL/Rules/ValidationandConvertFileFinalA.js",
 							"AttachmentActionType": [
-								"TakePhoto"
+								"TakePhoto",
+								"AddPhoto"
 							],
 							"AttachmentTitle": "Take Photo",
-							"AllowedFileTypes": [
-								"pdf",
-								"jpg",
-								"jpeg",
-								"png"
-							],
 							"AttachmentAddTitle": "Click Image"
 						}
 					],

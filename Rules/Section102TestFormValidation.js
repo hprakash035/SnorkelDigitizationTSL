@@ -59,15 +59,15 @@ export default async function Section102TestFormValidation(clientAPI) {
         }
 
         // --- Then Show Form Sections ---
-        const section102TestFormName2 = form.getSection('Section102TestFormName2');
-        if (section102TestFormName2) {
-            await section102TestFormName2.setVisible(true);
-        }
+        // const section102TestFormName2 = form.getSection('Section102TestFormName2');
+        // if (section102TestFormName2) {
+        //     await section102TestFormName2.setVisible(true);
+        // }
 
-        const section102Test2Form = form.getSection('Section102Test2Form');
-        if (section102Test2Form) {
-            await section102Test2Form.setVisible(true);
-        }
+        // const section102Test2Form = form.getSection('Section102Test2Form');
+        // if (section102Test2Form) {
+        //     await section102Test2Form.setVisible(true);
+        // }
 
     } catch (e) {
         console.error('❌ Error in Section102TestFormValidation:', e);

@@ -265,15 +265,10 @@
 							"Separator": true,
 							"OnValueChange": "/TRL_Snorkel_Digitization_TSL/Rules/ValidationandConvertFile131.js",
 							"AttachmentActionType": [
-								"TakePhoto"
+								"TakePhoto",
+								"AddPhoto"
 							],
 							"AttachmentTitle": "Take Photo",
-							"AllowedFileTypes": [
-								"pdf",
-								"jpg",
-								"jpeg",
-								"png"
-							],
 							"AttachmentAddTitle": "Click Image"
 						}
 					],
@@ -537,15 +532,10 @@
 							"Separator": true,
 							"OnValueChange": "/TRL_Snorkel_Digitization_TSL/Rules/ValidationandConvertFile132.js",
 							"AttachmentActionType": [
-								"TakePhoto"
+								"TakePhoto",
+								"AddPhoto"
 							],
 							"AttachmentTitle": "Take Photo",
-							"AllowedFileTypes": [
-								"pdf",
-								"jpg",
-								"jpeg",
-								"png"
-							],
 							"AttachmentAddTitle": "Click Image"
 						}
 					],
@@ -1431,15 +1421,10 @@
 							"Separator": true,
 							"OnValueChange": "/TRL_Snorkel_Digitization_TSL/Rules/ValidationandConvertFile135.js",
 							"AttachmentActionType": [
-								"TakePhoto"
+								"TakePhoto",
+								"AddPhoto"
 							],
 							"AttachmentTitle": "Take Photo",
-							"AllowedFileTypes": [
-								"pdf",
-								"jpg",
-								"jpeg",
-								"png"
-							],
 							"AttachmentAddTitle": "Click Image"
 						}
 					],
@@ -3140,15 +3125,10 @@
 							"Separator": true,
 							"OnValueChange": "/TRL_Snorkel_Digitization_TSL/Rules/ValidationandConvertFile142Outlet.js",
 							"AttachmentActionType": [
-								"TakePhoto"
+								"TakePhoto",
+								"AddPhoto"
 							],
 							"AttachmentTitle": "Take Photo",
-							"AllowedFileTypes": [
-								"pdf",
-								"jpg",
-								"jpeg",
-								"png"
-							],
 							"AttachmentAddTitle": "Click Image"
 						}
 					],
