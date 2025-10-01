@@ -14,10 +14,10 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "7.1 Uneveness of spray coat is not allowed.",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section71Question",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Enabled": true,
@@ -167,9 +167,9 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section72NextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -209,10 +209,10 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "7.2 Enough drying time is required. Not stick of spray to the finger after drying.",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section72Question",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Enabled": true,
@@ -362,9 +362,9 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section81NextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -397,10 +397,10 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "8.1 Clean up the inner surface of the mould & Coating the de-moulding oil/grease",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section81Question",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Enabled": true,
@@ -550,9 +550,9 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section82NextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -592,10 +592,10 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "8.2 Horizontal level",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section82Question",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Enabled": true,
@@ -745,9 +745,9 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section83NextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -780,10 +780,10 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "8.3 Center position  & tightening of bolts after vibtarion also",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section83Question",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Enabled": true,
@@ -933,9 +933,9 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section84NextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -968,10 +968,10 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "8.4 The gap between base plate and retainer ring",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section84Question",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Enabled": true,
@@ -1121,9 +1121,9 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section91NextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -1156,10 +1156,10 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "9.1 Confirmation of the workability for outer castable 'RH1'",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section91Question",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Enabled": true,
@@ -1309,9 +1309,9 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section92NextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -1645,9 +1645,9 @@
 							"IsEditable": true
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section101NextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -1676,10 +1676,10 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "10.1 Situation of Mixing for outer castable 'RH1'",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section101Title",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Enabled": true,
@@ -1829,9 +1829,9 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section102NextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -1875,10 +1875,10 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": " 10.2 The gap between the top of the casting mould  to the top face of casting    ",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section102Question",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Enabled": true,
@@ -2037,9 +2037,9 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section102TestNextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -2072,10 +2072,10 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "Ambient Temperature *C\t",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "FormCellTitle0",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"PlaceHolder": "PlaceHolder",
@@ -2200,6 +2200,17 @@
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section102SSFiber1",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "SSFiber",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section102Remark1",
 							"RequiredIndicator": false,
 							"IsVisible": true,
@@ -2297,6 +2308,17 @@
 									"ReturnValue": "no"
 								}
 							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section102SSFiber2",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "SSFiber",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
@@ -2398,6 +2420,17 @@
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section102SSFiber3",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "SSFiber",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section102Remark3",
 							"RequiredIndicator": false,
 							"IsVisible": true,
@@ -2493,6 +2526,17 @@
 									"ReturnValue": "no"
 								}
 							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section102SSFiber4",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "SSFiber",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
@@ -2596,6 +2640,17 @@
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section102SSFiber5",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "SSFiber",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section102Remark5",
 							"RequiredIndicator": false,
 							"IsVisible": true,
@@ -2606,9 +2661,9 @@
 							"IsEditable": true
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section102Test2NextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -2622,7 +2677,7 @@
 						}
 					],
 					"Layout": {
-						"NumberOfColumns": 6
+						"NumberOfColumns": 7
 					},
 					"Visible": false,
 					"EmptySection": {
@@ -2933,9 +2988,9 @@
 							"IsEditable": true
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section102StaticNextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -2968,10 +3023,10 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": " 10.3 Making the specimen for confirmation of the strength",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section103Question",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"PlaceHolder": "PlaceHolder",
@@ -3125,9 +3180,9 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section111NextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next ",

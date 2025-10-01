@@ -104,6 +104,7 @@ export async function loadSection102Data(pageProxy, qcItem102, FormSectionedTabl
                     await setFormValue(`Section102WaterCasting${suffix}`, test.watercasting);
                     await setFormValue(`Section102FludityOfCastable${suffix}`, test.fluidity ? [test.fluidity] : []);
                     await setFormValue(`Section102AddingVibration${suffix}`, test.vibration);
+                     await setFormValue(`Section102SSFiber${suffix}`, test.ssFiber);
                     await setFormValue(`Section102Remark${suffix}`, test.remark);
                 }
 

@@ -18,6 +18,7 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": " 13.1 Thickness of mortal : 1mm",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section131Question",
@@ -31,6 +32,7 @@
 							"Value": "{qc_ITEMS/DATE_INSPECTED}",
 							"_Type": "Control.Type.FormCell.DatePicker",
 							"_Name": "Section131Date",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Date",
@@ -43,6 +45,7 @@
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section131InspectedBy",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -138,6 +141,7 @@
 							"Value": "Visual confirmation",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131Method",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Method",
@@ -151,6 +155,7 @@
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section131DecisionTaken",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -179,6 +184,7 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Secion131StaticButton",
 							"IsVisible": true,
@@ -261,9 +267,13 @@
 							},
 							"_Type": "Control.Type.FormCell.Attachment",
 							"_Name": "Section131TakePhoto",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"OnValueChange": "/TRL_Snorkel_Digitization_TSL/Rules/ValidationandConvertFile131.js",
+							"IsEditable": true,
+							"MaxAttachments": 0,
+							"MaxFileSize": 0,
 							"AttachmentActionType": [
 								"TakePhoto",
 								"AddPhoto"
@@ -292,6 +302,7 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": " 13.2 Center position of the ring brick  *7",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section132Question",
@@ -305,6 +316,7 @@
 							"Value": "{qc_ITEMS/DATE_INSPECTED}",
 							"_Type": "Control.Type.FormCell.DatePicker",
 							"_Name": "Section132Date",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Date",
@@ -317,6 +329,7 @@
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section132InspectedBy",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -412,6 +425,7 @@
 							"Value": "Steel tape",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section132Method",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Method",
@@ -425,6 +439,7 @@
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section132DecisionTaken",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -453,6 +468,7 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section132StaticNextButton",
 							"IsVisible": true,
@@ -528,9 +544,13 @@
 							},
 							"_Type": "Control.Type.FormCell.Attachment",
 							"_Name": "Section132TakePhoto123",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"OnValueChange": "/TRL_Snorkel_Digitization_TSL/Rules/ValidationandConvertFile132.js",
+							"IsEditable": true,
+							"MaxAttachments": 0,
+							"MaxFileSize": 0,
 							"AttachmentActionType": [
 								"TakePhoto",
 								"AddPhoto"
@@ -566,7 +586,7 @@
 						"_Name": "SectionCommonTypeHeader10",
 						"AccessoryType": "None",
 						"UseTopPadding": true,
-						"Caption": "*8 Gap measurement between 2nd ring brick and the Core Shell "
+						"Caption": "*7 Gap measurement between 2nd ring brick and the Core Shell "
 					},
 					"Visible": false,
 					"EmptySection": {
@@ -588,6 +608,7 @@
 							"Value": "Gap-A",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section132Position1",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "1.Position",
@@ -599,6 +620,7 @@
 							"Value": "37.5±2mm",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section132Tolerence1",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "1.Tolerence",
@@ -610,6 +632,7 @@
 							"Value": "Convex scale",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section132Method1",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "1.Method",
@@ -620,6 +643,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section132ActualValue1",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "1.Actual Value",
@@ -631,6 +655,7 @@
 							"Value": "Gap-B",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section132Position2",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "2.Position",
@@ -642,6 +667,7 @@
 							"Value": "37.5±2mm",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section132Tolerence2",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "2.Tolerence",
@@ -653,6 +679,7 @@
 							"Value": "Convex scale",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section132Method2",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "2.Method",
@@ -663,6 +690,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section132ActualValue2",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "2.Actual Value",
@@ -674,6 +702,7 @@
 							"Value": "Gap-C",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section132Position3",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "3.Position",
@@ -685,6 +714,7 @@
 							"Value": "37.5±2mm",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section132Tolerence3",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "3.Tolerence",
@@ -696,6 +726,7 @@
 							"Value": "Convex scale",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section132Method3",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "3.Method",
@@ -706,6 +737,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section132ActualValue3",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "3.Actual Value",
@@ -717,6 +749,7 @@
 							"Value": "Gap-D",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section132Position4",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "4.Position",
@@ -728,6 +761,7 @@
 							"Value": "37.5±2mm",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section132Tolerence4",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "4.Tolerence",
@@ -739,6 +773,7 @@
 							"Value": "Convex scale",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section132Method4",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "4.Method",
@@ -749,6 +784,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section132ActualValue4",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "4.Actual Value",
@@ -757,6 +793,7 @@
 							"IsEditable": true
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section133NextButton",
 							"IsVisible": true,
@@ -791,6 +828,7 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "13.3 Fixing Ar pipes and Argon pipe sockets",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section133Question",
@@ -804,6 +842,7 @@
 							"Value": "{qc_ITEMS/DATE_INSPECTED}",
 							"_Type": "Control.Type.FormCell.DatePicker",
 							"_Name": "Section133Date",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Date",
@@ -816,6 +855,7 @@
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section133InspectedBy",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -911,6 +951,7 @@
 							"Value": "Visual confirmation",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section133Method",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Method",
@@ -924,6 +965,7 @@
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section133DecisionTaken",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -952,6 +994,7 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section134NextButton",
 							"IsVisible": true,
@@ -986,6 +1029,7 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "13.4 Putting Ar pipe cover on the each inlet.",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section134Question",
@@ -999,6 +1043,7 @@
 							"Value": "{qc_ITEMS/DATE_INSPECTED}",
 							"_Type": "Control.Type.FormCell.DatePicker",
 							"_Name": "Section134Date",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Date",
@@ -1011,6 +1056,7 @@
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section134InspectedBy",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -1106,6 +1152,7 @@
 							"Value": "Visual confirmation",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section134Method",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Method",
@@ -1119,6 +1166,7 @@
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section134DecisionTaken",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -1147,6 +1195,7 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section135NextButton",
 							"IsVisible": true,
@@ -1181,6 +1230,7 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "13.5 Protect the tip of Ar pipe by using Plastic tape",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section135Question",
@@ -1194,6 +1244,7 @@
 							"Value": "{qc_ITEMS/DATE_INSPECTED}",
 							"_Type": "Control.Type.FormCell.DatePicker",
 							"_Name": "Section135Date",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Date",
@@ -1206,6 +1257,7 @@
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section135InspectedBy",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -1301,6 +1353,7 @@
 							"Value": "Visual confirmation",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section135Method",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Method",
@@ -1314,6 +1367,7 @@
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section135DecisionTaken",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -1342,6 +1396,7 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section135StaticNextButton",
 							"IsVisible": true,
@@ -1417,9 +1472,13 @@
 							},
 							"_Type": "Control.Type.FormCell.Attachment",
 							"_Name": "Section135TakePhoto",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"OnValueChange": "/TRL_Snorkel_Digitization_TSL/Rules/ValidationandConvertFile135.js",
+							"IsEditable": true,
+							"MaxAttachments": 0,
+							"MaxFileSize": 0,
 							"AttachmentActionType": [
 								"TakePhoto",
 								"AddPhoto"
@@ -1448,6 +1507,7 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "13.6 Confirmation of uneven on the brick surface",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section136Question",
@@ -1461,6 +1521,7 @@
 							"Value": "{qc_ITEMS/DATE_INSPECTED}",
 							"_Type": "Control.Type.FormCell.DatePicker",
 							"_Name": "Section136Date",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Date",
@@ -1473,6 +1534,7 @@
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section136InspectedBy",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -1568,6 +1630,7 @@
 							"Value": "Visual confirmation",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section136Method",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Method",
@@ -1581,6 +1644,7 @@
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section136DecisionTaken",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -1609,6 +1673,7 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section136NextButton",
 							"IsVisible": true,
@@ -1643,6 +1708,347 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
+							"Value": "13.7 Leakage Checked Of All Pipes   (Flow Check Of All Pipes Before Casting )",
+							"_Type": "Control.Type.FormCell.Title",
+							"_Name": "Section137QuestionInlet",
+							"IsVisible": true,
+							"Separator": true,
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": false
+						},
+						{
+							"Value": "{qc_ITEMS/DATE_INSPECTED}",
+							"_Type": "Control.Type.FormCell.DatePicker",
+							"_Name": "Section137DateInlet",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Date",
+							"IsEditable": true,
+							"Mode": "Date"
+						},
+						{
+							"Value": [
+								"{qc_ITEMS/INSPECTED_BY}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section137InspectedByInlet",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Inspected By",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"PlaceHolder": "PlaceHolder",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": false,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "SOUMEN JANA",
+									"ReturnValue": "SOUMEN JANA"
+								},
+								{
+									"DisplayValue": "RAHUL CHOUDHARY",
+									"ReturnValue": "RAHUL CHOUDHARY"
+								},
+								{
+									"DisplayValue": "SOURAV JAISWAL",
+									"ReturnValue": "SOURAV JAISWAL"
+								},
+								{
+									"DisplayValue": "SURYAMANI KUMAR",
+									"ReturnValue": "SURYAMANI KUMAR"
+								},
+								{
+									"DisplayValue": "JOSHABANTA SAHU",
+									"ReturnValue": "JOSHABANTA SAHU"
+								},
+								{
+									"DisplayValue": "S PRASANTH KUMAR",
+									"ReturnValue": "S PRASANTH KUMAR"
+								},
+								{
+									"DisplayValue": "ANKIT KUMAR PATRA",
+									"ReturnValue": "ANKIT KUMAR PATRA"
+								},
+								{
+									"DisplayValue": "GAUTAM KIRO",
+									"ReturnValue": "GAUTAM KIRO"
+								},
+								{
+									"DisplayValue": "TAPAS KUMAR SAHU",
+									"ReturnValue": "TAPAS KUMAR SAHU"
+								},
+								{
+									"DisplayValue": "NILACHAL NAHAK",
+									"ReturnValue": "NILACHAL NAHAK"
+								},
+								{
+									"DisplayValue": "SURESH MUNDA",
+									"ReturnValue": "SURESH MUNDA"
+								},
+								{
+									"DisplayValue": "KARTIKA BEHERA",
+									"ReturnValue": "KARTIKA BEHERA"
+								},
+								{
+									"DisplayValue": "NARENDRA NAIK",
+									"ReturnValue": "NARENDRA NAIK"
+								},
+								{
+									"DisplayValue": "HEMANTA KUMAR SINGH",
+									"ReturnValue": "HEMANTA KUMAR SINGH"
+								},
+								{
+									"DisplayValue": "KULDEEP MAHANANDA",
+									"ReturnValue": "KULDEEP MAHANANDA"
+								},
+								{
+									"DisplayValue": "SANJAY RAJ PRADHAN",
+									"ReturnValue": "SANJAY RAJ PRADHAN"
+								},
+								{
+									"DisplayValue": "BANSIDHAR SETH",
+									"ReturnValue": "BANSIDHAR SETH"
+								},
+								{
+									"DisplayValue": "TAPAN KUMAR JENA",
+									"ReturnValue": "TAPAN KUMAR JENA"
+								},
+								{
+									"DisplayValue": "SONU SETH",
+									"ReturnValue": "SONU SETH"
+								},
+								{
+									"DisplayValue": "OMPRAKASH SATNAMI",
+									"ReturnValue": "OMPRAKASH SATNAMI"
+								}
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section137MethodInlet",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Method",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": [
+								"{qc_ITEMS/DECISION_TAKEN}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section137DecisionTakenInlet",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Decision Taken",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"PlaceHolder": "PlaceHolder",
+							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": false,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "OK",
+									"ReturnValue": "ok"
+								},
+								{
+									"DisplayValue": "Not OK",
+									"ReturnValue": "not_ok"
+								}
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "PipeNo1",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Pipe No 1",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "PipeNo2",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Pipe No 2",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "PipeNo3",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Pipe No 3",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "PipeNo4",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Pipe No 4",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "PipeNo5",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Pipe No 5",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "PipeNo6",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Pipe No 6",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "PipeNo7",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Pipe No 7",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "PipeNo8",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Pipe No 8",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "PipeNo9",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Pipe No 9",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "PipeNo10",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Pipe No 10",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "PipeNo11",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Pipe No 11",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "PipeNo12",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Pipe No 12",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"RequiredIndicator": false,
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "Section137NextButtonInlet",
+							"IsVisible": true,
+							"Separator": true,
+							"Title": "Next",
+							"Alignment": "Center",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
+							"Image": "sap-icon://open-command-field",
+							"ImagePosition": "Trailing",
+							"Enabled": true,
+							"OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/Section137Validation.js"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": false,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "Section137Form"
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"RequiredIndicator": false,
 							"Value": "13.1 Confirmation of the workability for gap filling castable 'HC-H111B'  *8",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section131FormQuestion",
@@ -1656,6 +2062,7 @@
 							"Value": "{qc_ITEMS/DATE_INSPECTED}",
 							"_Type": "Control.Type.FormCell.DatePicker",
 							"_Name": "Section131DateOutlet",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Date",
@@ -1668,6 +2075,7 @@
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section131InspectedByOutlet",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -1771,6 +2179,7 @@
 							"Value": "Actual Measurement",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131MethodOutlet",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Method",
@@ -1784,6 +2193,7 @@
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section131DecisionTakenOutlet",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -1812,6 +2222,7 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section131TestNextButtonOutlet",
 							"IsVisible": true,
@@ -1823,7 +2234,7 @@
 							"Image": "sap-icon://open-command-field",
 							"ImagePosition": "Trailing",
 							"Enabled": true,
-							"OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/Section131ValidationOutlet.js"
+							"OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/Section137Validation.js"
 						}
 					],
 					"Layout": {
@@ -1881,6 +2292,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131TestBatchNo1",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "1.Batch No",
@@ -1891,6 +2303,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131TestWaterCasteing1",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Water of casting(%) (5.0 ± 0.5)",
@@ -1901,6 +2314,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131FF1",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "FF1\t",
@@ -1911,6 +2325,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131FF12",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "FF2\t",
@@ -1921,6 +2336,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131TF1",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "TF1(>180mm)\t",
@@ -1931,6 +2347,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131TF12",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "TF2(>180mm)\t",
@@ -1941,6 +2358,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131SettingTime1",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Setting time / duration(>2Hr)",
@@ -1951,6 +2369,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131TestRemark1",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Remark",
@@ -1961,6 +2380,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131TestBatchNo2",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "2.Batch No",
@@ -1971,6 +2391,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131TestWaterCasteing2",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": " Water of casting(%) (5.0 ± 0.5)",
@@ -1981,6 +2402,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131FF2",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "FF1",
@@ -1991,6 +2413,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131FF22",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "FF2\t",
@@ -2001,6 +2424,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131TF2",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "TF1(>180mm)",
@@ -2011,6 +2435,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131TF22",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "TF2(>180mm)",
@@ -2021,6 +2446,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131SettingTime2",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Setting time / duration(>2Hr)",
@@ -2031,6 +2457,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131TestRemark2",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Remark",
@@ -2041,6 +2468,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131TestBatchNo3",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "3.Batch No",
@@ -2051,6 +2479,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131TestWaterCasteing3",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Water of casting(%) (5.0 ± 0.5)",
@@ -2061,6 +2490,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131FF3",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "FF1",
@@ -2071,6 +2501,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131FF32",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "FF2\t",
@@ -2081,6 +2512,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131TF3",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "TF1(>180mm)",
@@ -2091,6 +2523,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131TF32",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "TF2(>180mm)",
@@ -2101,6 +2534,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131SettingTime3",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Setting time / duration(>2Hr)",
@@ -2111,6 +2545,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section131TestRemark3",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Remark",
@@ -2119,6 +2554,7 @@
 							"IsEditable": true
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section141NextButtonOutlet",
 							"IsVisible": true,
@@ -2153,6 +2589,7 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "14.1 Situation of Mixing for gap filling castable  'HC-H111B'  *9",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section141Question",
@@ -2166,6 +2603,7 @@
 							"Value": "{qc_ITEMS/DATE_INSPECTED}",
 							"_Type": "Control.Type.FormCell.DatePicker",
 							"_Name": "Section141Date",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Date",
@@ -2178,6 +2616,7 @@
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section141InspectedBy",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -2273,6 +2712,7 @@
 							"Value": "Actual Measurement",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section141Method",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Method",
@@ -2286,6 +2726,7 @@
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section141DecisionTaken",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -2314,6 +2755,7 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section142NextButtonOutlet",
 							"IsVisible": true,
@@ -2355,6 +2797,7 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "14.2 The gap between the top of brick surface  to the top face of casting    *10",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section142Question",
@@ -2368,6 +2811,7 @@
 							"Value": "{qc_ITEMS/DATE_INSPECTED}",
 							"_Type": "Control.Type.FormCell.DatePicker",
 							"_Name": "Section142Date",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Date",
@@ -2380,6 +2824,7 @@
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section142InspectedBy",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -2475,6 +2920,7 @@
 							"Value": "Steel tape or  measurement Gauge",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142Method",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Method",
@@ -2488,6 +2934,7 @@
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section142DecisionTaken",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -2516,6 +2963,7 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section142TestNextButtonOutlet",
 							"IsVisible": true,
@@ -2578,6 +3026,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142TestBatchNo1",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "1. Batch No",
@@ -2588,6 +3037,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142PowerWeight1",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "1. Powder Weight",
@@ -2598,6 +3048,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142WaterCasting1",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Water Casting(± 0.5)",
@@ -2608,6 +3059,7 @@
 						{
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section142FludityOfCastable1",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -2638,6 +3090,7 @@
 						{
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section142AddingVibration1",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -2662,6 +3115,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142Remark1",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Remark",
@@ -2672,6 +3126,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142TestBatchNo2",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "2. Batch No",
@@ -2682,6 +3137,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142PowerWeight2",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "2. Powder Weight",
@@ -2692,6 +3148,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142WaterCasting2",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Water Casting(± 0.5)",
@@ -2702,6 +3159,7 @@
 						{
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section142FludityOfCastable2",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -2732,6 +3190,7 @@
 						{
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section142AddingVibration2",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -2756,6 +3215,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142Remark2",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Remark",
@@ -2766,6 +3226,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142TestBatchNo3",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "3. Batch No",
@@ -2776,6 +3237,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142PowerWeight3",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "3. Powder Weight",
@@ -2786,6 +3248,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142WaterCasting3",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Water Casting(± 0.5)",
@@ -2796,6 +3259,7 @@
 						{
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section142FludityOfCastable3",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -2826,6 +3290,7 @@
 						{
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section142AddingVibration3",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -2850,6 +3315,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142Remark3",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Remark",
@@ -2860,6 +3326,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142TestBatchNo4",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "4. Batch No",
@@ -2870,6 +3337,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142PowerWeight4",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "4. Powder Weight",
@@ -2880,6 +3348,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142WaterCasting4",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Water Casting(± 0.5)",
@@ -2890,6 +3359,7 @@
 						{
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section142FludityOfCastable4",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -2920,6 +3390,7 @@
 						{
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section142AddingVibration4",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -2944,6 +3415,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142Remark4",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Remark",
@@ -2954,6 +3426,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142TestBatchNo5",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "5. Batch No",
@@ -2964,6 +3437,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142PowerWeight5",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "5. Powder Weight",
@@ -2974,6 +3448,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142WaterCasting5",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Water Casting(± 0.5)",
@@ -2984,6 +3459,7 @@
 						{
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section142FludityOfCastable5",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -3014,6 +3490,7 @@
 						{
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section142AddingVibration5",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -3038,6 +3515,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142Remark5",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Remark",
@@ -3046,6 +3524,7 @@
 							"IsEditable": true
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section142Test2NextButtonOutlet",
 							"IsVisible": true,
@@ -3121,9 +3600,13 @@
 							},
 							"_Type": "Control.Type.FormCell.Attachment",
 							"_Name": "Section142TakePhotoOutlet",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"OnValueChange": "/TRL_Snorkel_Digitization_TSL/Rules/ValidationandConvertFile142Outlet.js",
+							"IsEditable": true,
+							"MaxAttachments": 0,
+							"MaxFileSize": 0,
 							"AttachmentActionType": [
 								"TakePhoto",
 								"AddPhoto"
@@ -3181,6 +3664,7 @@
 							"Value": "12:00 direction",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142TestPositionGapA",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "1.Position",
@@ -3192,6 +3676,7 @@
 							"Value": "100 ± 3 mm",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142TestToleranceA",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "1.Tolerance",
@@ -3203,6 +3688,7 @@
 							"Value": "Steel tape or measurement Gauge",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142TestMethodA",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "1.Method",
@@ -3213,6 +3699,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142TestActualGapA",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "1.Actual Gap",
@@ -3224,6 +3711,7 @@
 							"Value": "3:00 direction",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142TestPositionGapB",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "2.Position",
@@ -3235,6 +3723,7 @@
 							"Value": "100 ± 3 mm",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142TestToleranceB",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "2.Tolerance",
@@ -3246,6 +3735,7 @@
 							"Value": "Steel tape or measurement Gauge",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142TestMethodB",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "2.Method",
@@ -3256,6 +3746,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142TestActualGapB",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "2.Actual Gap",
@@ -3267,6 +3758,7 @@
 							"Value": "6:00 direction",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142TestPositionGapC",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "3.Position",
@@ -3278,6 +3770,7 @@
 							"Value": "100 ± 3 mm",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142TestToleranceC",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "3.Tolerance",
@@ -3289,6 +3782,7 @@
 							"Value": "Steel tape or measurement Gauge",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142TestMethodC",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "3.Method",
@@ -3299,6 +3793,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142TestActualGapC",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "3.Actual Gap",
@@ -3310,6 +3805,7 @@
 							"Value": "9:00 direction",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142TestPositionGapD",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "4.Position",
@@ -3321,6 +3817,7 @@
 							"Value": "100 ± 3 mm",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142TestToleranceD",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "4.Tolerance",
@@ -3332,6 +3829,7 @@
 							"Value": "Steel tape or measurement Gauge",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142TestMethodD",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "4.Method",
@@ -3342,6 +3840,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section142TestActualGapD",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "4.Actual Gap",
@@ -3350,6 +3849,7 @@
 							"IsEditable": true
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section142StaticNextButton",
 							"IsVisible": true,
@@ -3384,6 +3884,7 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": " 15.1 Curing time   > 24Hr",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section151Question",
@@ -3397,6 +3898,7 @@
 							"Value": "{qc_ITEMS/DATE_INSPECTED}",
 							"_Type": "Control.Type.FormCell.DatePicker",
 							"_Name": "Section151Date",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Date",
@@ -3409,6 +3911,7 @@
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section151InspectedBy",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -3504,6 +4007,7 @@
 							"Value": "Actual Measurement",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section151Method",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Method",
@@ -3517,6 +4021,7 @@
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section151DecisionTaken",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -3545,6 +4050,7 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section161NextButton",
 							"IsVisible": true,
@@ -3586,6 +4092,7 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": " 16.1 Drying pattern according to Process Chart",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section161Question",
@@ -3599,6 +4106,7 @@
 							"Value": "{qc_ITEMS/DATE_INSPECTED}",
 							"_Type": "Control.Type.FormCell.DatePicker",
 							"_Name": "Section161Date",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Date",
@@ -3611,6 +4119,7 @@
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section161InspectedBy",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -3706,6 +4215,7 @@
 							"Value": "Visual confirmation",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section161Method",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Method",
@@ -3719,6 +4229,7 @@
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section161DecisionTaken",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -3747,6 +4258,7 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section162NextButton",
 							"IsVisible": true,
@@ -3788,6 +4300,7 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "16.2 Drying time (76~80 hrs)",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section162Question",
@@ -3801,6 +4314,7 @@
 							"Value": "{qc_ITEMS/DATE_INSPECTED}",
 							"_Type": "Control.Type.FormCell.DatePicker",
 							"_Name": "Section162Date",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Date",
@@ -3813,6 +4327,7 @@
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section162InspectedBy",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -3908,6 +4423,7 @@
 							"Value": "Visual confirmation",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section162Method",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Method",
@@ -3921,6 +4437,7 @@
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section162DecisionTaken",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -3949,6 +4466,7 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section163NextButton",
 							"IsVisible": true,
@@ -3983,6 +4501,7 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "16.3 Drying temperature (350°C with 10 hrs soaking)",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section163Question",
@@ -3996,6 +4515,7 @@
 							"Value": "{qc_ITEMS/DATE_INSPECTED}",
 							"_Type": "Control.Type.FormCell.DatePicker",
 							"_Name": "Section163Date",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Date",
@@ -4008,6 +4528,7 @@
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section163InspectedBy",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -4103,6 +4624,7 @@
 							"Value": "Check temparature with IR Gun /thermocouple",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Section163Method",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Method",
@@ -4116,6 +4638,7 @@
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Section163DecisionTaken",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -4144,6 +4667,7 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section171NextButton",
 							"IsVisible": true,

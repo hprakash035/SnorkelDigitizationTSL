@@ -15,7 +15,8 @@
 		"vibration": "#Page:SnorkelInstallation2/#Control:Section102AddingVibration4/#SelectedValue",
 		"watercasting": "#Page:SnorkelInstallation2/#Control:Section102WaterCasting4/#Value",
 		"batchNo": "#Page:SnorkelInstallation2/#Control:Section102TestBatchNo4/#Value",
-		"QUESTION": "10.2 The gap between the top of the casting mould to the top face of casting    *5",
+		"SSFiber": "#Page:SnorkelInstallation2/#Control:Section102TestSSFiber4/#Value",
+		"QUESTION": "10.2 The gap between the top of the casting mould to the top face of casting    *4",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}
 }

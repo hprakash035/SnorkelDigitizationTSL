@@ -106,44 +106,11 @@ export async function loadSection113Data(pageProxy, qcItem113, FormSectionedTabl
             await userInputImageSection?.setVisible(false);
         }
 
-        // ---------------------------
-        // TYPE check for Section121
-        // ---------------------------
-        const type = (binding.TYPE || "").toLowerCase();
-        const sectionInlet = FormSectionedTable.getSection('Section121FormInlet');
-        const sectionOutlet = FormSectionedTable.getSection('Section121FormOutlet');
-
-        if (type === "inlet") {
-            if (sectionInlet) {
-                if (hasDynamicImage) {
-                    // console.log("✅ TYPE=inlet & dynamic image present → showing Section121FormInlet");
-                    await sectionInlet.setVisible(true);
-                } else {
-                    // console.log("🚫 TYPE=inlet but no dynamic image → hiding Section121FormInlet");
-                    await sectionInlet.setVisible(false);
-                }
-            }
-            if (sectionOutlet) {
-                await sectionOutlet.setVisible(false);
-            }
-        } else if (type === "outlet") {
-            if (sectionOutlet) {
-                if (hasDynamicImage) {
-                    // console.log("✅ TYPE=outlet & user input image present → showing Section121FormOutlet");
-                    await sectionOutlet.setVisible(true);
-                } else {
-                    // console.log("🚫 TYPE=outlet but no user input image → hiding Section121FormOutlet");
-                    await sectionOutlet.setVisible(false);
-                }
-            }
-            if (sectionInlet) {
-                await sectionInlet.setVisible(false);
-            }
-        } else {
-            // console.warn(`⚠️ Unknown TYPE '${type}' → hiding both Section121 forms`);
-            if (sectionInlet) await sectionInlet.setVisible(false);
-            if (sectionOutlet) await sectionOutlet.setVisible(false);
-        }
+ const Section114Form = FormSectionedTable.getSection('Section114Form');
+    if (Section114Form) {
+      await Section114Form.setVisible(hasDynamicImage);
+      // console.log(`📌 Section113Form visibility = ${hasDynamicImage}`);
+    }
 
     } catch (error) {
         // console.error("Error in loadSection113Data:", error);

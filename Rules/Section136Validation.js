@@ -29,15 +29,15 @@ export default function Section136Validation(clientAPI) {
         if (decisionTaken && inspectedBy && inspectionMethod && decisionTaken != "") {
             const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
   
-
+const Section134UserInputImage =FormSectionedTable.getSection('Section137Form');
+    Section134UserInputImage.setVisible('true');
+   
    
     FormSectionedTable.getSection('Section136Form').getControl('Section136NextButton').setVisible(false);
              clientAPI.executeAction({
                 Name: '/TRL_Snorkel_Digitization_TSL/Actions/Section136Create.action'
             });
-             return clientAPI.executeAction({
-                Name: '/TRL_Snorkel_Digitization_TSL/Actions/Nav2Sheet5.action',
-            });
+            
            
         } else {
             return clientAPI.executeAction({

@@ -18,10 +18,10 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": " 14.1 Confirmation of the workability for gap filling castable 'HC-H111B' *8",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section141Question",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"PlaceHolder": "PlaceHolder",
@@ -184,9 +184,9 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Sectiopn141TestNextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -268,7 +268,7 @@
 							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "Water of casting(%) (11.0 ± 0.5)",
+							"Caption": "Water of casting(%) ( ± 2mm)",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
@@ -356,7 +356,7 @@
 							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": " Water of casting(%) ( 11.0 ± 0.5)",
+							"Caption": " Water of casting(%) (  ± 2mm)",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
@@ -444,7 +444,7 @@
 							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
-							"Caption": "Water of casting(%) (11.0 ± 0.5)",
+							"Caption": "Water of casting(%) ( ± 2mm)",
 							"PlaceHolder": "PlaceHolder",
 							"Enabled": true,
 							"IsEditable": true
@@ -516,9 +516,9 @@
 							"IsEditable": true
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section151NextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -551,10 +551,10 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "15.1 Situation of Mixing for gap filling castable  'HC-H111B'  *9",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section151Question",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"PlaceHolder": "PlaceHolder",
@@ -717,9 +717,9 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section152NextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -740,7 +740,7 @@
 						"_Name": "Section151Header",
 						"AccessoryType": "None",
 						"UseTopPadding": true,
-						"Caption": "15.1 Situation of Mixing for gap filling castable  'HC-H111B'  *9"
+						"Caption": "15. Casting of the gap filling castable 'HC-H111B'"
 					},
 					"Visible": false,
 					"EmptySection": {
@@ -759,10 +759,10 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": " 15.2 The gap between the top of brick surface  to the top face of casting    *10",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section152Question",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"PlaceHolder": "PlaceHolder",
@@ -925,9 +925,9 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section152TestNextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -1482,9 +1482,9 @@
 							"IsEditable": true
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section152Test2NextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -1807,9 +1807,9 @@
 							"IsEditable": true
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section152StaticNextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -1842,10 +1842,361 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
+							"Value": "15.3 Leakage Checked Of All Pipes",
+							"_Type": "Control.Type.FormCell.Title",
+							"_Name": "Section153QuestionInlet",
+							"IsVisible": true,
+							"Separator": true,
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": false
+						},
+						{
+							"Value": "{qc_ITEMS/DATE_INSPECTED}",
+							"_Type": "Control.Type.FormCell.DatePicker",
+							"_Name": "Section153DateInlet",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Date",
+							"IsEditable": true,
+							"Mode": "Date"
+						},
+						{
+							"Value": [
+								"{qc_ITEMS/INSPECTED_BY}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section153InspectedByInlet",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Inspected By",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"PlaceHolder": "PlaceHolder",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": false,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "SOUMEN JANA",
+									"ReturnValue": "SOUMEN JANA"
+								},
+								{
+									"DisplayValue": "RAHUL CHOUDHARY",
+									"ReturnValue": "RAHUL CHOUDHARY"
+								},
+								{
+									"DisplayValue": "SOURAV JAISWAL",
+									"ReturnValue": "SOURAV JAISWAL"
+								},
+								{
+									"DisplayValue": "SURYAMANI KUMAR",
+									"ReturnValue": "SURYAMANI KUMAR"
+								},
+								{
+									"DisplayValue": "JOSHABANTA SAHU",
+									"ReturnValue": "JOSHABANTA SAHU"
+								},
+								{
+									"DisplayValue": "S PRASANTH KUMAR",
+									"ReturnValue": "S PRASANTH KUMAR"
+								},
+								{
+									"DisplayValue": "ANKIT KUMAR PATRA",
+									"ReturnValue": "ANKIT KUMAR PATRA"
+								},
+								{
+									"DisplayValue": "GAUTAM KIRO",
+									"ReturnValue": "GAUTAM KIRO"
+								},
+								{
+									"DisplayValue": "TAPAS KUMAR SAHU",
+									"ReturnValue": "TAPAS KUMAR SAHU"
+								},
+								{
+									"DisplayValue": "NILACHAL NAHAK",
+									"ReturnValue": "NILACHAL NAHAK"
+								},
+								{
+									"DisplayValue": "SURESH MUNDA",
+									"ReturnValue": "SURESH MUNDA"
+								},
+								{
+									"DisplayValue": "KARTIKA BEHERA",
+									"ReturnValue": "KARTIKA BEHERA"
+								},
+								{
+									"DisplayValue": "NARENDRA NAIK",
+									"ReturnValue": "NARENDRA NAIK"
+								},
+								{
+									"DisplayValue": "HEMANTA KUMAR SINGH",
+									"ReturnValue": "HEMANTA KUMAR SINGH"
+								},
+								{
+									"DisplayValue": "KULDEEP MAHANANDA",
+									"ReturnValue": "KULDEEP MAHANANDA"
+								},
+								{
+									"DisplayValue": "SANJAY RAJ PRADHAN",
+									"ReturnValue": "SANJAY RAJ PRADHAN"
+								},
+								{
+									"DisplayValue": "BANSIDHAR SETH",
+									"ReturnValue": "BANSIDHAR SETH"
+								},
+								{
+									"DisplayValue": "TAPAN KUMAR JENA",
+									"ReturnValue": "TAPAN KUMAR JENA"
+								},
+								{
+									"DisplayValue": "SONU SETH",
+									"ReturnValue": "SONU SETH"
+								},
+								{
+									"DisplayValue": "OMPRAKASH SATNAMI",
+									"ReturnValue": "OMPRAKASH SATNAMI"
+								}
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Section153MethodInlet",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Method",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": [
+								"{qc_ITEMS/DECISION_TAKEN}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Section153DecisionTakenInlet",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Decision Taken",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"PlaceHolder": "PlaceHolder",
+							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": false,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								{
+									"DisplayValue": "OK",
+									"ReturnValue": "ok"
+								},
+								{
+									"DisplayValue": "Not OK",
+									"ReturnValue": "not_ok"
+								}
+							]
+						},
+						{
+							"RequiredIndicator": false,
+							"Value": "Flow Check Of All Pipes After Casting ",
+							"_Type": "Control.Type.FormCell.Title",
+							"_Name": "FormCellTitle0",
+							"IsVisible": true,
+							"Separator": true,
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": false
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "PipeNo1",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Pipe No 1",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "PipeNo2",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Pipe No 2",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "PipeNo3",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Pipe No 3",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "PipeNo4",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Pipe No 4",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "PipeNo5",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Pipe No 5",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "PipeNo6",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Pipe No 6",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "PipeNo7",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Pipe No 7",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "PipeNo8",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Pipe No 8",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "PipeNo9",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Pipe No 9",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "PipeNo10",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Pipe No 10",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "PipeNo11",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Pipe No 11",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "PipeNo12",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Pipe No 12",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"RequiredIndicator": false,
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "Section153NextButtonInlet",
+							"IsVisible": true,
+							"Separator": true,
+							"Title": "Next",
+							"Alignment": "Center",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
+							"Image": "sap-icon://open-command-field",
+							"ImagePosition": "Trailing",
+							"Enabled": true,
+							"OnPress": "/TRL_Snorkel_Digitization_TSL/Rules/Section153Validation.js"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": false,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "Section153Form"
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"RequiredIndicator": false,
 							"Value": " 17.1 Coating on the outer castable",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section171Question",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Enabled": true,
@@ -2007,9 +2358,9 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section172NextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -2049,10 +2400,10 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "17.2 Confirmation of the uneven/trace on the ring brick after removing hanging hooks",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section172Question",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"PlaceHolder": "PlaceHolder",
@@ -2215,9 +2566,9 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section173NextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -2250,10 +2601,10 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "17.3 Putting the mark with clearly ",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section173Question",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"PlaceHolder": "PlaceHolder",
@@ -2416,9 +2767,9 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section174NextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -2451,10 +2802,10 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "17.4 Putting the manufacturing control numbers ",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section174Question",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"PlaceHolder": "PlaceHolder",
@@ -2617,9 +2968,9 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section174StaticNextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -2727,10 +3078,10 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "18.1 Dimension",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section181Question",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"PlaceHolder": "PlaceHolder",
@@ -2893,9 +3244,9 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section182NextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -2935,10 +3286,10 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "18.2 Appearance",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section182Question",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"PlaceHolder": "PlaceHolder",
@@ -3101,9 +3452,9 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section183NextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -3136,10 +3487,10 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "18.3 Hammering test",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section183Question",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"PlaceHolder": "PlaceHolder",
@@ -3302,9 +3653,9 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section184NextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -3337,10 +3688,10 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "18.4 Punching of Set No.",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section184Question",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"PlaceHolder": "PlaceHolder",
@@ -3503,9 +3854,9 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section185NextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -3538,10 +3889,10 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "18.5 Painting, Polishing & Stenciling",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section185Question",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"PlaceHolder": "PlaceHolder",
@@ -3704,9 +4055,9 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section191NextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -3739,10 +4090,10 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "19.1 Snorkel fixing to the pallet at 4 points of wood",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section191Question",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"PlaceHolder": "PlaceHolder",
@@ -3913,9 +4264,9 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section191StaticNextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -4030,10 +4381,10 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "19.2 Preventing the floating of snorkel",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section192Question",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"PlaceHolder": "PlaceHolder",
@@ -4204,9 +4555,9 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section192StaticNextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -4315,10 +4666,10 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "19.3 Hook pasting done inside of 3rd ring",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section193Question",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"PlaceHolder": "PlaceHolder",
@@ -4489,9 +4840,9 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Section194NextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",
@@ -4524,10 +4875,10 @@
 					},
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"Value": "19.4 Re packing done all leg rings",
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "Section194Question",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"PlaceHolder": "PlaceHolder",
@@ -4698,9 +5049,9 @@
 							]
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "SectionFinalNextButton",
-							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Next",

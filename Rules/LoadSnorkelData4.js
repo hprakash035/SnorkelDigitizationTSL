@@ -32,7 +32,7 @@ export default async function LoadSnorkelDataPage4(clientAPI) {
             FormSectionedTable.getSection('Section131Form').setVisible(true);
             FormSectionedTable.getSection('Section131FormOutlet').setVisible(false);
 
-            const orderedSectionKeys = ['13.1', '13.2', '13.3', '13.4', '13.5', '13.6'];
+            const orderedSectionKeys = ['13.1', '13.2', '13.3', '13.4', '13.5', '13.6','13.7'];
             for (const sectionKey of orderedSectionKeys) {
                 const loader = loadInletSectionLoader(sectionKey);
                 if (!loader) continue;

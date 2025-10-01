@@ -89,34 +89,39 @@ export default async function ValidateAndConvertFile113(clientAPI) {
         }
       }
     });
+ const FormSectionedTable = pageProxy.getControl('FormSectionedTable');
+    // FormSectionedTable.getSection('Section114Form').getControl('Section114NextButton').setVisible(false);
+    const Section113StaticImage =FormSectionedTable.getSection('Section114Form');
+    Section113StaticImage.setVisible('true');
 
+    
     // ✅ Show next section based on TYPE
-    const normalizedType = (type || "").toLowerCase();
+    // const normalizedType = (type || "").toLowerCase();
 
-    const sectionInlet = sectionedTable.getSection('Section121FormInlet');
-    const sectionOutlet = sectionedTable.getSection('Section121FormOutlet');
+    // const sectionInlet = sectionedTable.getSection('Section121FormInlet');
+    // const sectionOutlet = sectionedTable.getSection('Section121FormOutlet');
 
-    if (normalizedType === "inlet") {
-      if (sectionInlet) {
-        // console.log("✅ TYPE=inlet. Showing Section121FormInlet...");
-        await sectionInlet.setVisible(true);
-      }
-      if (sectionOutlet) {
-        // console.log("🚫 Hiding Section121FormOutlet...");
-        await sectionOutlet.setVisible(false);
-      }
-    } else if (normalizedType === "outlet") {
-      if (sectionOutlet) {
-        // console.log("✅ TYPE=outlet. Showing Section121FormOutlet...");
-        await sectionOutlet.setVisible(true);
-      }
-      if (sectionInlet) {
-        // console.log("🚫 Hiding Section121FormInlet...");
-        await sectionInlet.setVisible(false);
-      }
-    } else {
-      // console.warn(`⚠️ Unknown TYPE '${type}'. No section shown.`);
-    }
+    // if (normalizedType === "inlet") {
+    //   if (sectionInlet) {
+    //     // console.log("✅ TYPE=inlet. Showing Section121FormInlet...");
+    //     await sectionInlet.setVisible(true);
+    //   }
+    //   if (sectionOutlet) {
+    //     // console.log("🚫 Hiding Section121FormOutlet...");
+    //     await sectionOutlet.setVisible(false);
+    //   }
+    // } else if (normalizedType === "outlet") {
+    //   if (sectionOutlet) {
+    //     // console.log("✅ TYPE=outlet. Showing Section121FormOutlet...");
+    //     await sectionOutlet.setVisible(true);
+    //   }
+    //   if (sectionInlet) {
+    //     // console.log("🚫 Hiding Section121FormInlet...");
+    //     await sectionInlet.setVisible(false);
+    //   }
+    // } else {
+    //   // console.warn(`⚠️ Unknown TYPE '${type}'. No section shown.`);
+    // }
 
     // console.log("🏁 ValidateAndConvertFile113 completed successfully");
 

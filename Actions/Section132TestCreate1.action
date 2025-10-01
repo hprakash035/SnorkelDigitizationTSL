@@ -11,7 +11,7 @@
 		"actualvalue": "#Page:SnorkelInstallation4/#Control:Section132ActualValue1/#Value",
 		"method": "#Page:SnorkelInstallation4/#Control:Section132Method1/#Value",
 		"position": "#Page:SnorkelInstallation4/#Control:Section132Position1/#Value",
-		"testname": "*8 Gap measurement between 2nd ring brick and the Core Shell ",
+		"testname": "*7 Gap measurement between 2nd ring brick and the Core Shell ",
 		"tolerance": "#Page:SnorkelInstallation4/#Control:Section132Tolerence1/#Value",
 		"QUESTION": "13.2 Center position of the ring brick  *7",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"

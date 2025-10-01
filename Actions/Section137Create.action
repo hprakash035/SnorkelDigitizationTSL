@@ -1,0 +1,31 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Section137Create"
+	},
+	"OnFailure": "/TRL_Snorkel_Digitization_TSL/Actions/CreateEntityFailureMessage.action",
+	"Target": {
+		"Service": "/TRL_Snorkel_Digitization_TSL/Services/TRL_Snorkel_CAP_SRV.service",
+		"EntitySet": "QC_ITEM"
+	},
+	"Properties": {
+		"DATE_INSPECTED": "#Page:SnorkelInstallation4/#Control:Sectio137DateInlet/#Value",
+		"DECISION_TAKEN": "#Page:SnorkelInstallation4/#Control:Sectio137DecisionTakenInlet/#SelectedValue",
+		"INSPECTED_BY": "#Page:SnorkelInstallation4/#Control:Sectio137InspectedByInlet/#SelectedValue",
+		"METHOD": "#Page:SnorkelInstallation4/#Control:Sectio137MethodInlet/#Value",
+		"QUESTION": "13.7 Leakage Checked Of All Pipes (flow rate of all pipes before casting) ",
+		"PipeNo1": "#Page:SnorkelInstallation4/#Control:PipeNo1/#Value",
+		"PipeNo2": "#Page:SnorkelInstallation4/#Control:PipeNo2/#Value",
+		"PipeNo3": "#Page:SnorkelInstallation4/#Control:PipeNo3/#Value",
+		"PipeNo4": "#Page:SnorkelInstallation4/#Control:PipeNo4/#Value",
+		"PipeNo5": "#Page:SnorkelInstallation4/#Control:PipeNo5/#Value",
+		"PipeNo6": "#Page:SnorkelInstallation4/#Control:PipeNo6/#Value",
+		"PipeNo7": "#Page:SnorkelInstallation4/#Control:PipeNo7/#Value",
+		"PipeNo8": "#Page:SnorkelInstallation4/#Control:PipeNo8/#Value",
+		"PipeNo9": "#Page:SnorkelInstallation4/#Control:PipeNo9/#Value",
+		"PipeNo10": "#Page:SnorkelInstallation4/#Control:PipeNo10/#Value",
+		"PipeNo11": "#Page:SnorkelInstallation4/#Control:PipeNo11/#Value",
+		"PipeNo12": "#Page:SnorkelInstallation4/#Control:PipeNo12/#Value",
+		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
+	}
+}

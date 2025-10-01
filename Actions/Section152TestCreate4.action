@@ -15,7 +15,7 @@
 		"vibration": "#Page:SnorkelInstallation5/#Control:Section152AddingVibration4/#SelectedValue",
 		"watercasting": "#Page:SnorkelInstallation5/#Control:Section152WaterCasting4/#Value",
 		"batchNo": "#Page:SnorkelInstallation5/#Control:Section152TestBatchNo4/#Value",
-		"QUESTION": "15.2 The gap between the top of brick surface  to the top face of casting  *10",
+		"QUESTION": "15.2 The gap between the top of brick surface  to the top face of casting  *9",
 		"qC_HEADER_SNORKEL_NO": "#Page:SnorkelInstallation/#Control:SnorkelNo/#Value"
 	}
 }
